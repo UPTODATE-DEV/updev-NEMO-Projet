@@ -1,0 +1,43 @@
+<div class="inner" href="<%= qing_group.group_link %>">
+
+  <%# Spacing placeholder for styling purposes %>
+  <div class="standardized"></div>
+
+  <div class="type"><%= form_item_icon('group') %></div>
+
+  <div class="base-info">
+    <div class="wrapper"><%# Need this so we can handle wrapping nicely %>
+      <div><%= qing_group.group_name %></div>
+      <% if qing_group.repeatable? %>
+        <%= icon_tag("repeat", title: t("qing_group.tooltips.repeatable")) %>
+      <% end %>
+      <% if ODK::DecoratorFactory.decorate(qing_group.object).one_screen_appropriate? %>
+        <%= icon_tag("file-o", title: t("qing_group.tooltips.one_screen")) %>
+      <% else %>
+        <%= icon_tag("files-o", title: t("qing_group.tooltips.multi_screen")) %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%# Ranks of questions this group refers to by display conditions.
+        Used to inform the user, and data in data-ref-id used by the drag-drop system for constraint
+        enforcement. %>
+    <% if qing_group.refd_qings.any? %>
+      <div class="refd-qing-links">
+        <i class="fa fa-link"></i>
+        <% qing_group.refd_qings.each do |q| %>
+          <div class="refd-qing" data-ref-id="<%= q.id %>">#<span><%= q.full_dotted_rank %></span></div>
+        <% end %>
+      </div>
+    <% end %>
+
+    <% unless read_only %>
+      <%= action_link(:edit, edit_qing_group_path(qing_group), label: false) %>
+      <% if can?(:remove_questions, qing_group.form) %>
+        <%= action_link(:destroy, "#", label: false, data:
+              {message: I18n.t("activerecord.attributes.qing_group.delete", name: qing_group.group_name)}) %>
+      <% end %>
+    <% end %>
+  </div>
+</div> <%# End of form group info %>

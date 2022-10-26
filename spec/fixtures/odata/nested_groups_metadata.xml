@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:DataServices>
+    <Schema Namespace="NEMO" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <EntityType Name="Custom" OpenType="true">
+      </EntityType>
+      <EntityType Name="Geographic" OpenType="true">
+        <Property Name="Latitude" Type="Edm.Decimal" Nullable="true"/>
+        <Property Name="Longitude" Type="Edm.Decimal" Nullable="true"/>
+        <Property Name="Altitude" Type="Edm.Decimal" Nullable="true"/>
+        <Property Name="Accuracy" Type="Edm.Decimal" Nullable="true"/>
+      </EntityType>
+      <EntityType Name="Group.*form1*.G1" OpenType="true">
+        <Property Name="*q_code2*" Type="Edm.String" Nullable="true"/>
+        <Property Name="*q_code3*" Type="Edm.Int64" Nullable="true"/>
+      </EntityType>
+      <EntityType Name="Group.*form1*.G2" OpenType="true">
+        <Property Name="*q_code4*" Type="Edm.String" Nullable="true"/>
+        <Property Name="Group 3" Type="NEMO.Group.*form1*.G2.G1" Nullable="true"/>
+      </EntityType>
+      <EntityType Name="Group.*form1*.G2.G1" OpenType="true">
+        <Property Name="*q_code5*" Type="Edm.Int64" Nullable="true"/>
+        <Property Name="*q_code6*" Type="Edm.String" Nullable="true"/>
+      </EntityType>
+      <EntityType Name="Response" OpenType="true">
+        <Key>
+          <PropertyRef Name="ResponseID"/>
+        </Key>
+        <Property Name="ResponseSubmitDate" Type="Edm.DateTimeOffset" Nullable="true"/>
+        <Property Name="ResponseSubmitterName" Type="Edm.String" Nullable="true"/>
+        <Property Name="ResponseID" Type="Edm.Guid" Nullable="true"/>
+        <Property Name="ResponseShortcode" Type="Edm.String" Nullable="true"/>
+        <Property Name="ResponseReviewed" Type="Edm.Boolean" Nullable="true"/>
+        <Property Name="FormName" Type="Edm.String" Nullable="true"/>
+      </EntityType>
+      <EntityType Name="Responses: *form1*" OpenType="true" BaseType="NEMO.Response">
+        <Property Name="*q_code1*" Type="Edm.String" Nullable="true"/>
+        <Property Name="Group 1" Type="NEMO.Group.*form1*.G1" Nullable="true"/>
+        <Property Name="Group 2" Type="NEMO.Group.*form1*.G2" Nullable="true"/>
+      </EntityType>
+      <EntityContainer Name="NEMOService">
+        <EntitySet Name="Custom" EntityType="NEMO.Custom">
+        </EntitySet>
+        <EntitySet Name="Geographic" EntityType="NEMO.Geographic">
+        </EntitySet>
+        <EntitySet Name="Group.*form1*.G1" EntityType="NEMO.Group.*form1*.G1">
+        </EntitySet>
+        <EntitySet Name="Group.*form1*.G2" EntityType="NEMO.Group.*form1*.G2">
+        </EntitySet>
+        <EntitySet Name="Group.*form1*.G2.G1" EntityType="NEMO.Group.*form1*.G2.G1">
+        </EntitySet>
+        <EntitySet Name="Response" EntityType="NEMO.Response">
+        </EntitySet>
+        <EntitySet Name="Responses: *form1*" EntityType="NEMO.Responses: *form1*">
+        </EntitySet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

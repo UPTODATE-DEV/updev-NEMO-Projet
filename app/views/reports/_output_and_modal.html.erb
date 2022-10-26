@@ -1,0 +1,10 @@
+<div class="report-output">
+  <div class="tip report-info"></div>
+  <div class="report-body"></div>
+</div>
+
+<%= render("modal") unless @report_data[:embedded_mode] %>
+
+<%= javascript_doc_ready do %>
+  new ELMO.Views.ReportView(<%=json @report_data %>);
+<% end %>

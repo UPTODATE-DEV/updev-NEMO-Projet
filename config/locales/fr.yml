@@ -1,0 +1,2392 @@
+fr:
+  operation:
+    clear_confirm: "Etes vous sûr de vouloir supprimer toutes les opérations terminées?"
+    destroy_confirm: "Êtes-vous sûr de vouloir annuler cette opération?"
+    details:
+      user_import: "Importation d'utilisateur à partir de %{file}"
+      option_sets_import: "Importation de l'ensemble d'options '%{file}' "
+      questions_import: "Importation des questions '%{file}'"
+      download_csv: "Export des réponses au format CSV"
+      broadcast: "Diffusion '%{message}'"
+      cache_odata: "Actualisation des données de  l'API"
+      download_media: "Exportation des médias en masse"
+      download_xml: "Résponses originales ODK XML"
+    notes:
+      remaining: "Restant"
+    operations_panel: "Panneau des opérations"
+    status:
+      completed: "Succès"
+      failed: "Echec"
+      pending: "En attente"
+      running: "En cours"
+    summary:
+      all_in_progress:
+        one: "1 opération en cours"
+        other: "%{count} opérations en cours"
+      some_completed: "%{completed}/%{total}  opérations terminées"
+      all_completed:
+        one: "1 opération terminée"
+        other: "%{count} opérations terminées"
+      with_errors:
+        one: "%{message} (1 erreur)"
+        other: "%{message} (%{count} erreurs)"
+    errors:
+      delayed_job_stopped: "Les opérations ne sont pas fonctionnelles pour le moment. Veuillez contacter l'administrateur."
+      server_error: "Erreur serveur. veuillez contacter le support"
+      broadcast:
+        partial_send: "Il y a eu des erreurs lors de l'envoi de certains messages. Voir <a href='%{url}'>la page des diffusions </a>pour plus de détails."
+        fatal_send: "Échec de l'envoi. Voir <a href='%{url}'>la page des diffusions </a>pour plus d'informations."
+        not_found: "L'objet de la diffusion n'a pas été trouvé."
+    row_error: "Ligne %{row}: %{error}"
+    op_panel_more_info_link_html: "Voir le <a href='%{url}'> Panneau des opérations </a> pour plus d'informations."
+    queued_msg:
+      broadcast: "Diffusion en attente."
+      option_sets_import: "Importation d'ensembles d'options en file d'attente."
+      questions_import: "Importation des questions en file d'attente."
+      response_csv_export: "Export de réponses CSV en attente."
+      user_import: "Import d'utilisateur en attente."
+    see_error_report: "Voir le rapport d'erreur"
+    result_link_text:
+      response_csv_export: "Télécharger CSV"
+      bulk_media_download: "Télécharger le média"
+      xml_download: "Télécharger XML"
+  locale_name: "Français"
+  common:
+    accept: "Accepter"
+    active: "Actif"
+    add: "Ajouter"
+    and: "et"
+    AND: "Et"
+    apply: "Appliquer"
+    back: "Retour"
+    blank: "Vide"
+    by: "Par"
+    cancel: "Annuler"
+    choose: "Choisissez"
+    choose_file:
+      one: "Choisissez fichiers..."
+      other: "Ouvrir fichiers..."
+    clear: "Effacer"
+    clipped: "Certains résultats ne sont pas affichés car la limite du nombre de ligne a été atteinte"
+    clone: "Dupliquer"
+    close: "Fermer"
+    contact: "Contacter"
+    create: "Créer"
+    created: "Créé"
+    custom: "Personnalisé"
+    copy: "Copier"
+    data: "Données"
+    delete: "Supprimer"
+    design: "Concevoir"
+    docs: "Documentation"
+    edit: "Modifier"
+    either: 'L''un ou l''autre'
+    endDate: "Fin"
+    endDatePlaceholder: "Date fin"
+    error:
+      zero: "Erreurs"
+      one: "Erreur"
+      two: "Erreurs"
+      few: "Erreurs"
+      many: "Erreurs"
+      other: "Erreurs"
+    jsError: "Désolé, quelque chose s'est mal passé. Essayez de recharger la page."
+    example:
+      zero: "Exemples"
+      one: "Exemple"
+      two: "Exemples"
+      few: "Exemples"
+      many: "Exemples"
+      other: "Exemples"
+    example_abbr: "ex."
+    export: "Exporter"
+    file_drop_message: "Cliquez ou déposez le fichier ici"
+    found: "Trouvé"
+    generate: "Générer"
+    group: "Groupe"
+    inactive: "Inactif"
+    import: "Importer"
+    incoming: "Entrant"
+    is: "est"
+    language: "Langue"
+    login: "Connexion"
+    confirm_login: "Confirmer Connexion"
+    logout: "Déconnexion"
+    manage: "Gérer"
+    less_settings: "moins de paramètres"
+    more_settings: "plus de paramètres"
+    near: "Près"
+    next: "Suivant"
+    _no: "Non"
+    none: "Aucun"
+    ok: "OK"
+    or: "ou"
+    OR: "OR"
+    outgoing: "Sortant"
+    pending: "En attente"
+    previous: "Précédent"
+    print: "Imprimer"
+    regenerate: "Regénérer"
+    remove: "Retirer"
+    report: "Rapport"
+    reset: "Réinitialisation"
+    result:
+      zero: "Résultats"
+      one: "Résultat"
+      two: "Résultats"
+      few: "Résultats"
+      many: "Résultats"
+      other: "Résultats"
+    review: "Revoir"
+    run: "Exécuter "
+    save: "Enregistrer"
+    save_and_add_another: "Enregistrer et ajouter un autre"
+    save_and_close: "Enregistrer et fermer"
+    search: "Recherche"
+    send: "Envoyer"
+    showing: "Affichant"
+    startDate: "Début"
+    startDatePlaceholder: "Date début"
+    step: "étape"
+    suggest: "Suggérer"
+    submit: "Soumettre"
+    success:
+      one: "succès"
+      other: "succès "
+    successfully: "Avec succès"
+    system: "Système "
+    thanks_excl: "Merci!"
+    this: "Ce(tte)"
+    total: "Total"
+    try_again: "Réessayer"
+    updated: "Mis à jour"
+    upload_progress_notice:
+      one: "Téléchargement en cours"
+      other: "Téléchargement(s) en cours..."
+    view: "Afficher"
+    _yes: "Oui"
+  attributes:
+    access_level: "Niveau de sécurité de l'API"
+    name: "Nom"
+    code: "code"
+    copy_count: "Copies"
+    created_at: "Date de création"
+    email: "E-mail"
+    hint: "Indice"
+    password: "Mot de passe"
+    questions: "Questions"
+    title: "Titre"
+    type: "Type"
+    value: "Valeur"
+    media_prompt: "Instructions Media"
+  access_levels:
+    public: "Publique"
+    private: "Privé"
+    protected: "Protégé"
+    inherit: "Hériter"
+  metadata_types:
+    formstart: "Heure de début du formulaire"
+    formend: "Heure de fin du formulaire"
+  sms_guide_formatting_options:
+    auto: Automatique
+    inline: en ligne
+    appendix: Annexe
+    treat_as_text: considerer comme texte
+  errors:
+    format: "%{attribute}: %{message}"
+    file_upload:
+      error: "Il y a eu une erreur lors du téléchargement du fichier."
+      login_error: "Vous n'êtes plus connecte, veuillez actualiser la page et réessayer."
+      file_missing: "Aucun fichier sélectionné pour l'import."
+      invalid_format: "Le fichier téléchargé n'était pas au format accepté"
+      internal: "une erreur interne s'est produite lors du traitement de votre téléchargement."
+    messages:
+      deleted_successfully: "supprimé avec succès"
+      generic_delete_error: "Erreur lors de la suppression."
+  helpers:
+    submit:
+      create: "Sauvegarder"
+      update: "Sauvegarder"
+      option_sets_import:
+        create: "Importer"
+      user_import:
+        create: "Importer"
+  flash_message_types:
+    success: "Succès"
+    error: "Erreur"
+    alert: "Alerte"
+    notice: "Notification"
+  activerecord:
+    models:
+      answer:
+        zero: "Résultats"
+        one: "Résultat"
+        two: "Réponses"
+        few: "Réponses"
+        many: "Réponses"
+        other: "Résultats"
+      assignment:
+        zero: "Tâches"
+        one: "Tâche"
+        two: "Tâches"
+        few: "affectations"
+        many: "affectations"
+        other: "Tâches"
+      broadcast:
+        zero: "Diffusions"
+        one: "Diffusion"
+        two: "Diffusions"
+        few: "diffusions"
+        many: "diffusions"
+        other: "Diffusions"
+      choice:
+        zero: "Choix"
+        one: "Choix"
+        two: "Choix"
+        few: "Choix"
+        many: "Choix"
+        other: "Choix"
+      condition:
+        zero: "Conditions"
+        one: "Condition"
+        two: "Conditions"
+        few: "Conditions"
+        many: "Conditions"
+        other: "Conditions"
+      form:
+        zero: "Formulaires"
+        one: "Formulaire"
+        two: "Formulaires"
+        few: "Formulaires"
+        many: "Formulaires"
+        other: "Formulaires"
+      mission:
+        zero: "Missions"
+        one: "Mission"
+        two: "Missions"
+        few: "Missions"
+        many: "Missions"
+        other: "Missions"
+      operation:
+        zero: "Opérations"
+        one: "Opération"
+        two: "Opérations"
+        few: "Opérations"
+        many: "Opérations"
+        other: "Méthodologies"
+      option:
+        zero: "Options"
+        one: "Option"
+        two: "Options"
+        few: "Options"
+        many: "Options"
+        other: "Options"
+      option_set:
+        zero: "Ensembles d'options"
+        one: "Ensemble d'options"
+        two: "Ensembles d'options"
+        few: "Ensembles d'options"
+        many: "Ensembles d'options"
+        other: "Ensembles d'options"
+      password_reset:
+        zero: "Réinitialisations du mot de passe"
+        one: "Réinitialisation du mot de passe"
+        two: "Réinitialisation des mots de passe"
+        few: "Réinitialisation des mots de passe"
+        many: "Réinitialisation des mots de passe"
+        other: "Réinitialisation du mot de passe"
+      question:
+        zero: "Questions"
+        one: "Question"
+        two: "Questions"
+        few: "Questions"
+        many: "Questions"
+        other: "Questions"
+      questioning:
+        zero: "Questions"
+        one: "Question"
+        two: "Questions"
+        few: "Questions"
+        many: "Questions"
+        other: "Questions"
+      report/calculation:
+        zero: "Calculs"
+        one: "Calcul"
+        two: "Calculs"
+        few: "Calculs"
+        many: "Calculs"
+        other: "Calculs"
+      report/report:
+        zero: "Rapports"
+        one: "Rapport"
+        two: "Rapports"
+        few: "Rapports"
+        many: "Rapports"
+        other: "Rapports"
+      report/tally_report:
+        zero: "Comptes de résultats"
+        one: "Compte de résultats"
+        two: "Comptes de résultats"
+        few: "Comptes de résultats"
+        many: "Comptes de résultats"
+        other: "Comptes de résultats"
+      report/answer_tally_report:
+        zero: "Comptes de résultats par question"
+        one: "Compte de résultats par question"
+        two: "Comptes de résultats par question"
+        few: "Comptes de résultats par question"
+        many: "Comptes de résultats par question"
+        other: "Comptes de résultats par question"
+      report/response_tally_report:
+        zero: "Comptes de réponses par résultat/attribut"
+        one: "Compte de réponses par résultat/attribut"
+        two: "Comptes de réponses par résultat/attribut"
+        few: "Comptes de réponses par résultat/attribut"
+        many: "Comptes de réponses par résultat/attribut"
+        other: "Comptes de réponses par résultat/attribut"
+      report/list_report:
+        zero: "Liste des résultats"
+        one: "Listes des résultats"
+        two: "Liste des résultats"
+        few: "Liste des résultats"
+        many: "Liste des résultats"
+        other: "Liste des résultats"
+      report/standard_form_report:
+        zero: "Rapports de Formulaire Standardisé"
+        one: "Rapport de Formulaire Standardisé"
+        two: "Rapport standard sur un formulaire"
+        few: "Rapport standard sur un formulaire"
+        many: "Rapport standard sur un formulaire"
+        other: "Rapports de Formulaire Standardisé"
+      response:
+        zero: "Réponses"
+        one: "Réponse"
+        two: "Réponses"
+        few: "Réponses"
+        many: "Réponses"
+        other: "Réponses"
+      response_decorator:
+        many: "Réponses"
+      search/search:
+        zero: "Recherches"
+        one: "Rechercher"
+        two: "Recherches"
+        few: "Recherches"
+        many: "Recherches"
+        other: "Recherches"
+      setting:
+        zero: "Paramètres"
+        one: "Paramètre"
+        two: "Paramètres"
+        few: "Paramètres"
+        many: "Paramètres"
+        other: "Paramètres"
+      sms/message:
+        zero: "SMS"
+        one: "SMS"
+        two: "SMS"
+        few: "SMS"
+        many: "SMS"
+        other: "SMS"
+      user:
+        zero: "Utilisateurs"
+        one: "Utilisateur"
+        two: "Utilisateurs"
+        few: "Utilisateurs"
+        many: "Utilisateurs"
+        other: "Utilisateurs"
+      user_group:
+        zero: "Groupes d'Utilisateurs"
+        one: "Groupe d'Utilisateurs"
+        two: "Groupes d'Utilisateurs"
+        few: "Groupes d'utilisateurs"
+        many: "Groupes d'Utilisateurs"
+        other: "Groupes d'Utilisateurs"
+      tag:
+        zero: "Tags"
+        one: "Tag"
+        two: "Tags"
+        few: "Tags"
+        many: "Tags"
+        other: "Tags"
+    attributes:
+      broadcast:
+        body: "Message"
+        created_at: "Heure d'envoi"
+        errors: "Erreurs?"
+        medium: "Moyen"
+        sent_at: "Envoyé/Erroné à"
+        send_errors: "Erreurs d'envoi"
+        subject: "Sujet"
+        to: "à"
+        which_phone: "Quel(s) numéro de téléphone?"
+        recipient_selection: "Destinataires"
+        recipient_ids: "Groupes d'Utilisateurs"
+      condition:
+        left_qing_id: "Question"
+        op: "Comparaison"
+        value: "Valeur"
+      form:
+        allow_incomplete: "Autoriser les formulaires incomplets"
+        copy_responses_count: "Copiez les réponses"
+        downloads: "Téléchargements"
+        responses: "Réponses"
+        smsable: "Utilisable par SMS"
+        sms_relay: "Transférer SMS?"
+        recipient_ids: "Destinateurs de SMS transferé"
+        authenticate_sms: "authentifier SMS"
+        updated_at: "Dernière modification"
+        current_version_name: "version actuelle"
+        item_list_heading: "Questions"
+        default_response_name: "Nom de la réponse par défaut"
+        minimum_version_id: "Version minimale acceptée"
+      mission:
+        compact_name: "Nom Compact"
+        locked: "Verrouillé?"
+      operation:
+        created_at: "Date de début"
+        creator: "Commencé par"
+        details: "Détails"
+        job_started_at: "commencé à"
+        job_failed_at: "echoué à"
+        job_completed_at: "terminé à"
+        job_outcome_url: "URL du resultat"
+        job_error_report: "Rapport d'Erreurs"
+        status: "État "
+        result: "Résultat"
+      option:
+        coordinates: "Les coordonnées "
+        shortcode: "code court"
+        value: "Valeur"
+      option_set:
+        allow_coordinates: "avec les coordonnées"
+        answers: "Résultats"
+        geographic: "Géographique?"
+        multilevel: "Est-ce qu'il y a plusieurs niveaux?"
+        options: "Options"
+        option_levels: "Niveaux"
+        sms_guide_formatting: "Formatage du guide SMS"
+      option_sets/import:
+        name: "Nom de l'Ensemble d'options"
+        file: "Fichier à importer"
+      password_reset:
+        identifier: "Identifiant ou Email"
+      qing_group:
+        group_name: "Nom"
+        group_hint: "Indice"
+        group_item_name: "Nom de l'élément à répéter"
+        new: "Ajouter groupe"
+        edit: "Modifier groupe"
+        delete: "Êtes-vous certain de vouloir supprimer le goupe '%{name}'?"
+        repeatable: "Répétable"
+        one_screen: "Afficher sur un seul écran ?"
+        show: "Groupe: %{name}"
+        display_logic: "Logique d'affichage"
+      question:
+        code: "Code"
+        answer_count: "Résultats"
+        form_count: "Formulaires"
+        key: "Est-ce une question clé?"
+        minimum: "Minimum"
+        maximum: "Maximum"
+        auto_increment: "Auto incrémenter le compteur?"
+        casted_minimum: "Minimum"
+        casted_maximum: "Maximum"
+        name: "Titre"
+        option_set_id: "Ensemble d'options"
+        qtype_name: "Type"
+        metadata_type: "Type de métadonnée"
+        tag_ids: "Tags"
+        sms_guide_formatting: "Formatage du guide SMS"
+      questions/import:
+        file: "Fichier à importer"
+      questioning:
+        name: "Titre"
+        condition: "Condition?"
+        display_logic: "Logique d'affichage"
+        skip_logic: "logique de saut"
+        hidden: "Masqué?"
+        disabled: "Désactivé?"
+        rank: "Rang"
+        required: "Obligatoire?"
+        all_levels_required: "Niveaux Requis"
+        preload_last_saved: "Pre-remplir la dernière réponse?"
+        default: "Réponse par défaut"
+        delete: "Êtes-vous certain de vouloir enlever la question '%{code}' de ce formulaire?"
+        read_only: "Lecture seule"
+      response:
+        age: "Âge"
+        answers: "Résultats"
+        old_id: "Ancien ID"
+        id: "Numero de la réponse"
+        created_at: "Date de soumission"
+        form_id: "Formulaire"
+        reviewed: "Revu"
+        reviewer_notes: "Remarques"
+        reviewer_id: "Réviseur"
+        shortcode: "Numéro de la réponse"
+        source: "Origine"
+        user_id: "Utilisateur/Nom de l'équipe"
+        incomplete: "Cette réponse est incomplète"
+      report/report:
+        aggregation: "Opération"
+        aggregation_id: "Opération"
+        bar_style: "Histogramme"
+        display_type: "Type d'affichage"
+        fields: "Attributs/Questions"
+        name: "Titre"
+        percent_type: "Type de percentage"
+        pri_grouping: "Regroupement 1"
+        sec_grouping: "Regroupment 2"
+        submit_edit: "Enregistrer les modifications"
+        submit_new: "Générer un rapport"
+        unique_rows: "Masquer les lignes dupliquées"
+        unreviewed: "Autoriser les réponses non révisées"
+        view_count: "Vues"
+        viewed_at: "Date de dernière consultation"
+      setting:
+        incoming_sms_numbers_str: "Numéro(s) de SMS entrant"
+        incoming_sms_token: "Jeton du SMS entrant"
+        universal_sms_token: "Jeton SMS universel"
+        preferred_locales_str: "Langues Préférées"
+        default_outgoing_sms_adapter: "Fournisseur par defaut de SMS sortant"
+        override_code: "code de dérogation"
+        external_sql: "SQL Externe "
+        timezone: "Fuseau Horaire"
+        twilio_account_sid: "compte SID"
+        twilio_auth_token1: "jeton d'authentification"
+        twilio_phone_number: "Numéro de SMS sortant"
+        frontlinecloud_api_key1: "clé de l'API"
+        generic_sms_config_str: "Configuration"
+      sms/message:
+        adapter_name: "Adaptateur"
+        body: "Corps"
+        from: "De"
+        sent_at: "Heure d'envoi"
+        to: "À"
+        received_at: "Date de la réception"
+      sms/test:
+        from: "De"
+        body: "Corps"
+      user:
+        admin: "Est-il administrateur?"
+        assignments: "Tâches"
+        birth_year: "Année de naissance"
+        nationality: "Nationnalité"
+        gender: "Genre"
+        gender_custom: "Déterminer le genre"
+        latest_mission: "Mission la plus récente"
+        login: "Identifiant"
+        name: "Nom complet"
+        notes: "Observations"
+        password_confirmation: "Réentrer votre mot de passe"
+        phone: "Numéro de téléphone principal"
+        phone2: "Autre numéro de téléphone"
+        pref_lang: "Langue Préférée"
+        role: "Rôle"
+        api_key: "La clé d'API"
+        sms_auth_code: "Code d'authentification du SMS"
+        user_group_ids: "Groupes"
+        user_groups: "Groupes"
+      user_import:
+        file: "Fichier à importer"
+    table_headers:
+      response:
+        incomplete: "Incomplet?"
+      user:
+        admin: "Administrateur?"
+    placeholders:
+      question:
+        code: "Ex: MaQuestion"
+      user:
+        phone: "Ex: +17123241235"
+        phone2: "Ex: +2348123456789"
+    hints:
+      form:
+        name: "Un nom descriptif pour le formulaire."
+        smsable: "Permet l'envoi de réponses par SMS. Cela peut avoir des conséquences pour les prochaines versions de ce questionnaire."
+        sms_relay: "s'il faut autoriser le transfert de SMS aux utilisateurs et groupes"
+        recipient_ids: "Si vous saisissez un utilisateur ou un groupe d'utilisateur ici, les réponses SMS entrant leur seront automatiquement transmises"
+        authenticate_sms: "Si coché, l'utilisateur devra entrer son code utilisateur lors de l'envoi de réponse par SMS."
+        allow_incomplete: "Si coché, permet la soumission des formulaires avec des questions obligatoires sans réponse (seulement par web et ODK). Les observateurs utilisant ODK doivent saisir un code de dérogation (voir page paramètres) pour ce faire."
+        current_version_name: "Chaque version du formulaire a un identifiant à 10 chiffres et un code à 3 lettres. Le système de gestion des versions de formulaire est destiné à indiquer de petits changements dans la conception du formulaire afin que les observateurs puissent mettre à jour leurs copies du formulaire."
+        access_level: "Public: tous les utilisateurs peuvent accéder aux données via API. Protégé: Seulement les utilisateurs spécifiques peuvent accéder aux donnes via API. Privé: Personne ne peut accéder aux donnes via API."
+        default_response_name: "Le texte entré ici sera utilisé comme nom par défaut des formulaires remplis dans ODK. Vous pouvez saisir le $CodeQuestion pour inclure la valeur d'une question dans le formulaire.\n\nPar exemple, entrer:\n\n&nbsp;&nbsp;&nbsp;Questionnaire pour $NumVillage-$NomDeFamille\n\npourrait nommer le formulaire:\n\n&nbsp;&nbsp;&nbsp;Questionnaire pour 7-Smith\n\nen supposant que vous avez des questions avec les codes 'NumVillage' et 'NomDeFamille'\n\nVous pouvez également entrer une expression de calcul XPath en l’entourant de la fonction <code>calc()</code>:\n\n&nbsp;&nbsp;&nbsp;<code>calc($NumVillage + 100 / 2)</code>"
+      mission:
+        name: "Le titre de cette mission doit être unique et contenir un maximum de 32 caractères. Il est recommandé d'inclure l'année si des missions futures utiliseront le même titre."
+        locked: "Si une mission est verrouillée, les réponses et les formulaires ne peuvent pas être créés ou modifiés et les utilisateurs ne peuvent pas être ajoutés ou supprimés."
+      option:
+        name: "La description textuelle de cette option que les utilisateurs verront."
+      option_set:
+        allow_coordinates: "Si cet ensemble d'options autorise des options avec des coordonnées géographiques."
+        geographic: "Si cet ensemble d'options représente des informations géographiques, par ex. un ensemble de provinces ou de régions."
+        name: "Un nom qui résume cet ensemble des options. Les utilisateurs normaux ne verront pas ce nom."
+        multilevel: "Si l'ensemble d'options comporte plusieurs niveaux d'options, telles que pays -> province-> ville."
+        options:
+          editable: "Pour ajouter des options existantes, tapez-les et cliquez sur 'Ajouter'. Si vous ne voyez pas une option dans le menu déroulant, cliquez sur 'Créer une nouvelle option' pour créer un nouveau option."
+          read_only: "Les options qui apparaissent pour les questions à l'aide de cet ensemble des options."
+        option_levels: "Les titres pour chaque niveau d'options, (p.ex 'Pays', 'Province', 'Ville'). Notez que les titres des niveaux sont différent parmi les options elles-mêmes. "
+        sms_guide_formatting: "Les significations des options sont les suivantes: Auto: Determiner automatiquement si il faut utiliser 'inline' ou 'appendix'. Inline: Montre la liste des options dans le guide SMS. Appendix: Inclue la liste des options dans un tableau créé par le coordonnateur. Treat as text: Considere les options comme des textes saisis"
+      qing_group:
+        group_item_name: "Vous pouvez saisir $CodeQuestion pour inclure la valeur d'une question (pour ODK seulement)\nPar exemple, imaginons que nous créons un groupe répétable où le code de la question est 'HouseholdID' et nous saisissons\n\n&nbsp;&nbsp;&nbsp;Household: $HouseholdID\n\nVous créez un groupe et répondez '123' pour \"HouseholdID'. En suite vous créez un deuxième groupe et vous répondez '789' pour 'HouseholdID'. Le premier nom du groupe sera 'HouseholdID:123'. Le second groupe sera 'Household:789'"
+      question:
+        media_prompt: "Joignez un fichier multimédia que les énumérateurs peuvent visualiser ou écouter lors de la consultation de la question dans ODK. Video (mp4), audio (mp3, ogg, wav, flac), et fichiers image (png, jpg) sont tous acceptés. La taille des fichiers peut être jusqu'à %{max_size_mib}."
+        code: "Un nom de code court (entre 2-20 caractères), qui devrait contenir seulement des lettres et des chiffres, par ex. UrneClos, HeureDeDepart."
+        hint: "Instructions additionnels, par ex. 'Entrez un nombre approximatif de personnes qui sont dans la file d'attente pour voter.'"
+        key: "Les réponses aux questions clés aident à résumer les réponses et apparaissent dans la liste des réponses. Exemples de questions clé: Région, Evaluation globale."
+        minimum: "La valeur minimale de la réponse. Cochez la case si le minimum lui-même n'est pas valide."
+        maximum: "La valeur maximale de la réponse. Cochez la case si le maximum lui-même n'est pas valide."
+        auto_increment: "Si cette case est cochée et que vous utilisez ODK collect, la valeur sera incrémentée chaque fois que vous remplissez un nouveau formulaire."
+        name: "Le texte de la question principale, par ex. 'Combien de personnes sont dans la file d'attente?'"
+        option_set_id: "Le groupe d'options que l'utilisateur pourra choisir."
+        qtype_name: "Le type d'information que l'utilisateur entrera."
+        access_level: "Hériter: le même niveau d'accès que le formulaire parent. Privé: personne ne peut accéder aux données par l'API."
+        metadata_type: "Une valeur spéciale qui peut être pré-remplie dans cette question. Si cette option est choisie, cette question sera automatiquement masquée et non requise, et toutes les conditions seront supprimées."
+        reference: "Une URL pour complémenter la question. Doit commencer par http: // ou https: //."
+      questioning:
+        default: |-
+            Le texte saisi ici sera pré-rempli dans l'espace de réponse (pour ODK Collect uniquement).
+            Vous pouvez saisir les valeurs des questions précédentes, les numéros des groupes à répétition et les expressions XPath. En savoir plus dans le
+            <a href="https://getnemo.readthedocs.io/en/latest/content/formsquestions/formsquestions.html#default-answer" _target="blank">documentation</a>
+        display_logic: "Conditions qui doivent être remplies pour que cette question soit visible pour l'utilisateur"
+        hidden: "Seulement pour ODK collect:  masque la question mais prend la réponse par défaut."
+        hidden_more_info: "Voir plus a propos des questions masquées dans la documentation."
+        disabled: "Masquer la question et ne rien collecter"
+        read_only: "ODK Collect uniquement. Ne peut pas modifier la réponse par défaut."
+        required: "Si cette question doit avoir une réponse"
+        skip_logic: "Règles pour savoir quelle question afficher après cette question."
+        constraints: "Conditions à remplir pour qu'une réponse soit acceptée. Actuellement pour ODK seulement."
+        all_levels_required: "Pour une question de sélection à plusieurs niveau, est-ce que l'énumérateur doit saisir une valeur pour chaque niveau ?"
+        preload_last_saved: "Uniquement ODK Collect: Pre remplir la dernière réponse enregistrée par défaut."
+      report/report:
+        name: "Un titre descriptif pour ce rapport."
+        aggregation_id: "L'opération que vous voulez accomplir sur les données combinées."
+        kind: "Le type de données avec qui vous voulez travailler."
+        display_type: "Le méthode lequel vous voudriez utiliser pour présenter les résultats."
+        unreviewed: "Si les réponses non révisées devraient être inclus dans le rapport."
+        unique_rows: "Si les rangées en double devraient être omis du rapport."
+        pri_grouping: "Un attribut ou une question par lequel le nombre de réponses devraient être grouper (par ex. état, note globale)."
+        percent_type: "Si et comment les pourcentages devraient être calculés pour le rapport."
+        bar_style: "Si les bandes doivent être empilés ou côte-à-côte."
+      response:
+        incomplete: "Cochez cette boîte s'il-y-a des réponses obligatoires manquantes. Il sera quand même possible d'enregistrer votre formulaire. La réponse sera simplement marquée comme étant \"incomplète\"."
+      response_csv_export_options:
+        long_text_behavior: "Certains programmes limitent le nombre de caractères et de lignes que chaque cellule de données peut contenir. Vous pouvez modifier les données exportées comme suit:\n\n&nbsp;&nbsp;&nbsp;<b>Exclure</b>: Exporter toutes les réponses de type Texte Long comme vide.  Ceci est l'option la plus rapide.\n&nbsp;&nbsp;&nbsp <b>Tronquer</b> Les données seront tronquées pour ne pas dépasser les limites des cellules Excel. Cela peut casser le code HTML contenu dans la réponse exportée. C'est l'option la plus lente.\n&nbsp;&nbsp;&nbsp <b>Inclure</b>  Aucune modification ne sera faite."
+      setting:
+        preferred_locales_str: |-
+            Entrez le <a href='http://www.loc.gov/standards/iso639-2/php/code_list.php' target='_blank'>code à deux lettres</a> pour les langues préférées de cette mission. Séparez les langues par des virgules.
+
+            Ce code determine:
+            * La langue préférée pour les nouveau utilisateurs
+            * La langue préférée pour les réponses SMS
+            * La langue pour les questions et les options
+        override_code: |-
+            Ce code doit être remis aux observateur si il y a besoin d'envoyer des formulaires incomplets. Les formulaires avec des questions obligatoires sans réponses ne pourront pas être soumis sans ce code.
+
+            Si vous générez un nouveau code, veuillez enregistrer l'ancien code s'il existe des formulaires publiés. Le nouveau code ne fonctionnera que pour les formulaires téléchargés après la régénération du code.
+        incoming_sms_numbers_str: "Entrez le ou les numéros de téléphone (y compris le code du pays, séparés par des virgules) auxquels les SMS entrants pour les formulaires SMS doivent être envoyés. Nécessaire uniquement si vous utilisez des soumissions SMS."
+        incoming_sms_token: |-
+            ce jeton est inclu dans l'URL utilisé par le fournisseur de SMS entrant pour eviter l'envoi des messages non autorisés.
+        theme: "Choisissez un thème pour l'application. Vous pouvez consulter  <a href='https://github.com/thecartercenter/nemo/blob/main/docs/production-setup.md#custom-theme'>les instructions pour créer un thème personnalisé</a>."
+        universal_sms_token: |-
+            Ce jeton est contenu dans l'URL utilisé par le fournisseur de SMS entrant pour empêcher l'envoi des messages non autorisés. Utilisez cet URL si vous voulez permettre à plusieurs missions d'envoyer des formulaires par la même adresse URL.
+        using_incoming_sms_token_title: Utilisation du jeton du SMS entrant
+        using_incoming_sms_token_body: |-
+            Veuillez enregistrer l'URL du SMS entrant chez votre fournisseur de passerelle
+
+            %{url}
+        default_outgoing_sms_adapter: "L'adaptateur utilisé pour envoyer les SMSs. Notez que les réponses par SMS peuvent être envoyées a partir de différent adaptateurs, selon l'adaptateur par lequel ils arrivent."
+        twilio_phone_number: "Le numéro de téléphone enregistré chez Twilio. Les diffusions SMS sortant ne vont pas s'effectuer si ce numéro n'est pas associé à votre compte Twilio. Ce numéro doit contenir le code pays. Ex: +25680344523"
+        twilio_account_sid: "Le \"Account SID\" pour le compte Twilio."
+        twilio_auth_token1: "Le jeton d'authentification du compte Twilio"
+        frontlinecloud_api_key1: "Le Clé API pour l'Activité de FrontlineCloud."
+        external_sql: "Le code SQL utilisé pour extraire les données à utiliser dans des applications externes. Cliquez sur 'Sélectionner tout' puis appuyez sur Ctrl-C pour copier."
+        timezone: "Le fuseau horaire qui est utilisé pour le site"
+        generic_sms_config_str: "Chaîne de configuration au format JSON pour le fournisseur générique. Exemple: <pre>{&quot;params&quot;:{&quot;from&quot;:&quot;num&quot;,&quot;body&quot;:&quot;msg&quot;}, &quot;response&quot;:&quot;&lt;message&gt;%{reply}&lt;/message&gt;&quot;}</pre>"
+      sms/test:
+        from: "Entrez le numéro de téléphone à partir duquel ce SMS doit sembler provenir. Ce numéro doit inclure l'indicatif de pays (par exemple, +1 404 555 1212, +23476543212)."
+        body: "Entrez le corps du message."
+      user:
+        name: "Le nom complet de l'utilisateur. Par exemple: 'Tout-le-monde Durant' ou 'Équipe 1.1'"
+        login: "L'identifiant ou nom d'utilisateur sera utilisee pour se connecter. Il peut contenir seulement des lettres, des chiffres, le point (.) et le -"
+        phone: "Le numéro de téléphone doit inclure l'indicatif téléphonique du pays. Par exemple: +25680344523"
+        phone2: "Le numéro de téléphone doit inclure l'indicatif téléphonique du pays. Par exemple: +25680344523"
+        admin: "Indique si cet utilisateur est un administrateur à l'échelle du système. Vous pouvez contrôler les autorisations par mission en utilisant les champs ci-dessous."
+        assignments: "Les missions à qui cet utilisateur est assigné."
+        password: "Saisissez un nouveau mot de passe ici si vous souhaitez modifier votre mot de passe existant."
+        password_confirmation: "Saisissez encore une fois le nouveau mot de passe."
+        pref_lang: "La langue dans laquelle vous souhaitez utiliser le système."
+        role: "Le rôle de l'utilisateur dans la mission en cours et s'il est actuellement actif ou non. Les utilisateurs inactifs ne peuvent pas accéder à la mission."
+        api_key: "Utiliser cette clé pour se connecter à d'autres applications"
+        sms_auth_code: "Utiliser ce code pour envoyer une réponse par SMS"
+    errors:
+      messages:
+        taken: "Entrez une valeur unique."
+        is_invalid: "Entrez une valeur valide."
+        blank: "Ce champ est obligatoire."
+        empty: "Ce champ ne peut pas être vide."
+        not_a_number: "Entrez un numéro valide."
+        not_an_integer: "Entrez un entier valide."
+        did_not_match: "Les mots de passe ne correspondent pas."
+        too_long:
+          one: "Veuillez entrer au plus un caractère."
+          other: "Veuillez entrer au plus %{count} caractères."
+        too_short:
+          one: "Il faut entrer au moins un caractère."
+          other: "Veuillez entrer au moins %{count} caractères."
+        wrong_length:
+          one: "Il faut entrer exactement un caractère."
+          other: "Veuillez entrer exactement %{count} caractères."
+        must_be_group: "Parent doit être un groupe."
+        invalid_password: "le mot de passe doit contenir au moins un chiffre, une lettre majiscule et une lettre miniscule"
+        all_required: "Tous les champs sont requis."
+      models:
+        answer:
+          required: "Entrez un valeur."
+          invalid_latitude: "La latitude est hors de portée."
+          invalid_longitude: "La longitude est hors de portée."
+          invalid_altitude: "L'altitude est hors de portée."
+          invalid_accuracy: "La précision est hors de portée."
+          invalid_date: "La date est invalide."
+          invalid_datetime: "La Date/heure est invalide."
+          accuracy_negative: "La précision ne peut être négative."
+        assignment:
+          blank: "Obligatoire"
+        broadcast:
+          no_recipients: "Personne ne peut recevoir cette diffusion"
+        condition:
+          all_required: "Tous le champs sont obligatoires."
+        constraint:
+          attributes:
+            conditions:
+              blank: "Il doit y avoir au moins une condition."
+        form:
+          cant_delete_if_has_responses: "Vous ne pouvez pas supprimer ce formulaire car il a des réponses associées."
+          ranks_break_conditions: "Les nouveaux rangs invalident au moins une condition."
+          general: "Le formulaire est invalide (voir ci-dessous)."
+          attributes:
+            default_response_name:
+              calc_must_wrap_all: "calc(...) doit entourer le nom entier."
+        mission:
+          cant_delete_if_assoc: "Vous ne pouvez pas supprimer cette mission car elle a des formulaires, des réponses ou d'autres objets associés."
+          let_num_spc_only: "Utilisez seulement des lettres, des chiffres et des espaces."
+          not_unique: "Le titre ressemble à  la mission existante'%{existing}'"
+          general: "La mission est invalide (voir ci-dessous)."
+        option:
+          cant_delete_if_has_response: "Impossible de supprimer cette option parce qu'elle est comprise dans au moins une réponse."
+          names_cant_be_all_blank: "Au moins un titre doit être fourni pour chaque option."
+          names_too_long: "Les noms doivent être au plus 30 caractères."
+          invalid_coordinates: "les coordonnés fournies ne sont pas valides"
+        option_set:
+          at_least_one: "Choisissez au moins une option."
+          cant_delete_if_has_questions: "Impossible de supprimer cet ensemble d'options parce qu'une ou plus questions y sont associées."
+          cant_delete_if_has_answers: "Impossible de supprimer cet ensemble d'options parce que c'est inclus dans au moins une réponse."
+          duplicate: "Ce nom d'ensemble d'options existe déjà dans cette mission, veuillez entrer un nom unique."
+          general: "Il y avait un problème d'enregistrer l'ensemble d'options."
+          wrong_depth: "Vous avez %{levels} niveaux d'options mais votre arbre d'options est %{depth} options profonde."
+        option_sets/import:
+          general: "L'importation de l'ensemble d'options est invalide (voir ci-dessous)"
+          blank_interior_cell: "Erreur dans la ligne %{row_num}:  cellule intérieure vide."
+          option_too_long: "Erreur dans la ligne %{row_num}: Les options ne peuvent avoir plus de %{limit} caractères."
+          header_too_long: "Erreur dans la ligne %{row_num}: les en-têtes ne peuvent avoir plus de %{limit} caractères."
+        question:
+          at_least_one_name: "Il faut entrer un titre dans au moins une langue. "
+          code: "Le code de la question est requis"
+          option_set: "L'ensemble d'option n'existe pas"
+          qtype_unrecognized: "Le type de question n'est pas reconnu."
+          attributes:
+            code:
+              invalid: "Commencer par une lettre. Utiliser seulement des lettres et des chiffres et un maximum de 20 caractères."
+            media_prompt:
+              invalid_type: "Le type de fichier est invalide."
+            media_prompt_content_type:
+              invalid_type: "Le type de fichier est invalide."
+            reference:
+              invalid: "Votre lien de référence doit commencer par https ou http."
+          cant_change_if_conditions: "Vous ne pouvez pas changer le type ou l'ensemble d'options parce qu'il y a des conditions que concernent cette question."
+          cant_change_if_responses: "Impossible de changer le type ou l'ensemble d'options parce qu'il y a des réponses pour cette question déjà."
+          cant_delete_if_has_answers: "Impossible de supprimer cette question parce qu'elle est mentionnée dans au moins une résultat."
+          general: "La question est invalide (voir ci-dessous)."
+        questioning:
+          attributes:
+            code:
+              invalid: "Commencer par une lettre. Utiliser seulement des lettres et des chiffres et un maximum de 20 caractères."
+            default:
+              calc_must_wrap_all: "calc(...) doit entourer toute la réponse par défaut."
+              must_use_calc: "Vous devez utiliser la fonction calc(...) pour ce type de question si vous utilisez $references."
+          cant_delete_if_has_answers: "Impossible d'éliminer cette question parce qu'il y a au moins un résultat pour cette formulaire."
+          invalid_condition: "Une condition invalide (voir ci-dessous)"
+          question: "Question"
+        report/report:
+          attributes:
+            fields:
+              blank: "Choisissez au moins une question ou un attribut."
+            form_id:
+              blank: "Choisissez un formulaire."
+            name:
+              blank: "Entrez un titre du rapport."
+            question_order:
+              blank: "Choisissez une séquence pour les questions."
+            questions:
+              blank: "Choisissez au moins une question ou un ensemble d'options."
+            tally_type:
+              blank: "Choisissez un type de compte."
+            text_responses:
+              blank: "Choisissez comment montrer les réponses textuelles."
+            type:
+              blank: "Choisissez un titre du rapport."
+          no_calc_or_opt_set: "il n'y a pas de question ou d'ensemble d'option selectionné pour le rapport '%{name}'. Veuillez modifier le rapport pour corriger ceci."
+        response:
+          general: "La réponse est invalide (voir ci-dessous)."
+          checked_out: "Cette réponse a été examiné par:"
+          form_unavailable: "le formulaire spécifié n'existe pas dans cette mission."
+        setting:
+          attributes:
+            generic_sms_config_str:
+              invalid_keys: "Les clés valides sont params, response et matchHeaders."
+              missing_keys: "La configuration doit inclure les clés params.from, params.body et Response."
+              invalid_json: "Erreur JSON: %{msg}"
+            preferred_locales_str:
+              invalid_code: "Le code '%{code}' n'est pas valide"
+              one_must_have_translations: "Choisissez au moins une langue avec des tranductions  (%{locales})"
+          general: "Les paramètres sont invalides (voir ci-dessous)."
+        skip_rule:
+          attributes:
+            dest_item_id:
+              blank_unless_goto_end: "Ce champ est obligatoire à moins que vous ne choisissiez 'passer à la fin du formulaire'."
+        user:
+          at_least_digits: "Entrez au moins %{num} chiffres"
+          cant_delete_if_has_responses: "Vous ne pouvez pas supprimer cet utilisateur car il a des réponses associées."
+          cant_delete_if_has_reviewed_responses: "Vous ne pouvez pas supprimer cet utilisateur car il a révisé des réponses."
+          cant_delete_if_has_sms_messages: "Vous ne pouvez pas supprimer cet utilisateur car il a des messages SMS associés."
+          duplicate_assignments: "Il y a des tâches en double."
+          no_missions: "Vous n'êtes pas affecté à des missions."
+          phone_assigned_to_other: "A déjà été attribué à un autre utilisateur"
+          general: "L'utilisateur est invalide (voir ci-dessous)."
+          attributes:
+            assignments:
+              cant_be_empty_if_not_admin: "Au moins une tâche est obligatoire pour l'utilisateurs non-administratifs."
+            login:
+              invalid: "Utilisez seulement des lettres, des chiffres, les points et les traits"
+            reset_password_method:
+              cant_passwd_email: "Non autorisé sauf si une adresse email est fournie."
+        user_import:
+          general: "Le lot d'importation d'utilisateur n'est pas valide (voir ci-dessous)"
+          internal: "Une erreur interne s'est produite lors du traitement de votre téléchargement."
+          invalid_headers:
+            one: "L'en-tête de colonne suivante n'a pas été reconnu: %{headers}"
+            other: "Les en-têtes de colonne suivantes n'ont pas été reconnus: %{headers}"
+          too_many_errors: "Le fichier CSV téléchargé contient plusieurs erreurs. Le traitement s'est arrêté a la linge %{row}"
+        user_group:
+          general: "Groupe d'utilisateurs invalide"
+          attributes:
+            name:
+              blank: "Veuillez saisir un nom pour votre groupe."
+  layout:
+    about: "A propos de %{site_name}"
+    actions: "Actions"
+    are_you_sure: "Êtes-vous sur?"
+    changelog: "Journal des modifications"
+    change_language: "Changer la langue"
+    created_by: "Crée par"
+    copy_to_clipboard: "Copier dans le presse papier"
+    delete_warning: "Êtes-vous sur que vous voulez supprimer définitivement le %{obj_description}?"
+    deselect_all: "Désélectionner tout"
+    loading: "Téléchargement"
+    locale_change_get_only: "Changement de langues à partir de cette page peut causer des pertes de données. Terminez ou annulez le formulaire et réessayer encore."
+    logged_in_as: "Connecté en tant que"
+    mission_change_get_only: "Changement de mission à partir de cette page peut causer des pertes de données. Terminez ou annulez le formulaire et réessayer encore."
+    must_be: "Doit être"
+    no_selection: "Rien n'a été sélectionné."
+    reqd_sym_definition: "Les réponses obligatoires sont marqués avec un %{reqd_sym}."
+    select_all: "Sélectionner tout"
+    server_contact_error: "Impossible de contacter le serveur."
+    system_error: "Erreur de système. L'administrateur a été notifié."
+    system_version: "Version du système"
+    time_ago: "%{time}"
+    time_zone: "Fuseau horaire"
+    updated_at: "Mise à jour à"
+    no_live_forms: "Pas de formulaires disponibles"
+  actions:
+    cancel: "Annuler"
+    clone: "Cloner"
+    close: "Fermer"
+    edit: "Editer"
+    go_live: "Publier"
+    pause: "Pause"
+    print: "Imprimer"
+    sms_guide: "Guide SMS"
+  action_links:
+    show: "Afficher"
+    edit: "Modifier"
+    close: "Fermer"
+    destroy: "Supprimer"
+    index: "Liste"
+    clone: "Dupliquer"
+    import_standard: "Importer des formulaires standard"
+    import_from_csv: "Importer au format CSV"
+    export_csv: "Exporter au format CSV"
+    export: "Exporter"
+    models:
+      form:
+        new: "Créer un formulaire"
+        sms_guide: "Guide SMS"
+        sms_console: "Console de test SMS"
+        go_live: "Publier"
+        pause: "Pause"
+        return_to_draft: "Retour au statut brouillon"
+        print: "Imprimer"
+        re_cache: "Remettre en cache OData"
+        view_raw_odata: "Voir OData brute"
+      mission:
+        new: "Créer une mission"
+      operation:
+        clear: "Effacer toutes les opérations terminées"
+        destroy: "Effacer"
+      option_set:
+        new: "Créer un Nouvel Ensemble d'Options"
+        export: "Exporter au format CSV"
+      option_sets/import:
+        new: "Importer au format CSV"
+      question:
+        new: "Créer une nouvelle question"
+        add_to_form: "Ajouter au formulaire"
+      questions/import:
+        new: "Importer CSV"
+      report/report:
+        new: "Créer un Rapport"
+        export: "Exporter au format CSV"
+      user:
+        new: "Créer un utilisateur"
+        export_to_vcard: "Exporter comme vCard"
+        add_to_group: "Ajouter au groupe"
+        remove_from_group: "Retirer du groupe"
+        send_broadcast: "Envoyer une diffusion"
+      user_group:
+        new: "Nouveau groupe"
+        members: "Lister les membres"
+      broadcast:
+        send: "Envoyer une diffusion"
+  will_paginate:
+    previous_label: "&#8592; Précédent"
+    next_label: "Suivant &#8594;"
+    page_gap: "&hellip;"
+    broadcast:
+      page_entries_info:
+        single_page_html:
+          zero: "Aucune diffusion trouvée"
+          one: "<b>1</b> diffustion affichée"
+          other: "<b>Affichage de %{count}</b> diffusions"
+        multi_page_html: "Affichages des diffusions <b>%{from} - %{to}</b> de <b>%{count}</b> au total"
+    form:
+      page_entries_info:
+        single_page_html:
+          zero: "Il n'y avait pas de formulaires trouvés."
+          one: "<b>1</b> formulaire affiché"
+          other: "<b>Affichage de %{count}</b> formulaires"
+    mission:
+      page_entries_info:
+        single_page_html:
+          zero: "Il n'y avait pas de missions trouvées."
+          one: "<b>1</b> mission affiché"
+          other: "<b>Affichage de %{count}</b> missions"
+    option:
+      page_entries_info:
+        single_page_html:
+          zero: "Il n'y avait pas d'options trouvées."
+          one: "<b>1</b> option affichée"
+          other: "<b>Affichage de %{count}</b> options"
+    option_set:
+      page_entries_info:
+        single_page_html:
+          zero: "Il n'y avait pas d'ensembles d'options trouvés."
+          one: "<b>1</b> ensemble d'options affiché"
+          other: "<b>Affichage de %{count}</b> ensembles d'options"
+    question:
+      page_entries_info:
+        single_page_html:
+          zero: "Il n'y avait pas de questions trouvées."
+          one: "<b>1</b> question affichée"
+          other: "<b>Affichage de %{count}</b> questions"
+        multi_page_html: "Affichage des questions <b>%{from} - %{to}</b> de <b>%{count}</b> au total"
+    questioning:
+      page_entries_info:
+        single_page_html:
+          zero: "Pas de questions trouvées"
+          one: "<b>1</b> question affichée"
+          other: "<b>Affichage de %{count}</b> questions"
+        multi_page_html: "Affichage des questions <b>%{from} - %{to}</b> de <b>%{count}</b> au total"
+    report/report:
+      page_entries_info:
+        single_page_html:
+          zero: "Pas de rapports trouvés"
+          one: "<b>1</b> rapport affiché"
+          other: "<b>Affichage de %{count}</b> rapports"
+    response:
+      page_entries_info:
+        single_page_html:
+          zero: "Pas de réponses trouvées"
+          one: "<b>1</b> réponse affichée"
+          other: "Affichage <b>de %{count}</b> réponses"
+        multi_page_html: "Affichage des réponses <b>%{from} - %{to}</b> de <b>%{count}</b> au total"
+    sms/message:
+      page_entries_info:
+        single_page_html:
+          zero: "Il n'y avait pas de SMS trouvés."
+          one: "<b>1</b> SMS affiché"
+          other: "<b>Affichage de %{count}</b> SMS"
+        multi_page_html: "Affichage des SMS <b>%{from} - %{to}</b> de <b>%{count}</b> au total"
+    user:
+      page_entries_info:
+        single_page_html:
+          zero: "Pas d'utilisateurs trouvés"
+          one: "<b>1</b> utilisateur affiché"
+          other: "<b>Affichage de %{count}</b> utilisateurs"
+        multi_page_html: "Affichage des utilisateurs <b>%{from} - %{to}</b> de <b>%{count}</b> au total"
+    operation:
+      page_entries_info:
+        single_page_html:
+          zero: "Aucune opération trouvée"
+          one: "<b>1</b> opération affiché"
+          other: "<b>Affichage de %{count}</b> opérations"
+        multi_page_html: "Affichage des opérations <b>%{from} - %{to}</b> de <b>%{count}</b> au total"
+  authlogic:
+    error_messages:
+      consecutive_failed_logins_limit_exceeded: "Vous avez dépassé la limite d'échec de connexion consécutive. Votre compte a été désactivé."
+      email_invalid: "Devrait ressembler à une adresse e-mail."
+      login_blank: "Entrez un identifiant."
+      login_invalid: "Utilisez seulement des lettres, des chiffres, et .-_@"
+      login_not_found: "n'est pas valide"
+      no_authentication_details: "Vous n'avez pas fourni de détails pour l'authentification."
+      not_active: "Votre compte n'est pas actif."
+      not_approved: "Votre compte n'est pas approuvé."
+      not_confirmed: "Votre compte n'est pas confirmée."
+      password_blank: "Entrez un mot de passe."
+      password_invalid: "Non valide."
+    models:
+      user_session: "Session de l'utilisateur"
+    attributes:
+      user_session:
+        login: "Identifiant"
+        password: "Mot de passe"
+        remember_me: "Rester connecté"
+        verify: "Vérifier"
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      short: "%b %d"
+  time:
+    formats:
+      default: "%Y-%m-%d %H:%M:%S"
+      short: "%b %d %H:%M"
+      time_only: "%H:%M:%S"
+  search_qualifiers:
+    text: "texte"
+    email: "email"
+    form: "formulaire"
+    exact_form: "formulaire-exact"
+    form_id: "form-id"
+    login: "identifiant"
+    name: "nom"
+    option_set: "ensemble-d'options"
+    phone: "téléphone"
+    question: "question"
+    question_type: "type-de-question"
+    reviewed: "revu"
+    role: "rôle"
+    shortcode: "code-court"
+    source: "source"
+    submit_date: "date"
+    submitter: "émetteur"
+    submitter_id: "submitter-id"
+    group_id: "group-id"
+    code: "code"
+    title: "titre"
+    type: "type"
+    tag: "tag"
+    date: "date"
+    datetime: "date-heure"
+    username: "utilisateur"
+    content: "contenu"
+    number: "numéro"
+    group: "groupe"
+  page_titles:
+    broadcasts:
+      index: "Diffusions"
+      new: "Diffuser un message"
+      new_with_users: "Diffuser un message"
+      show: "Diffusion"
+    forms:
+      choose_questions: "Ajouter des questions au formulaire: %{name}"
+      edit: "Modifier le formulaire: %{name}"
+      index: "Formulaires"
+      new: "Nouveau formulaire"
+      show: "Formulaire: %{name}"
+    missions:
+      edit: "Modifier la mission: %{name}"
+      index: "Missions"
+      new: "Nouvelle mission"
+      show: "Mission: %{name}"
+    operations:
+      index: "Opérations"
+      show: "Opération: %{name}"
+    option_sets:
+      edit: "Modifier l'ensemble d'option: %{name}"
+      index: "Ensembles d'options"
+      new: "Nouveau ensemble d'option"
+      show: "Ensemble d'options: %{name}"
+    option_set_imports:
+      new: "Importer les Ensembles d'Options Nouveaux"
+    options:
+      edit: "Option: %{name}"
+      index: "Options"
+      new: "Nouvelle option"
+      show: "Option: %{name}"
+    password_resets:
+      all: "Réinitialiser le mot de passe"
+    questions:
+      edit: "Modifier la question: %{code}"
+      index: "Questions"
+      new: "Nouvelle Question"
+      show: "Question: %{code}"
+    question_imports:
+      new: "Importer de nouvelles questions"
+    questionings:
+      edit: "Modifier la question: %{code}"
+      index: "Questions"
+      new: "Nouvelle Question"
+      show: "Question: %{code}"
+    responses:
+      edit: "%{id} Modifier la réponse"
+      index: "Réponses"
+      new: "Nouvelle réponse"
+      show: "Réponse: %{id}"
+    reports:
+      index: "Rapports"
+      new: "Nouveau Rapport"
+      edit: "Modifier Rapport"
+    settings:
+      all: "Paramètres"
+    sms:
+      index: "Journal de bord de SMS"
+    sms_tests:
+      all: "Console de test SMS"
+    user_imports:
+      all: "Importer des utilisateurs"
+    user_sessions:
+      new: "Connexion"
+      login_confirmation: "confirmer la connexion"
+      logged_out: "Déconnecté"
+    users:
+      edit: "Modifier l'utilisateur: %{name}"
+      edit_profile: "Modifier le profil"
+      show_profile: "Profil: %{name}"
+      index: "Utilisateurs"
+      login_instructions: "Instructions de connexion"
+      new: "Nouveau utilisateur"
+      show: "Utilisateur: %{name}"
+    welcome:
+      index: "Accueil"
+      unauthorized: "Non autorisé"
+  admin_mode:
+    admin_mode: "Mode Administrateur"
+    exit_admin_mode: "Quitter le mode Administrateur"
+    goto_admin_mode: "Mode Administrateur"
+  answer:
+    no_name: "Pas de nom"
+    this_answer: "Ce résultat"
+  attrib_fields:
+    form: "Formulaire"
+    submitter: "Nom de l'émetteur"
+    submitter_username: "Nom d'utilisateur de l'émetteur"
+    source: "Source"
+    time_submitted: "Temps de Soumission"
+    date_submitted: "Date de Soumission"
+    response_id: "Numero de la réponse"
+    reviewed: "Revu"
+    reviewer: "Réviseur"
+  broadcast:
+    chars:
+      remaining: "caractères restants"
+      too_many: "trop de caractères"
+    email_intro: "C'est un message diffusé par"
+    email_error: "Erreur d'E-mail"
+    group_count:
+      one: "1 groupe"
+      other: "%{count} groupes"
+    instructions: "Pour diffuser un message, sélectionnez d'abord les destinataires ci-dessous, puis cliquez sur 'Envoyer une diffusion'."
+    may_not_be_enough: "Cela n'est pas être suffisant"
+    mediums:
+      names:
+        sms: "SMS"
+        email: "E-mail"
+        sms_only: "seulement SMS"
+        email_only: "seulement Email"
+        both: "SMS et Email"
+      options:
+        sms: "SMS préferé (utiliser email quand un recipient n'a pas de téléphone)"
+        email: "Email préferé (utiliser SMS quand une recipient n'a pas d'email)"
+        sms_only: "Seulement SMS (n'envoyer pas d'emails)"
+        email_only: "Seulement E-mail (n'envoyez pas des SMS)"
+        both: "SMS et E-mail"
+    recipient_selection_options:
+      all_users: "Tous les utilisateurs dans la mission"
+      all_enumerators: "Tous les observateurs dans la mission"
+      specific: "Groupe ou utilisateur spécifique dans la mission"
+    send_success: "Diffusion envoyée avec succès."
+    send_error: "Erreur d'envoi de la diffusion (voir ci-dessous)."
+    sms_error: "Erreur de SMS"
+    user_count:
+      one: "1 utilisateur"
+      other: "%{count} utilisateurs"
+    which_phone_options:
+      main_only: "Seulement téléphone principale "
+      alternate_only: "Seulement téléphone alterné"
+      both: "Les deux portables"
+  condition:
+    operators:
+      select:
+        eq: "= égale à"
+        lt: "< inférieur à"
+        gt: "> supérieure à"
+        leq: "≤ inférieur ou égal à"
+        geq: "supérieur ou égal à"
+        neq: "≠ n'est pas égal"
+        inc: "inclus"
+        ninc: "exclus"
+      human_readable:
+        eq: "est égal à"
+        lt: "est inférieur à"
+        gt: "est supérieur à"
+        leq: "est inférieur ou égal à"
+        geq: "est supérieur ou égal à"
+        neq: "n'est pas égal à"
+        inc: "inclus"
+        ninc: "exclus"
+    no_refable_qings: "Il n'y a pas de questions sur le formulaire à laquelle une condition pourrait se référer."
+    op: "Comparaison"
+    value: "Valeur"
+    left_qing_prompt: "Choisissez une question..."
+    right_side_type:
+      literal: "Une valeur spécifique ..."
+      qing: "Une autre question ..."
+    this_question: "Cette question"
+  dashboard:
+    close_dashboard: "Quitter le Dashboard"
+    enter_full_screen: "Agrandir l'écran"
+    exit_full_screen: "Réduire l'écran"
+    expand_map: "Étendre la carte"
+    my_responses: "Mes Réponses"
+    no_map_offline: "La carte est désactivée parce que le serveur n'a pas de connexion internet."
+    no_map_key: "La carte est désactivée parce qu'aucune clé Google Maps n'a été défini dans les paramètres. "
+    no_reports: "Aucun rapport n'a encore été créé pour cette mission "
+    create_report: "Vous pouvez créer un "
+    create_report_also: "Vous pouvez aussi créer un nouveau."
+    recent_responses: "Dernières réponses"
+    shrink_map: "Réduire la carte"
+    response_locations: "Lieu de soumission des réponses"
+    response_locations_truncated: "Seulement les %{max} localisations les plus récentes sont affichées."
+    report_placeholder: "Sélectionner un rapport ci dessus pour explorer les données. Les rapports sont actualisées toutes les 30 secondes."
+    summary: "Résumé"
+    top_forms: "Formulaires les plus Actifs"
+  filter:
+    form: "Formulaire"
+    choose_form: "Choisissez un formulaire"
+    question: "Question"
+    date: "Date"
+    showing_questions_from: "Affichage des questions de %{form_list} seulement."
+    reviewed: "Revu"
+    is_reviewed: "Est marqué \"Revu\""
+    submitter: "Emetteur"
+    choose_submitter:
+      submitter: "Sélectionner un utilisateur"
+      group: "Sélectionner un groupe"
+    search_box_placeholder: "Rechercher"
+  form:
+    select_api_users: "Choisissez tous les utilisateurs qui peuvent accéder aux formulaires par l'API:"
+    add_group: "Ajouter groupe"
+    add_questions: "Ajouter des questions"
+    back_to_questions: "Retourner à la liste des questions"
+    choose_form: "Choisissez un formulaire..."
+    clone_confirm: "Vous êtes sûr que vous voulez faire un copie de le formulaire '%{form_name}'?"
+    clone_error: "Il y avait un problème avec le clonage de le formulaire (%{msg})."
+    clone_success: "Formulaire '%{form_name}' a été cloné avec succès."
+    no_mission: "Pas de Mission"
+    no_questions_yet: "Il n'y avait pas de questions trouvées."
+    increment_version: "Incrémenter version"
+    increment_version_warning: "Voulez-vous vraiment incrémenter la version de ce formulaire? Les versions antérieures seront toujours acceptées, sauf si vous modifiez l'attribut Version minimale acceptée ci-dessous."
+    invalid_drop_location:
+      parent_must_be_group: "Le parent doit être un groupe."
+      max_depth: "Les groupes ne peuvent pas être les enfants des autres groupes."
+      invalid_condition: "Cette position invaliderait une condition."
+    print_form: "Imprimer le formulaire"
+    print_format_tips:
+      title: "Conseils pour imprimer"
+      body: "Pour s'assurer que les formulaires impriment correctement, activez le fond couleurs et images dans la fenêtre de dialogue dans l'option imprimer de votre système. Cette fenêtre doit apparaitre dès que vous  appuyer \"Ok\" en bas."
+    question_remove_error: "Il y avait une problème enlevant les questions (%{msg})."
+    question_remove_answer_error: "Au moins une question sélectionnée a des résultats et ne peut pas être supprimée."
+    questions_add_error: "Il y avait une problème ajoutant les questions (%{msg})."
+    questions_add_success: "Questions ajouté avec succès."
+    questions_remove_success: "Questions retiré avec succès."
+    remove_selected: "Supprimer les éléments sélectionnés"
+    remove_question_confirm:
+      zero: "Etes vous sûr de vouloir supprimer zero questions du formulaires?"
+      one: "Etes vous sûr de vouloir supprimer cette question du formulaire?"
+      two: "Etes-vous certains de vouloir supprimer ces 1 %{count} questions du formulaire?"
+      few: "Etes vous certain de vouloir supprimer ces %{count} questions du formulaire?"
+      many: "Etes-vous certains de vouloir supprimer ces 1 %{count} questions du formulaire?"
+      other: "Etes vous sûr de vouloir supprimer ces %{count} questions du formulaire§"
+    reqd_sym_definition: "Questions obligatoire sont marquer avec un"
+    return_to_draft:
+      modal:
+        title: "Avertissement: retour au statut de brouillon"
+        body_html: "Le retour au statut Brouillon vous permettra d'apporter des modifications importantes au formulaire, telles que la suppression de questions et la modification d'ensembles d'options. Cela peut entraîner une perte de réponses. Envisagez plutôt de <a href='%{clone_url}' data-method='put'>cloner ce formulaire</a>. "
+        confirm: "Accepter les risques et changer de statut"
+        prompt_html: "Tapez <strong>\"%{override}\"</strong> ci-dessous pour reconnaître les risques et revenir au statut de brouillon:"
+        override: "override"
+    save_and_go_live: "Enregistrer et Publier"
+    saving_order: "Enregistrer l'ordre..."
+    statuses:
+      draft: "Brouillon"
+      live: "Publié"
+      paused: "En pause"
+    unsaved_rank_notice: "Vous n'avez pas encore enregistrer les modifications vous avez fait à l'ordre des questions.  Vous devriez poussez 'enregistrer' si vous voulez enregistrer les modifications."
+  forms:
+    sms_guide:
+      appendix:
+        one: "L'appendice suivante doit être inclus avec ce formulaire:"
+        other: "Les appendices suivants doivent être inclus avec ce formulaire:"
+      auth_code: "Code d'autorisation de l'utilisateur (recquis)"
+      header: "Guide SMS"
+      draft_error: "Vous ne pouvez pas voir le guide SMS pour le formulaire %{form_name} parce qu'il est actuellement un brouillon. Publier le formulaire ou le mettre en pause pour voir le guide SMS."
+      for_paper_record: "Pour l'enregistrement sur papier seulement"
+      form_code: "Le code unique du formulaire (recquis)"
+      multiple_sms_numbers: "Numéro d'envoi multiple de SMS"
+      sms_message: "Message SMS"
+      pointers:
+        text: "Ecrivez votre résultat dans la zone de texte. Abréger si nécessaire."
+        barcode: "Ecrivez votre résultat dans la zone de texte."
+        number: "Ecrivez votre résultat dans la zone de texte."
+        select_one: "Ecrivez la lettre de votre choix dans la zone. Ecrivez seulement un lettre."
+        select_one_as_text: "Ecrivez votre reponse dans le champ. Rassurez vous d'ecrire l'option exacte."
+        select_one_with_appendix: "Ecrivez le code court de votre choix dans le champ. voir le tableau pour les vos options"
+        select_multiple: "Saisissez les lettres pour chaucun de vos choix en les separant par des virgules dans le champ."
+        select_multiple_with_appendix: "Saisissez les lettres pour chaucun de vos choix en les separant par des virgules dans le champ. voir le tableaux pour les options"
+        datetime: "Ecrivez votre résultat dans la zone. Utiliser le format AAAAMMJJ HHMM (an/mois/jour heure/minute)."
+        date: "Ecrivez votre résultat dans la zone. Utiliser le format AAAAMMDD (an/mois/jour)."
+        time: "Ecrivez votre résultat dans la zone. Utiliser le format HHMM (heure/minute)."
+      instructions:
+        instructions: "Instructions"
+        intro: "Veuillez lire toutes les instructions pour commencer. Vous utiliserez d'abor ce papier en suite votre téléphone"
+        paper: "Formulaire"
+        1a: "Ecrivez votre nom d'utilisateur/équipe ici:"
+        1b: "Repondez d'abor à toutes les questions ci dessous et remplissez dans chaque case; ex:"
+        phone: "Téléphone"
+        2a_appendix: "Avec votre téléphone, redigez un SMS à un des numéros sur la page ci jointe"
+        2a_number_html: "Avec votre téléphone; composez un SMS à  <strong>%{number}</strong>."
+        2b: "saissiez le contenu de chaque ligne à droite de la page en allatn de haut en bas"
+        2c_html: "Les points sont marqués par %{period}  et les espaces par %{spc}. c'est important de saisir tous les points et les espaces"
+        example_sms: "Exemple SMS"
+        example_sms_body: 1.c 2.c,f 3.27 4.d 5.porte était fermée 6.20160401 7.c
+      unique_code: "C'est un code unique pour le formulaire."
+      unknown_number: "[Numéro de téléphone inconnu]"
+  form_item:
+    accept_if_options:
+      all_met: "Tout ce qui précède doit être vrai"
+      any_met: "Au moins un des énoncés ci-dessus doit être vrai"
+    add_condition: "Ajouter Condition"
+    add_rule: "Ajouter une règle"
+    delete_rule: "Supprimer régle"
+    display_if_options:
+      qing_group:
+        always: "Toujours afficher ce groupe"
+        all_met: "Afficher ce groupe si toutes ces conditions sont remplies"
+        any_met: "Afficher ce groupe si une de ces conditions est remplie"
+      questioning:
+        always: "Toujours afficher cette question"
+        all_met: "Afficher cette question si toutes ces conditions sont remplies"
+        any_met: "Afficher cette question si une de ces conditions est remplie"
+    display_if_operator:
+      all_met: "et"
+      any_met: "ou"
+    skip_logic_options:
+      dont_skip: "Après cette question, passez à la question suivante"
+      skip: "Après cette question, passez ..."
+      end_of_form: "Passer à la fin du formulaire"
+    constrain_options:
+      dont_constrain: "Accepter n'importe quelle réponse à cette question"
+      constrain: "Seulement accepter une réponse si ..."
+    rejection_message:
+      add: "Ajouter un message de rejet"
+      edit: "Editer un message de rejet"
+    all_levels_required_options:
+      'true': "Tous les niveaux de la question sont obligatoires"
+      'false': "Au moins un niveau de la question est requis"
+  incomplete_response:
+    missing_answers:
+      label: "Sont toutes les réponses obligatoires complètes dans le formulaire?"
+      hint: "La remise des réponses dans des circonstances particulières est possible. Si vous n'êtes pas sûr que toutes les réponses obligatoires sont manquants, choisissez «pas certain». Enregistrez les modifications."
+      foo: "bar"
+      options:
+        'no': "Pas certain"
+        'yes': "Oui"
+    code_label: "Entrez le code de dérogation"
+  index_table:
+    messages:
+      searched_rows_selected: "Notez que <strong>toutes</strong> les %{count}  lignes sont correspondant à la recherche actuelle maintenant selectionnées"
+      selected_rows_page: "Tous les %{count}%{class_name} de cette page sont sélectionnés."
+      select_all_rows: "Sélectionner tous les %{count}%{class_name}"
+      selected_all_rows: "<strong>Tous les</strong> %{count}%{class_name} sont sélectionnés"
+  integrity_warnings:
+    more_suffix: "%{count} en plus"
+    titles:
+      careful_with_changes: "Soyez prudent avec les modifications"
+      features_disabled: "Certaines fonctionnalités désactivées"
+    reasons:
+      form:
+        published: "Ce formulaire est publié (pas un brouillon)"
+        data: "Ce formulaire a des réponses associées"
+      qing_group:
+        published: "Le formulaire de ce groupe est publié (pas un brouillon)"
+        standard_copy: "Le formulaire de ce groupe est basé sur un standard"
+      question:
+        in_use: "Cette question apparaît sur les formulaires: %{form_list}"
+        published: "Cette question apparaît sur au moins un formulaire publié (pas un brouillon)"
+        standard_copy: "Cette question est basée sur une question standard"
+        data: "Cette question a des réponses associées"
+      option_set:
+        in_use: "Cet ensemble d'options apparaît sur questions: %{question_list}"
+        published: "Cet ensemble d'options apparaît sur au moins un formulaire publié (pas un brouillon)"
+        standard_copy: "Cet ensemble d'options est basé sur un standard"
+        data: "Cet ensemble d'options a des réponses associées"
+  location_picker:
+    choose_location: "Choisissez l'emplacement"
+    current_location: "L'emplacement actuel"
+    enter_query: "Entrez une question dans la boîte au-dessus pour chercher un emplacement dans la base de données du Google."
+    search_locations: "Recherchez les emplacements..."
+  notifier:
+    if_link_doesnt_work: "Si le lien au-dessus ne marche pas, copiez et collez le lien dans le navigateur."
+    if_you_made_it: "Cliquez le lien au-dessus si vous avez fait cette sollicitation:"
+    login_name: "Votre identifiant est %{login}."
+    to_choose: "Pour choisir un mot de passe, cliquez:"
+    must_choose: "Vous DEVEZ choisir un mot de passe avant de pouvoir utiliser n’importe quel système, y compris celui basé sur un téléphone mobile."
+    password_reset_instructions: "Instructions pour rerégler le mot de passe"
+    request_made: "Une sollicitation pour remettre votre %{site} mot de passe a été fait. Si vous n'avez pas faites cette sollicitation, ignorez cette courriel."
+    welcome: "Bienvenue à %{site}!"
+    sms_token_change:
+      subject: "Jeton SMS entrant modifié pour %{mission_name}"
+      body: "Le jeton SMS entrant pour %{site_name} - %{mission_name} a été régénéré par vous ou un autre coordinateur dans les paramètres de votre mission. Cela signifie que vous devrez mettre à jour l'URL du SMS entrant avec votre fournisseur de passerelle avant que de nouvelles soumissions SMS puissent être acceptées."
+  option_set:
+    add_level: "Ajouter Un Niveau"
+    add_option: "Ajouter une option"
+    and_n_more: "... et %{count} options de plus."
+    clone_confirm: "Est-ce que vous etes sûr que vous voulez copier l'ensemble d'options %{name}'?"
+    clone_error: "Il y avait un problème avec le clonage de l'ensemble d'options (%{msg})."
+    clone_success: "L'ensemble d'options '%{name}' a été cloné avec succès."
+    create_new: "[Créer un Nouveau Option]"
+    create_for_question: "Créer un ensemble d'option pour la question%{identifier}"
+    create_for_new_question: "Créer un ensemble d'option pour la nouvelle question"
+    new_option: "Nouvelle option"
+    edit_option: "Modifier Option"
+    edit_option_level: "Modifier Niveau"
+    huge_notice: "Cet ensemble d'option est très large(%{count} Options) et donc seulement un échantillon est présenté ci-dessous. Le nom et d'autres propriétés peuvent être modifié. Cependant, vous devez utiliser la fonction importer/exporter pour modifier les options."
+    leave_page_warning: "Si vous quittez cette page, vous perdrez vos modifications à cet ensemble d'options."
+    multilevel_forbidden_notice: "Cet ensemble d'options est actuellement utilisé par au moins une question à choix multiple et donc ne peut être converti à un ensemble d'options à multiple niveau."
+    new_option_level: "Nouveau Niveau"
+    none_found: "Il n'y avait pas d'options trouvés."
+    searching: "En train de rechercher..."
+    type_to_add_new: "Tapez un titre d'option."
+    option_prompt: "Choisissez une option ..."
+    option_prompt_with_level: "Choisissez %{level} ..."
+    latitude: "Latitude"
+    longitude: "Longitude"
+    value: "Valeur numérique"
+  option_set_import:
+    instructions_html: |-
+        Télécharger un fichier CSV avec vos options. Modèles CSV avec <a href="%{csv_url_1}">options à plusieurs niveaux</a> and <a href="%{csv_url_2}">options à un seul niveau avec traduction</a> sont disponibles comme point de départ.
+
+        Notes:
+
+        * Seuls les fichiers CSV sont acceptés. Ils doivent être encodés en UTF-8. Vous pouvez exporter des fichiers XLSX au format CSV à l'aide de n'importe quel tableur standard.
+        * Vous pouvez trouver plus de documentation <a href="https://getnemo.readthedocs.io/en/main/content/formsoptionsets/formsoptionsets.html#import-new-option-set">ici</a>.
+  tag:
+    none_found: "Aucun tag trouvé "
+    searching: "Recherche..."
+    type_to_add_new: "Saisissez un tag"
+    new_tag: "Nouveau tag"
+    click_to_filter: "Clicker pour filtrer avec ce tag"
+  password_reset:
+    check_email: "Instructions pour changer votre mot de passe était envoyer par email à vous.  S'il vous plait, verifié votre e-mail."
+    enter_new_pass: "%{name}, s'il vous plait entrez un nouveau mot de passe."
+    fill_out_form: "Saisissez votre code utilisateur ci dessous pour réinitialiser votre mot de passe. Le mot de passe vous sera envoyé. S'il n'existe pas d'email associé à votre compte, votre mot de passe devra être réinitialise par un administrateur."
+    multiple_accounts: "Il existe plusieurs comptes associés à cet email. Veuillez saisir votre code utilisateur ou contactez un administrateur."
+    no_associated_email: "Il n'y a pas d'email associé à ce compte. Veuillez contacter un administrateur pour changer votre mot de passe"
+    success: "Mot de passe mis à jour avec succès"
+    success_but_inactive: "Le mot de passe a été mis a jour mais votre compte n'est pas actif, vous ne pouvez pas vous connecter."
+    token_not_found: |-
+        Désolé, le compte n'a pas été trouvé. Si vous avez des problèmes, ressayez  l'URL de votre courriel dans votre navigateur ou recommencer le procès de remettre le mot de passe.
+    user_not_found: "Aucun utilisateur trouvé avec cet adresse email ou identifiant"
+  permission_error:
+    need_mission: "Impossible de voir ce sans sélectionner une mission."
+    need_login: "Se connectez pour voir ça page."
+    no_permission: "Vous n'a pas la permission pour voir cette page."
+    processing_error: "Erreur avec la permission de la traitement."
+    enumerators_cant_change_submitter: "Les observateurs ne peuvent pas changer l'émetteur pour les réponses."
+    must_be_admin: "Seuls les administrateurs peuvent accéder à cette page."
+    must_be_logged_out: "Vous devez être déconnecté pour voir cette page."
+  question:
+    answer_only_caps: "REPONDEZ SEULEMENT SI"
+    bulk_destroy_confirm:
+      zero: "Êtes-vous sûr de vouloir supprimer zéro question?"
+      one: "Êtes-vous sûr de vouloir supprimer cette question?"
+      two: "Êtes-vous sûr de vouloir supprimer ces %{count} questions?"
+      few: "Êtes-vous sûr de vouloir supprimer ces %{count} questions?"
+      many: "Êtes-vous sûr de vouloir supprimer ces %{count} questions?"
+      other: "Êtes-vous sûr de vouloir supprimer ces %{count} questions?"
+    bulk_destroy_deleted:
+      zero: "Aucune question supprimée."
+      one: "%{count} question supprimée avec succès."
+      two: "%{count} questions supprimée avec succès."
+      few: "%{count} questions supprimée avec succès."
+      many: "%{count} questions supprimée avec succès."
+      other: "%{count} questions supprimée avec succès."
+    bulk_destroy_skipped:
+      zero: "Aucune question ignorée."
+      one: "%{count} question ignorée."
+      two: "%{count} questions ignorées."
+      few: "%{count} questions ignorées."
+      many: "%{count} questions ignorées."
+      other: "%{count} questions ignorées."
+    maxmin:
+      gt: "plus grand que"
+      lt: "moins que"
+      or_eq: "ou égal à"
+      strictly_lt: "strictement strictement inférieur à"
+      strictly_gt: "strictement plus grand que"
+    opt_set_warning: "La modification de l'ensemble d'options entraîne la suppression d'une ou plusieurs conditions."
+  qing_group:
+    one_screen_disabled: "Non disponible car le groupe contient une condition ou un autre groupe."
+    tooltips:
+      repeatable: "Répétable"
+      one_screen: "S'affiche sur un seul écran sur ODK collect"
+      multi_screen: "S'affiche sur plusieurs écran sur ODK collect"
+  question_type:
+    text: "Texte"
+    long_text: "Texte Long"
+    integer: "Nombre Entier"
+    barcode: "Code à barre"
+    counter: "Compteur"
+    decimal: "Décimale"
+    location: "Emplacement"
+    select_one: "Sélectionner un"
+    select_multiple: "Sélection multiple"
+    datetime: "Date/Heure"
+    date: "Date"
+    time: "Heure"
+    image: "Image"
+    annotated_image: "image annotée"
+    signature: "Signature"
+    sketch: "Èbauche"
+    audio: "Audio"
+    video: "Vidéo"
+  recaptcha:
+    errors:
+      verification_failed: "la réponse de vérification est incorrecte. Veuillez réessayer"
+      recaptcha_unreachable: "Oops; nous n'avons pas pu valider votre réponse de verification. Ressayez encore."
+  recipient:
+    prefixes:
+      user: "Utilisateur"
+      user_group: "Groupe"
+  report/report:
+    add_column: "Ajouter colonne"
+    answered_only_if: "Répondé seulement si"
+    attribute:
+      zero: "Attributs"
+      one: "Attribut"
+      two: "Attributs"
+      few: "Attributs"
+      many: "Attributs"
+      other: "Attributs"
+    back_to_list: "Retour à la liste des rapports"
+    blank: "Blanc"
+    choose_attrib_question: "Choisissez un attribut ou question"
+    choose_disagg_qing: "Choisissez une question..."
+    choose_form: "Choisissez un formulaire..."
+    choose_report: "Choisissez un rapport..."
+    columns: "Colonnes"
+    display_options: "Options "
+    edit_report: "Modifier Rapport"
+    enter_name: "Entrez un titre descriptif pour le rapport."
+    export_to_csv: "Exportez les données au format CSV"
+    fields: "Champs"
+    form: "Formulaire"
+    form_selection: "Selectionner Les Formulaires"
+    generated_at: "Généré le"
+    group_by_tag: "Groupez les questions par tag?"
+    grouping: "Collecter par"
+    groupings: "Collections"
+    how_to_disaggregate: "Diviser rapport par une question spécifique?"
+    how_to_display_questions: "Comment voulez vous afficher les questions ?"
+    how_to_display_results: "Comment voulez vous afficher les résultats ?"
+    how_to_order_questions: "Comment devraient être ordonnés les questions?"
+    questions_with_option_sets: "Questions avec ces ensembles d'options"
+    missing_enumerators: "Observateur n'ayant pas répondu"
+    missing_enumerators_total_count: "%{user_count} au total"
+    mission: "Mission"
+    no_match: "Aucune donnée correspondante n'a été trouvée"
+    question_selection: "Selectionner les Questions"
+    report_type: "Type de rapport"
+    response_count: "Nombre de Réponses"
+    questions_tagged: "Questions tagué  "
+    see_dependent_questions:
+      one: "Voir la question dépendante"
+      other: "Voir les questions dépendantes"
+    show_examples: "Montrer les Exemples"
+    show_text_responses: "Montrer les réponses textuelles?"
+    showing_limited_answers: "Montrer seulement les %{count} premières réponses"
+    submitted_by_at: "Par %{user} à %{datetime}"
+    subset_intro: "Les données de réponses dans laquelle la résultat à la '%{question}' question était '%{disagg_value}'"
+    tally: "Total"
+    tally_type: "Que voulez vous compter ?"
+    these_questions: "Ces questions spécifique"
+    total_rows: "total des lignes :%{count}"
+    untagged: "Questions non tagué"
+    view_response: "Réponse #%{id}"
+    what_attrib_col_headers: "Quel attribut ou question voudriez-vous utiliser pour les titre des colonnes (optional)?"
+    what_attrib_row_headers: "Quel attribut ou question voudriez-vous utiliser pour les titres des rangées?"
+    what_bar_style: "Quel style d'histogramme voulez-vous utiliser?"
+    what_percent_style: "Quel style de pourcentage voulez-vous utiliser?"
+    what_columns_in_list: "Quel questions et/ou attributs voudriez-vous mettre sur la liste?"
+    what_form: "Pour quel formulaire voudriez-vous faire un rapport?"
+    what_type: "Quel type de report voudriez-vous?"
+    which_calculation: "Quel calcul (le cas échéant) voudriez-vous appliquer?"
+    which_forms: "Quelles sont les formulaires qui vous intéressent ?"
+    which_questions: "Quelle question(s) voudriez-vous inclure?"
+    zero_missing_enumerators: "Aucun"
+    bar_styles:
+      side_by_side: "Côte à côte"
+      stacked: "Empilé"
+    calculation_descriptions:
+      identity: "Aucun"
+      zero_nonzero: "Si un résultat est égale à 0 ou supérieure à 0"
+    display_types:
+      table: "Table"
+      bar_chart: "Histogramme"
+    descriptions:
+      tally_report: "Décomptes globaux de résultats ou des réponses, groupés par caractéristiques d'intérêt."
+      list_report: "Une liste de résultats et attributs pour un ensemble de réponses."
+      standard_form_report: "Un résumé des réponses question par question pour un formulaire spécifique."
+    examples:
+      tally_report:
+      - Nombre de réponses Très bien, Bien, etc. pour la question évaluation globale
+      - Pourcentage de oui et non pour toutes les questions oui-non
+      - Nombre de réponses par formulaire pour chaque équipe
+      - Pourcentage de réponses nulles et non nulles par État pour la question ObservateurNationaux
+      list_report:
+      - Liste des réponses aux questions sur les plaintes et autres irrégularités ainsi que le numéro du centre de vote
+      - Liste de tous les numéros de centre de vote, sans doublons
+      - Liste du nom de l'émetteur, de la date et de la réponse à la question région
+      standard_form_report:
+      - Sommaires(pourcentage, moyennes, médianes, etc.) de toutes les questions dans un formulaire
+      - Peuvent être groupés par type de questions ou par tag
+      - 'Peuvent être divisés par une réponse à une question spécifique (exemple: région) '
+    percent_types:
+      none: "Pas de Pourcentage"
+      overall: "Pourcentage en Général"
+      by_row: "Pourcentage par Rang"
+      by_col: "Pourcentage par Colonne"
+    question_labels:
+      code: "Seulement les codes (économisation de l'espace)"
+      title: "Titres complets (plus facile à lire)"
+    question_orders:
+      number: "Par Numéro"
+      type: "Par Type"
+    standard_form_report:
+      overall_headers:
+        dates: "Dates"
+        responses: "Réponses"
+      stat_headers:
+        mean: "Moyenne"
+        median: "Médiane"
+        min: "Minimum"
+        max: "Maximum"
+      type_sets:
+        categorical: "Les Données Catégoriques"
+        numbers: "Les Données Statistiques"
+        dates: "Dates"
+        times: "Heures"
+        short_text: "Courtes Réponses Textuelles"
+        long_text: "Longues Réponses Textuelles"
+    tally_types:
+      answer: "Résultats per Question"
+      response: "Réponses par Résultats/Caractéristique"
+    tally_type_examples:
+      answer: "Compte de Oui et Non pour toutes les Questions Oui/Non"
+      response: "Compte de réponses par formulaire pour chaque équipe."
+    text_response_options:
+      all: "Montrer Tous"
+      short_only: "Ne Montrer Pas les Longues Réponses Textuelles"
+      none: "Ne Montrer Aucun"
+  response:
+    reviewed: "Cette réponse a été revu"
+    edit_this_response: "Modifier cette réponse"
+    edit_with_nemo: "Modifier avec NEMO"
+    download_csv: "Télécharger"
+    connect_odata: "Connecter aux OData"
+    download: "Télécharger les réponses"
+    export:
+      export: "Exporter"
+      to_csv: "Format CSV"
+      to_odata: "OData via l'API"
+      odata_prompt_html: "Utiliser l'API de NEMO pour accéder aux données en utilisant un le standard OData. Vous pouvez copier cet URL dans votre logiciel de traitement des données, tel que Power BI."
+    export_options:
+      summary:
+        zero: "Aucune réponse a exporter."
+        one: "%{count} réponses a exporter"
+        two: "%{count} réponses a exporter"
+        few: "%{count} réponses a exporter."
+        many: "%{count} réponses a exporter."
+        other: "%{count} réponses a exporter."
+      download_media: "Pièces jointes média"
+      download_xml: "XML original (ODK)"
+      download_csv: "CSV"
+      calculating: "Calcul de la taille du fichier"
+      download_types: "Téléchargement de:"
+      mb: "MB"
+      no_space: "Il n'y a pas assez d'espace sur le disque pour exporter les réponses sélectionnées. Essayez une sélection plus petite."
+      media_size: "Taille totale du média:"
+      xml_size: "Taille totale du XML :"
+      try_again: "Il y a eu une erreur. Veuillez réessayer."
+      export_error: "Exporter plus que %{threshold} réponses n'est pas permis. Veuillez sélectionné moins de réponses ou utiliser l'API OData."
+      export_warning: "Exporter plus que %{threshold} réponses pourrait durer longtemps. Pensez à sélectionné moins de réponses ou utiliser l'API OData."
+    loading: "Chargement Réponse..."
+    observation_time: "Le temps d'Observation"
+    save_and_mark_reviewed: "Enregistrer et Marquer comme Revu"
+    view_response: "Voir Réponse"
+    checked_out: "Cette réponse a été examiné par:"
+    remove_media_object_confirm:
+      image: "Etes vous sûr de vouloir supprimer cette image?"
+      audio: "Etes vous sûr de vouloir supprimer ce son?"
+      video: "Etes vous sûr de vouloir supprimer cette vidéo?"
+    drop_more_info: "Plus d'info"
+    drop_hint:
+      image: "L'image doit etre au plus %{max_size_mib} MB. Les formats acceptes sont: JPG, PNG."
+      video: "La vidéo doit avoir la taille maximum de %{max_size_mib} MiB. les formats acceptés sont: 3gp, mp4, webm, mpg, wmv, avi."
+      audio: "l'audio doit avoir au plus %{max_size_mib} MiB, les formats acceptés sont: mp3, ogg, webm, wav"
+    csv_headers:
+      response_id: "NumeroReponse"
+      reviewed: "Revu"
+      form_name: "Formulaire"
+      user_name: "Emetteur"
+      submit_time: "DateSoumission"
+      shortcode: "CodeCourt"
+      latitude: "Latitude"
+      longitude: "Longitude"
+      altitude: "Altitude"
+      accuracy: "Précision"
+      parent_group_name: "NomGroupe"
+      parent_group_depth: "NiveauGroupe"
+    add_to_group: "Ajouter à '%{group_name}'"
+    empty_group_notice: "Ce groupe est vide"
+    bulk_destroy_confirm:
+      zero: "Êtes-vous sûr de vouloir supprimer zéro réponses?"
+      one: "Êtes-vous sûr de vouloir supprimer cette réponse?"
+      two: "Êtes-vous sûr de vouloir supprimer ces %{count} réponses?"
+      few: "Êtes-vous sûr de vouloir supprimer ces %{count} réponses?"
+      many: "Êtes-vous sûr de vouloir supprimer ces %{count} réponses?"
+      other: "Êtes-vous sûr de vouloir supprimer ces %{count} réponses?"
+    bulk_destroy_deleted:
+      zero: "Aucune réponses n'a été supprimée."
+      one: "%{count} réponse supprimée avec succès."
+      two: "%{count} réponses supprimée avec succès."
+      few: "%{count} réponses supprimée avec succès."
+      many: "%{count} réponses supprimée avec succès."
+      other: "%{count} réponses supprimée avec succès."
+    long_text_behavior_options:
+      exclude: "Exclu"
+      truncate: "Tronquer pour Excel (plus lent)"
+      include: "Contient"
+  role:
+    role: "Rôle"
+    enumerator: "Observateur"
+    reviewer: "Réviseur"
+    staffer: "Membre du Personnel"
+    coordinator: "Coodinateur/Coordinatrice"
+    admin: "Admin"
+    blank: "Aucun"
+  search:
+    blank: "vide"
+    examples:
+      responses:
+      - bed nets
+      - submitter:"john smith"
+      - group:western
+      - form:polling
+      - reviewed:1
+      - submit-date < 2013-10-15
+      - '{QuestionCode}:(disruption security)'
+      users:
+      - john smith
+      - phone:+443726458364
+      - login:jsmith
+      - email:jsmith@example.com
+      - group:"The Smiths"
+      - role:staffer
+      questions:
+      - Travailleurs des bureaux de vote
+      - code:Urnes
+      - type:select-one
+      sms:
+      - Travailleurs des bureaux de votes
+      - 1.b
+      - '+1234567890'
+      - john smith
+      - jsmith
+      - type:reply
+      - date >= 2015-01-29
+      - date-heure < "2015-01-12 14:00"
+    expected: "Attendu"
+    help_link: "Aide"
+    help_title: "Aide "
+    help_text:
+      responses: |-
+          ## Qualificatifs
+
+          Une recherche simple telle que:
+
+          * __romeo juliet__
+
+          cherche les réponses aux questions. Pour rechercher dans les attributs de réponse, utilisez un qualificatif, par exemple.:
+
+          * __form:Widgets__
+
+          affichera uniquement les réponses au formulaire 'Widgets'.
+
+          Combinez les deux éléments ci-dessus pour affiner votre recherche:
+
+          * __romeo juliet form:Widgets__
+
+          affichera les réponses au formulaire 'Widgets' contenant les mots 'romeo' et 'juliet'.
+
+          La liste complète des qualificatifs que vous pouvez utiliser sont les suivant:
+
+          * __form__ Le nom du formulaire
+          * __submitter__ Le nom de l'utilisateur qui a soumis la réponse (correspondances partielles autorisées)
+          * __group__ Le nom d'un groupe d'utilisateurs auquel appartient l'utilisateur qui soumet (correspondances partielles autorisées)
+          * __submit-date__ Date à laquelle la réponse a été soumise (par exemple, 1985-03-22)
+          * __reviewed__ Si la réponse a été marquée 'révisée' (1 = oui ou 0 = non)
+          * __source__ Le moyen par lequel la réponse a été soumise ('web', 'odk' ou 'sms')
+          *__{CodeQuestion} La réponse à une question ayant pour code CodeQuestion
+
+          ## Phrases exactes
+
+          Les phrases exactes peuvent être trouvées en les mettant entre guillemets:
+
+          * __submitter:"John Smith"__
+
+          Les phrases entre guillemets ne peuvent actuellement être utilisées qu'avec des qualificatifs autres que "text".
+
+          ## Tous les termes vs. N'importe quel terme
+
+          Par défaut, tous les termes de la recherche doivent correspondre. Par exemple,
+
+          * __alpha lima peru__
+
+          correspond uniquement aux réponses avec ces trois mots. Utilisez le caractère barre verticale ('|') pour faire correspondre plusieurs mots / phrases:
+
+          * __form:( Lions | "Bears and Sharks" | Tigers )__
+
+          correspond aux réponses pour n'importe lequel des formulaires ci-dessus. Le '|' ne peut être utilisé qu'avec des qualificatifs autres que "text".
+
+          ## Les opérateurs
+
+          Vous pouvez inverser le sens d'une recherche en utilisant l'opérateur de négation:
+
+          * __form != Widgets__
+
+          correspondra aux réponses pour tout formulaire sauf le formulaire 'Widgets'.
+
+          Pour la recherche de réponses, la négation fonctionne différemment:
+
+          * __ballot -box__
+
+          correspondra à toute réponse avec une réponse contenant le mot "ballot" mais pas le mot "box". Il doit y avoir au moins un terme non nié dans une telle recherche.
+
+          Pour certains qualificatifs (par exemple, __submit-date__), les comparaisons supérieures à et inférieures à sont également autorisées.:
+
+          * __submit-date > 2000-01-01__
+
+          Plusieurs de ceux-ci peuvent être combinés pour limiter la recherche à une plage:
+
+          * __submit-date >= 2000-01-01 submit-date < 2000-02-01__
+
+          correspondra aux réponses soumises au mois de janvier 2000.
+
+          ## Format de réponse
+
+          Certains types de questions attendent un format spécifique pour rechercher des réponses : par exemple, la recherche de réponses à une question de type Date avec le code de question DateQ1 peut ressembler à "{DateQ1} : 2021-01-01"
+
+          * Date: AAAA-MM-JJ, ex: "2021-01-01"
+          * Heure: HHhMMmSSs, ex: "13h00m00s"
+          * Date/Heure: AAAA-MM-JJ HHhMMmSSs, ex: "2021-01-01 13h00m00s"
+
+          Ces valeurs sont traitées comme du texte brut, vous pouvez donc par exemple rechercher simplement "13h" pour trouver n'importe quelle réponse basée sur l'heure, la date et l'heure ou le texte qui correspond à ce mot.
+      users: |-
+          ## Qualificatifs
+
+          Une recherche simple telle que:
+
+          * __romeo juliet__
+
+          fait correspondre les noms d'utilisateur, les identifiants de connexion et les emails sur chaque mot. Pour effectuer une recherche en fonction d'attributs spécifiques, utilisez un qualificatif, par exemple:
+
+          * __email:@example.com__
+
+          recherche les utilisateurs dont les adresses e-mail correspondent à "@ exemple.com".
+
+          Combinez les deux éléments ci-dessus pour affiner votre recherche:
+
+          * __Susan email:@example.com__
+
+          cherchera les utilisateurs nommés Susan avec une adresse électronique @exemple.com.
+          Vous pouvez faire correspondre les valeurs vides à l'aide de '[blank]':
+
+          * __phone: [blank]__
+
+          L'ensemble des qualificatifs que vous pouvez utiliser est le suivant:
+
+          * __email__ L'adresse email de l'utilisateur
+          * __group__ L'appartenance au groupe de l'utilisateur
+          * __login__ Le nom d'utilisateur de l'utilisateur
+          * __name__ Nom complet de l'utilisateur
+          * __phone__ Le numéro de téléphone de l'utilisateur (sans tiret ni autre ponctuation)
+          * __role__ Le rôle de l'utilisateur ("observateur", "réviseur", "membre du personnel", "coordinateur")
+
+
+          Les correspondances partielles sont autorisées pour tous les qualificateurs
+
+          ## Phrases exactes
+
+          Les phrases exactes peuvent être associées en les mettant entre guillemets:
+
+          * __"john smith"__
+
+          ## Tous les termes vs. N'importe quel terme
+
+          Par défaut, tous les termes de la recherche doivent correspondre. Par exemple,
+
+          * __john smith__
+
+          sélectionne uniquement les utilisateurs dont les noms 'john' et 'smith' apparaissent tous les deux dans leur nom. Utilisez le caractère barre verticale ('|') pour faire correspondre plusieurs noms:
+
+          * __abdul | juanita | clarice__
+
+          Le caractère '|' peut également être utilisé avec des qualificatifs:
+
+          * __email:( john@example.com | patty@foo.com )__
+
+          correspond aux utilisateurs avec l'une des adresses électroniques ci-dessus.
+
+          ## Négation
+
+          Vous pouvez nier une recherche qualifiée en utilisant l'opérateur de négation:
+
+          * __name != Oluwaseun__
+
+          correspondra aux utilisateurs non nommés 'Oluwaseun'.
+      questions: |-
+          ## Qualificatifs
+
+          Une recherche simple telle que:
+
+          * __romeo juliet__
+
+          recherche dans les titres de la question pour chaque mot. Pour effectuer une recherche en fonction d'attributs de question, utilisez un qualificatif, par exemple.:
+
+          * __code:BallotBox__
+
+          affichera les questions avec 'BallotBox' dans leur code.
+
+          Combinez les deux éléments ci-dessus pour affiner votre recherche:
+
+          * __romeo juliet code:BallotBox__
+
+          affichera des questions avec 'BallotBox' dans leur code dont les titres contiennent également les mots 'romeo' et 'juliet'.
+
+          L’ensemble complet de qualificatifs que vous pouvez utiliser est le suivant:
+
+          * __title__ Le titre de la question (correspondances partielles autorisées)
+          * __code__ Le code de la question (correspondances partielles autorisées)
+          * __type__ Le type de question (%{question_types})
+          * __tag__ Recherche les tags appliqués à la question
+
+          ## Phrases exactes
+
+          Les phrases exactes peuvent être associées en les mettant entre guillemets:
+
+          * __"the rain in spain"__
+
+          Les phrases entre guillemets peuvent être mélangées avec d'autres sans guillemets:
+
+          * __apples oranges "passion fruit"__
+
+          ## Tous les termes vs. N'importe quel terme
+
+          Par défaut, tous les termes de la recherche doivent correspondre. Par exemple,
+          * __alpha lima peru__
+
+          correspond uniquement aux questions avec ces trois mots. Utilisez le caractère barre verticale ('|') pour faire correspondre plusieurs mots / phrases:
+
+          * __apples | oranges | "passion fruit"__
+
+          Le caractère '|' peut également être utilisé avec des qualificatifs:
+
+          * __code:( Lions | "Bears and Sharks" | Tigers )__
+
+          fait correspondre les questions avec l'un des codes ci-dessus.
+
+          ## Négation
+
+          Vous pouvez nier une recherche qualifiée à l'aide de l'opérateur de négation:
+
+          * __code != Widgets__
+
+          correspondra aux questions avec n'importe quel code ne contenant pas 'Widgets'.
+      sms: |-
+          ## Qualificatifs ##
+
+          Une recherche simple telle que:
+
+          * __romeo juliet__
+
+          recherche dans le contenu du message, le nom d'utilisateur, le nom complet de l'utilisateur et le numéro de téléphone pour chaque mot.
+          Pour effectuer une recherche en fonction d'attributs de question, utilisez un qualificatif, par exemple.:
+
+          * __type:incoming__
+
+          affichera les messages entrants uniquement.
+
+          Combinez les deux options ci-dessus pour affiner votre recherche:
+
+          * __romeo juliet type:incoming__
+
+          affichera les messages entrants contenant également les mots "romeo" et "juliet".
+
+          Les qualificateurs que vous pouvez utiliser sont les suivant:
+
+          * __content__ Le contenu du message (correspondances partielles autorisées)
+          * __type__ Le type de message: 'incoming' pour les messages entrants, 'reply' pour les réponses envoyées par NEMO, 'broadcast' pour les messages de diffusion. (correspondances partielles autorisées)
+          * __username__ Le nom d'utilisateur de l'expéditeur ou du destinataire (correspondances partielles autorisées)
+          * __name__ Le nom complet de l'expéditeur ou du destinataire (correspondances partielles autorisées)
+          * __number__ Le numéro de téléphone de l'expéditeur ou du destinataire (correspondances partielles autorisées)
+          * __date__ Date à laquelle le message a été envoyé ou reçu (par exemple 2015-01-29)
+          * __datetime__ Date et heure à laquelle le message a été envoyé ou reçu (utilisez des guillemets et le format 24hr: par exemple, "2015-01-29 14:00")
+
+          ## Phrases exactes ##
+
+          Les phrases exactes peuvent être trouvées en les mettant entre guillemets:
+
+          * __"the rain in spain"__
+
+          Les phrases entre guillemets peuvent être mélangées avec des termes sans guillemets
+
+          * __apples oranges "passion fruit"__
+
+          ## Tous les termes vs. N'importe quel terme
+
+          Par défaut, tous les termes de la recherche doivent correspondre. Par exemple,
+
+          * __alpha lima peru__
+
+          correspond uniquement aux questions avec ces trois mots. Utilisez le caractère barre verticale ('|') pour faire correspondre plusieurs mots / phrases:
+
+          * __apples | oranges | "passion fruit"__
+
+          Le caractère '|' peut également être utilisé avec des qualificatifs:
+
+          * __content:( Lions | "Bears and Sharks" | Tigers )__
+
+          apparie les questions avec l'un des codes ci-dessus.
+
+          ## Négation
+
+          Vous pouvez nier une recherche qualifiée à l'aide de l'opérateur de négation:
+
+          * __type != broadcast__
+
+          correspondra aux messages dont le type ne contient pas "broadcast".
+    invalid_op: "L'opérateur '%{op}' n'est pas valide pour le qualificatif '%{qualifier}'."
+    multiple_terms_not_allowed: "Plusieurs termes ne sont pas permis pour '%{qualifier}' recherches sauf le case où 'OU' est utilisé."
+    must_use_qualifier: "Vous devez utiliser un qualificatif pour tous les termes de recherche."
+    or_not_allowed_between: "'OU' n'est pas permis entre les expressions."
+    invalid_qualifier: "'%{chunk}' n'est pas un qualificatif valide de la recherche."
+    search_error: "Erreur de Recherche"
+    unexpected: "La recherche a échoué en raison de texte inattendu près '%{str}'."
+    unexpected_end: "La recherche a échoué en raison de texte inattendu vers la fin."
+    boolean_error: "Le qualificatif '%{qualifier}' doit être réglé sur \"oui\" ou \"non\" (\"1\" et \"0\" sont également acceptés)."
+    invalid_date: "'%{value}' n'est pas une date valide."
+  setting:
+    admin_mode_notice: "Les paramètres ci dessous sont définis comme paramètres par défaut pour toutes les nouvelles missions et servent comme solution de rechange dans les cas ou le contexte d'une mission n'est pas disponible. Certains d'entre eux affectent le mode administrateur. (ex: thème, préférences locales)."
+    change_sms_password: "Changez mot de passe pour SMS"
+    change_twilio_auth_token: "Changer le jeton d'authentification"
+    change_api_key: "Changer Clé API"
+    override_code_warning: "Notez que le nouveau code de dérogation ne fonctionnera pas avec les formulaires qui ont déjà été téléchargés. Vous devriez enregistrer le code existant si c'est un problème. Etes-vous sûr que vous voulez régénérer le code?"
+    sms_token_warning: "Notez que cela invalidera le jeton SMS précédent pour cette mission. Tous les SMS entrants seront rejetés jusqu'à ce que les paramètres de votre passerelle SMS soient mis à jour en conséquence. Êtes-vous sûr de vouloir régénérer le jeton?"
+    api_key_warning: "Notez que cela invalidera la clé API précédente pour cet utilisateur. Êtes-vous sûr de vouloir régénérer la clé?"
+    sms_auth_code_warning: "Notez que cela invalidera le code d'autorisation SMS précédent pour cet utilisateur. Êtes-vous sûr de vouloir régénérer le code?"
+    using_incoming_sms_token: "Comment utiliser?"
+    headings:
+      general: "Paramètres généraux"
+      generic: "Paramètres génériques du fournisseur SMS"
+      sms: "Paramètres SMS partagés"
+      twilio: "Paramètres pour Twilio"
+      frontlinecloud: "Paramètres pour FrontlineCloud"
+  skip_rule:
+    end: "Fin"
+    skip_if_options:
+      always: "dans tous les cas"
+      all_met: "si toutes ces conditions sont remplies"
+      any_met: "si l'une de ces conditions est remplie"
+    skip_to_item: "Passer à %{label}"
+    dest_prompt: "Choisir destination ..."
+    instructions:
+      with_conditions: "Passer à %{destination} si %{conditions}"
+      without_conditions: "Passer à %{destination}"
+    end_of_form: "fin du formulaire"
+  constraint:
+    accept_if_options:
+      all_met: "Valable uniquement si toutes ces conditions sont remplies"
+      any_met: "Valable uniquement si l'une de ces conditions est remplie"
+    instructions: "VALABLE UNIQUEMENT SI %{conditions}"
+    odk_message: "Valable uniquement si: %{conditions}"
+  sms:
+    extra_recipients_html: "<br/>... et %{count} plus"
+    error: "Erreur"
+    when_sending_reply: "Lors de l'envoi d'une réponse"
+    no_valid_adapter: "Il n'y a pas de fournisseur de SMS sortant valide. S'il vous plaît vérifier les paramètres."
+    outgoing_provider: "Fournisseur de SMS sortants"
+    timestamp_with_diff_html: "%{time}<br/>(sent %{time_diff} plus tot)"
+  sms_console:
+    back_to_forms: "Retournez au formulaires"
+    no_reply: "Aucun résultat."
+    submit_error: "Il y avait un erreur pendant la réponse de votre test."
+  sms_form:
+    decoding:
+      account_locked: "Désolé, votre compte a été temporairement bloqué. Vérifiez votre code d'authentification et patientez quelques minutes avant de réessayer."
+      answer_error_intro: "Désolé, votre résultat '%{value}' pour question %{rank} dans le formulaire '%{form_code}'"
+      answer_not_date: "n'etait pas un date valable"
+      answer_not_datetime: "n'etait pas un date ou temp valable"
+      answer_not_decimal: "n'etait pas un nombre valable"
+      answer_not_integer: "was not a valid integer number"
+      answer_too_large: "n'était pas inférieur ou égal à %{maximum}"
+      answer_too_large_strict: "n'était pas inférieur à %{maximum}"
+      answer_too_small: "n'était pas supérieur ou égal à %{minumum}"
+      answer_too_small_strict: "n'était pas supérieur à %{minumum}"
+      answer_not_time: "n'etait pas un temp valable"
+      answer_not_valid_option: "n'etait pas un option valable"
+      answer_not_valid_long_option_multi: "contenue multiples options invalides"
+      answer_not_valid_option_multi: "contenait l'option non-valable '%{invalid_options}'"
+      answer_not_valid_options_multi: "contenait les options non-valables '%{invalid_options}'"
+      congrats: "Votre réponse pour le formulaire '%{form_code}' a été reçue. Merci!"
+      duplicate_answer: "Désolé, la soumission comprend des réponses dupliquées pour la question %{rank}."
+      duplicate_submission: "Desolé, votre réponse est identique a une autre qui a été reçue récemment."
+      first_answer_invalid: "Desolé mais %{token} n'est pas une réponse valide. Rassurez vous d'inclure un point après le numéro de la question"
+      form_not_found: "Désolé, il n'y a pas un formulaire avec le code '%{form_code}'."
+      form_not_permitted: "Désolé, vous n'avez pas la permission pour soumettre le formulaire '%{form_code}'."
+      form_not_live: "Désolé, le formulaire '%{form_code}' n'est actuellement pas disponible pour les soumissions."
+      form_not_smsable: "Désolé, le formulaire '%{form_code}' n'est pas disponible pour l'envoi via SMS."
+      form_version_outdated: "Désolé, le formulaire '%{form_code}' concerner une version ancienne. Obtenez un guide de la remise mis à jour, s'il vous plait."
+      invalid_form_code: "Désolé, '%{form_code}' n'est pas un code valable pour le formulaire."
+      question_doesnt_exist: "Désolé, question %{rank} n'existe pas dans le formulaire '%{form_code}'."
+      user_not_found: "Désolé, nous ne pouvons pas trouvez vous au systeme."
+      no_answers: "Désolé, vous devez fournir au moins une réponse."
+    incoming_numbers:
+      id: "ID"
+      phone_number: "numéro de téléphone"
+    validation:
+      invalid_answer: "Désolé, votre résultat pour question %{rank} %{error}."
+      missing_answer: "Désolé, votre réponses pour formulaire '%{form_code}' manquait un résultat pour un question obligatoire %{ranks}."
+      missing_answers: "Désolé, votre réponses pour formulaire '%{form_code}' manquait des résultats pour des questions obligatoires %{ranks}."
+  standard:
+    import: "Importer"
+    import_choose_one:
+      forms: "Choisissez au moins un formulaire à importer."
+      option_sets: "Choisissez au moins un ensemble d'options à importer ."
+      questions: "Choisissez au moins une question à importer."
+    import_errors: "Il y avait les erreurs."
+    import_instructions:
+      forms: "Cochez les boîtes à coté des formulaires que vous voudriez importer.  Ensuite, cliquez 'importer'. "
+      option_sets: "Cochez les boîtes à coté des ensemble d'options que vous voudriez importer.  Ensuite, cliquez 'importer'. "
+      questions: "Cochez les boîtes à coté de chaque questions que vous voudriez importer.  Ensuite, cliquez 'importer'. "
+    import_standard:
+      forms: "Importer des formulaires standard"
+      option_sets: "Importer les Ensembles d'Options Standard"
+      questions: "Importer les Questions Standard"
+    import_success:
+      forms:
+        zero: "%{count} formulaires importés avec succès."
+        one: " %{count} formulaires importés avec succès."
+        two: "%{count}Formulaire importé avec succès"
+        few: "%{count} formulaires importés avec succès."
+        many: "%{count} formulaires importés avec succès."
+        other: "%{count} formulaires importés avec succès."
+      option_sets:
+        zero: "%{count} Ensembles d'options importés avec succès."
+        one: "%{count} Ensembles d'options importés avec succès."
+        two: "%{count} Ensembles d'options importés avec succès."
+        few: "%{count} Ensembles d'options importés avec succès."
+        many: "%{count} Ensembles d'options importés avec succès."
+        other: "%{count} Ensembles d'options importés avec succès."
+      questions:
+        zero: " %{count} questions importées avec succès."
+        one: " %{count} question importé avec succès."
+        two: " %{count} questions importées avec succès."
+        few: " %{count} questions importées avec succès."
+        many: " %{count} Questions importées avec succès."
+        other: " %{count} Questions importées avec succès."
+    no_importable:
+      forms: "Il n'y a rien de disponible à importer. Soit il n’existe pas de formulaire standard, soit ils ont déjà été importés."
+      option_sets: "Il n'y a rien de disponible pour importer. Soit il n'y a pas d'Ensembles d'options, soit ils ont déjà tous été importés."
+      questions: "Il n'y a rien disponible à importer. Soit il n'y a pas de questions standard, soit elles ont déjà été importées."
+    standard: "Standard"
+    standard_forms: "Formulaires Standard"
+    there_were_errors:
+      zero: "Il y avait %{count} erreurs."
+      one: "Il y avait %{count} erreur."
+      two: "Il y avait %{count} erreurs."
+      few: "Il y avait %{count} erreurs."
+      many: "Il y avait %{count} erreurs."
+      other: "Il y avait %{count} erreurs."
+  tabular_import:
+    errors:
+      wrong_type: "Le fichier téléchargé doit être un fichier de type CSV valide."
+      no_rows: "Aucune ligne à importer."
+      bad_csv: "Un problème est survenu avec votre fichier CSV: %{msg}"
+  question_import:
+    instructions_html: |-
+        Téléchargez un fichier CSV avec vos questions. Un <a href="%{csv_url}">modéle CSV</a> est disponible comme point de départ.
+
+        Notes:
+
+        * Seuls les fichiers CSV sont acceptés. Ils doivent être encodés en UTF-8. Vous pouvez exporter des fichiers XLSX au format CSV à l'aide de n'importe quel tableur standard.
+        * Le code doit être un nom de code court (entre 2 et 20 caractères). Ne doit contenir que des lettres et des chiffres, par ex. BallotBoxSealed, HeureDepart.
+        * QType doit être un type de question valide, par exemple : entier, selectionner\_un, selection\_multiple, texte, texte\_long, décimale.
+        * Le nom de l'ensemble d'options doit correspondre à un nom d'ensemble d'options existant, s'il est spécifié.
+        * Vous pouvez trouver plus de documentation <a href="https://getnemo.readthedocs.io/en/latest/content/formsquestions/formsquestions.html#import-new-questions">ici</a>.
+    errors:
+      missing_headers: "Il manquait certaines colonnes à votre CSV, veuillez consulter le modèle/la documentation."
+  unauthorized:
+    default: "Vous n'avez pas l'authorisation pour accéder à cette page."
+    must_login: "Vous devez login pour accéder à cette page."
+    expired: "Votre requête a expirée, veuillez réessayer."
+  user_import:
+    instructions_html: |-
+        Télécharger une fichier CSV avec vos utilisateurs. Un <a href="%{csv_url}">modéle CSV</a> est disponible comme point de départ.
+
+        Notes:
+
+        * Seuls les fichiers CSV sont acceptés. Ils doivent être encodés en UTF-8. Vous pouvez exporter des fichiers XLSX au format CSV à l'aide de n'importe quel tableur standard.
+        * Veuillez ne pas modifier la ligne supérieure du modèle de quelque manière que ce soit.
+        * Les numéros de téléphone doivent inclure l'indicatif du pays (par exemple, +17095551212).
+        * Le genre peut être "Homme", "Femme" ou "Refuser de répondre", ou peut être n'importe quelle autre valeur.
+        * La nationalité doit être le nom d'un pays tel que 'Canada' ou 'Bangladesh'.
+        * Les noms de plusieurs groupes d'utilisateurs doivent être séparés par un point-virgule. Si un groupe d'utilisateurs nommé n'existe pas, il sera créé.
+        * You can find more documentation <a href="https://getnemo.readthedocs.io/en/main/content/users/users.html#import-users">ici</a>.
+  user:
+    add_assignment: "Ajouter Une Tâche"
+    api_key:
+      regenerate: "Régénérer"
+    back_to_index: "Retourner à liste d'utilisateurs"
+    bulk_destroy_confirm:
+      zero: "Etes vous sûr de vouloir supprimer zéro utilisateur?"
+      one: "Etes vous sûr de vouloir supprimer cet utilisateur?"
+      two: "Etes vous sûr de vouloir supprimer ces %{count}  utilisateurs?"
+      few: "Etes vous sûr de vouloir supprimer ces %{count}  utilisateurs?"
+      many: "Etes vous sûr de vouloir supprimer ces %{count}  utilisateurs?"
+      other: "Etes vous sûr de vouloir supprimer ces %{count}  utilisateurs?"
+    bulk_destroy_deleted:
+      zero: "Aucun utilisateur supprimé"
+      one: " %{count} utilisateurs supprimé avec succès"
+      two: " %{count} utilisateurs supprimé avec succès"
+      few: " %{count} utilisateurs supprimé avec succès"
+      many: " %{count} utilisateurs supprimé avec succès"
+      other: " %{count} utilisateurs supprimé avec succès"
+    bulk_destroy_deactivated:
+      zero: "Pas d'tutilisateurs desactivés"
+      one: "%{count} utilisateur n'ont pas pu être supprimé, ils ont donc été désactivés."
+      two: "%{count} utilisateurs n'ont pas pu être supprimé, ils ont donc été désactivés."
+      few: "%{count} utilisateurs n'ont pas pu être supprimé, ils ont donc été désactivés."
+      many: "%{count} utilisateurs n'ont pas pu être supprimé, ils ont donc été désactivés."
+      other: "%{count} utilisateurs n'ont pas pu être supprimé, ils ont donc été désactivés."
+    bulk_destroy_skipped:
+      zero: "Aucun utilisateur n'a été ignoré."
+      one: "%{count} utilisateur ignoré."
+      two: "%{count} utilisateurs ignorés."
+      few: "%{count} utilisateurs ignorés."
+      many: "%{count} utilisateurs ignorés."
+      other: "%{count} utilisateurs ignorés."
+    bulk_destroy_skipped_current: "Ne peut supprimer l'utilisateur en cours"
+    edit_profile: "Modifier le profil"
+    forgot_password: "Vous avez oublié votre mot de passe?"
+    gender_options:
+      man: "Homme"
+      woman: "Femme"
+      no_answer: "Refus de répondre"
+      specify: "Spécifier "
+    add_to_group: "Ajouter au groupe"
+    remove_from_group: "Retirer du groupe"
+    login_instructions:
+      closing:
+      - Veuillez noter le 's' dans 'https' dans l'URL du site.
+      - "Si vous souhaitez choisir un mot de passe plus facile à retenir, vous pouvez le changer en visitant \nl'URL ci-dessus, en vous connectant et en cliquant sur votre nom d'utilisateur dans le coin supérieur droit."
+      - "Les informations d'identification ci-dessus fonctionneront également sur votre appareil Android. Pour entrer vos informations de connexion, \nouvrez 'ODK Collect', appuyez sur le bouton ⋮ > Paramètres administrateur> Paramètres d'importation/exportation, puis \nscanner le code à barres ci-dessus."
+      preamble_singular: |-
+          Les instructions de connexion se trouvent ci-dessous. Merci d'imprimer cette page et de s'assurer que l'utilisateur reçoive les instructions.
+          Le mot de passe est emmagasiné dans un format encodé, il sera donc irrécupérable après avoir quitté cette page.
+      preamble_plural: |-
+          Les instructions de connexion se trouvent ci-dessous. Merci de les imprimer et de vous assurer que les utilisateurs reçoivent les instructions.
+          Les mots de passe sont emmagasinés dans un format encodé, ils seront donc irrécupérables après avoir quitté cette page.
+      qr_code: "QR Code ODK collect"
+      site_url: "Adresse URL du site"
+      title: "L'instructions détaillées pour se connecter."
+      welcome: "Bienvenue à %{site}. Votre titres sont les suivants:"
+    logout_success: "Vous vous êtes déconnecté avec succès."
+    profile_updated: "Profil modifié avec succès."
+    reset_password_hint_choose: "Sélectionnez comment cet utilisateur doit obtenir son mot de passe."
+    reset_password_hint_reset: "Choisissez si et comment réinitialiser le mot de passe de cet utilisateur."
+    reset_password_label_choose: "Créer mot de passe"
+    set_admin_password: "Définissez votre mot de passe administrateur et les informations de votre profil"
+    reset_password_label_reset: "Mot de passe"
+    password_options:
+      dont: "Pas de changement"
+      email: "Envoyer les instructions de réinitialisation du mot de passe par email"
+      print: "Générer un nouveau mot de passe et afficher les instructions de connexion imprimables"
+      enter: "Entrer un nouveau mot de passe"
+      enter_and_show: "Entrez un nouveau mot de passe et affichez les instructions de connexion imprimables"
+  user_group:
+    create_prompt: "Veuillez saisir le nom de votre groupe"
+    add_users_success: "%{count} utilisateurs ajoutés avec succès au groupe %{group}"
+    remove_users_success: "%{count} utilisateurs supprimés avec succès du groupe %{group}"
+    new_group: "Nouveau groupe"
+    no_groups: "Il n'y a actuellement aucun groupe d'utilisateurs dans cette mission. Créer un groupe en ajoutant a un utilisateur un groupe lors de la création ou de la mise a jour d'un utilisateur."
+  welcome:
+    awaiting_review: "**%{count}** En attentes de révision"
+    by_you: "**%{count}** Réponses par vous"
+    form_count: "**%{count}** Formulaires"
+    in_the_past_day: "**%{count}** Pendant la journée passé"
+    in_the_past_hour: "**%{count}** Pendant l'heure passé"
+    in_the_past_month: "**%{count}** Pendant le mois passé"
+    in_the_past_week: "**%{count}** Pendant la semaine passé"
+    in_the_past_year: "**%{count}** Pendant l'année passé"
+    no_mission_selected:
+      title: "Aucune mission sélectionnée"
+      choose: "Veuillez sélectionner une mission dans le menu déroulant en haut à droite de l'écran."
+      choose_or_create: "Veuillez sélectionner une mission dans le menu déroulant en haut à droite de l'écran ou bien"
+      create_link: "Créer une Nouvelle Mission."
+      need_to_create: "Il n'y a pas de missions."
+      no_missions: "Il n'y a aucune mission dans le système.  Contactez un administrateur."
+    no_recent: "**0** Réponses Récentes"
+    select_a_form: "Choisir un formulaire pour envoyer"
+    select_a_report: "Choisir un rapport pour envoyer"
+    total_responses: "**%{count}** Réponses au total"
+    total_users: "**%{count}** Utilisateurs au total"

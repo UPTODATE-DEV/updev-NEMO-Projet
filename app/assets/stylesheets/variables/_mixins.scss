@@ -1,0 +1,52 @@
+@mixin link-divider {
+  .link-divider {
+    color: $light-border-color;
+    display: inline-block;
+    margin-#{$right}: 10px;
+  }
+}
+
+@mixin top-action-links {
+  @include link-divider;
+
+  margin-bottom: 10px;
+
+  a {
+    display: inline-block;
+    margin: side-values(0 10px 5px 0);
+
+    &:hover {
+      color: $accent-color;
+    }
+
+    i {
+      color: $accent-color;
+      font-size: 110%;
+      margin-#{$right}: 3px;
+    }
+  }
+}
+
+@mixin hint-icon {
+  i.hint {
+    color: $theme-main;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 0 3px; // Right padding is so things look ok when there is a bg color.
+    vertical-align: middle;
+  }
+}
+
+@mixin reviewed-response-col {
+  td.reviewed_col {
+    a {
+      color: $main-text-color;
+    }
+
+    i.fa {
+      color: $success-green;
+      margin-right: 5px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+# frozen_string_literal: true
+
+require "support/helpers/general_spec_helpers"
+
+RSpec.configure do |config|
+  config.include(FactoryBot::Syntax::Methods)
+
+  # Resets the sequence numbers that are used in some factories
+  # It is only needed in cases where your spec expectations depend on those sequences
+  # like ‘Question 1’, ‘Question 2’, etc.
+  config.before(:each, reset_factory_sequences: true) do
+    FactoryBot.reload
+  end
+end
+
+if defined? FactoryBot
+  # Some of these helpers are useful in factories.
+  FactoryBot::SyntaxRunner.include(GeneralSpecHelpers)
+end

@@ -1,0 +1,25 @@
+#location-picker-modal {
+  .modal-body {
+    height: 500px;
+  }
+
+  .cur-lat-lng {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .map-canvas {
+    height: 450px;
+  }
+
+  form.location-search {
+    input {
+      margin-bottom: 10px;
+    }
+
+    div.results a {
+      display: block;
+      margin-bottom: 8px;
+    }
+  }
+}

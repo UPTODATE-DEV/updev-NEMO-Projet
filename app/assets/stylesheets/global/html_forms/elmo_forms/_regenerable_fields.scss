@@ -1,0 +1,15 @@
+// For things like API tokens.
+div.regenerable-field {
+  span[data-value] {
+    font-family: Monaco, monospace; // Monaco has slashed zero
+  }
+
+  a.regenerate {
+    margin-left: 1em;
+  }
+
+  div.inline-load-ind {
+    display: inline-block;
+    margin-left: 0.5em;
+  }
+}

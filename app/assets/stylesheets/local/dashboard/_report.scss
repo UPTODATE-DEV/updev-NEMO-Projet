@@ -1,0 +1,63 @@
+body.dashboard {
+  .report {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .report-header {
+    .report-title {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .report-chooser {
+      margin-top: 15px;
+
+      select {
+        width: 150px;
+      }
+    }
+
+    .inline-load-ind,
+    .action-link {
+      display: inline;
+    }
+
+    .action-link {
+      color: $mid-gray;
+    }
+  }
+
+  .report-content {
+    display: flex;
+    flex: 1 0 0;
+    overflow: auto;
+  }
+
+  .report-output {
+    overflow: auto;
+
+    div.tip {
+      // have to cancel the 800px width as it messes with the dashboard sizing
+      width: inherit;
+    }
+  }
+
+  .report-placeholder {
+    color: $lighter-gray-text;
+    flex: 1 0 0;
+    font-size: 16px;
+    padding: 40px 40px 20px;
+    text-align: center;
+
+    a {
+      color: $lighter-gray-text;
+      text-decoration: underline;
+    }
+
+    i {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+  }
+}

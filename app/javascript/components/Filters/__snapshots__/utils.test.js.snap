@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`checks if param is truthy 1`] = `false`;
+
+exports[`checks if param is truthy 2`] = `true`;
+
+exports[`checks if param is truthy 3`] = `false`;
+
+exports[`gets filter string (all filters) 1`] = `"form-id:(1|3) {One}:\\"5\\" reviewed:1 submitter-id:(B) group-id:(B) query"`;
+
+exports[`gets filter string (no filters) 1`] = `""`;
+
+exports[`gets hints (0) 1`] = `""`;
+
+exports[`gets hints (small number) 1`] = `" (one)"`;
+
+exports[`gets hints (too many) 1`] = `" (3 filters)"`;
+
+exports[`gets item name (found) 1`] = `"One"`;
+
+exports[`gets item name (not found) 1`] = `"Unknown"`;
+
+exports[`submits searches 1`] = `Array []`;
+
+exports[`submits searches 2`] = `
+Array [
+  Array [
+    "?foo=bar&search=foo",
+  ],
+]
+`;
+
+exports[`submits searches 3`] = `
+Array [
+  Array [
+    "?foo=bar",
+  ],
+]
+`;
+
+exports[`submits searches 4`] = `
+Array [
+  Array [
+    "/pathname",
+  ],
+]
+`;

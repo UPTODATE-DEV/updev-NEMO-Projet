@@ -1,0 +1,15 @@
+list_name,name,label::English,parent_id
+*optsetcode1*,*optcode1*,Animal,
+*optsetcode1*,*optcode2*,Vertebrate,*optcode1*
+*optsetcode1*,*optcode3*,Cat,*optcode2*
+*optsetcode1*,*optcode4*,Dog,*optcode2*
+*optsetcode1*,*optcode5*,Invertebrate,*optcode1*
+*optsetcode1*,*optcode6*,Lobster,*optcode5*
+*optsetcode1*,*optcode7*,Jellyfish,*optcode5*
+*optsetcode1*,*optcode8*,Plant,
+*optsetcode1*,*optcode9*,Tree,*optcode8*
+*optsetcode1*,*optcode10*,Oak,*optcode9*
+*optsetcode1*,*optcode11*,Pine,*optcode9*
+*optsetcode1*,*optcode12*,Flower,*optcode8*
+*optsetcode1*,*optcode13*,Tulip,*optcode12*
+*optsetcode1*,*optcode14*,Daisy,*optcode12*

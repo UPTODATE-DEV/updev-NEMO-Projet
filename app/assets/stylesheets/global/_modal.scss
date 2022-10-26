@@ -1,0 +1,40 @@
+div.ui-dialog-content {
+  margin-top: 10px;
+
+  div.modal_error {
+    color: $error-red;
+    display: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+}
+
+.modal-dialog {
+  max-width: 800px;
+  min-width: 600px;
+  width: 90%;
+
+  .modal-body {
+    word-wrap: break-word;
+
+    .alert {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.modal-small .modal-dialog {
+  max-width: 400px;
+  min-width: 400px;
+}

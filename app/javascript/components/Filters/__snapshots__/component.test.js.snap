@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`integration navigates on apply advanced search 1`] = `
+Array [
+  "?search=form-id%3A%282%29%20%7BOne%7D%3A%225%22%20reviewed%3A1%20submitter-id%3A%28B%29%20group-id%3A%28B%29%20something%20else",
+]
+`;
+
+exports[`integration navigates on apply form filter 1`] = `
+Array [
+  "?search=form-id%3A%281%29%20reviewed%3A1%20submitter-id%3A%28B%29%20group-id%3A%28B%29%20query",
+]
+`;
+
+exports[`integration navigates on apply question filter 1`] = `
+Array [
+  "?search=form-id%3A%282%29%20%7BOne%7D%3A%225%22%20reviewed%3A1%20submitter-id%3A%28B%29%20group-id%3A%28B%29%20query",
+]
+`;
+
+exports[`integration navigates on apply reviewed filter 1`] = `
+Array [
+  "?search=form-id%3A%282%29%20%7BOne%7D%3A%225%22%20reviewed%3A0%20submitter-id%3A%28B%29%20group-id%3A%28B%29%20query",
+]
+`;
+
+exports[`integration navigates on apply submitter filter 1`] = `
+Array [
+  "?search=form-id%3A%282%29%20%7BOne%7D%3A%225%22%20reviewed%3A1%20submitter-id%3A%28A%29%20group-id%3A%28A%29%20query",
+]
+`;
+
+exports[`renders as expected (other page) 1`] = `
+<div
+  className="filters"
+>
+  <AdvancedSearchFilter
+    onClear={[Function]}
+    onSubmit={[Function]}
+    renderInfoButton={false}
+  />
+</div>
+`;
+
+exports[`renders as expected (responses page) 1`] = `
+<div
+  className="filters"
+>
+  <ButtonToolbar>
+    <i
+      className="fa fa-filter"
+    />
+    <FormFilter
+      onSubmit={[Function]}
+    />
+    <QuestionFilter
+      onSubmit={[Function]}
+    />
+    <FormFilter
+      onSubmit={[Function]}
+    />
+    <SubmitterFilter
+      onSubmit={[Function]}
+    />
+    <DateFilter
+      onSubmit={[Function]}
+    />
+  </ButtonToolbar>
+  <AdvancedSearchFilter
+    onClear={[Function]}
+    onSubmit={[Function]}
+    renderInfoButton={true}
+  />
+</div>
+`;

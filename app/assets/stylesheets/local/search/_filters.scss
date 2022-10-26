@@ -1,0 +1,124 @@
+.filters {
+  margin-bottom: 4px;
+
+  .btn-toolbar {
+    margin-bottom: 5px;
+
+    // Counter the margin-top of the children, so that there's
+    // no margin UNLESS the buttons wrap to a second row.
+    margin-top: -5px;
+
+    > * {
+      margin-top: 5px;
+    }
+
+    button {
+      background-color: transparent;
+      // Same color that Bootstrap uses for the search box.
+      border-color: $gray-400;
+
+      &:hover {
+        // Arbitrary choice that's slightly darker than default.
+        border-color: $gray-500;
+      }
+
+      &.active-filter {
+        background-color: $light-blue;
+
+        &:not(:hover) {
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  .btn-margin-left {
+    margin-left: 5px;
+  }
+
+  i {
+    color: $nav-icon-color;
+
+    &:not(.inline) {
+      font-size: 12pt;
+      // Same height as `form.search-form .btn`
+      line-height: 28px;
+      margin-right: 5px;
+      width: 15px;
+    }
+
+    &.inline {
+      margin-left: 5px;
+    }
+
+    &.hint {
+      cursor: pointer;
+      margin-left: 15px;
+    }
+  }
+}
+
+.filters-popover {
+  $container-padding: 12px;
+
+  max-width: 300px;
+  padding: $container-padding;
+
+  width: 80vw !important;
+
+  &.wide {
+    max-width: 450px;
+  }
+
+  &.popover-multi-select2 {
+    padding-top: 0;
+
+    .select2-container {
+      // Replace container padding top with popover margin so it's all consistent.
+      margin-top: 8px;
+    }
+  }
+
+  .btn-apply-container {
+    margin-top: $container-padding;
+    text-align: right;
+
+    &.condition-margin {
+      // Account for margin already present from the condition set UI.
+      margin-top: -15px;
+    }
+
+    &.inline {
+      margin-top: -32px;
+    }
+  }
+
+  // Optional button to the left of 'Apply'.
+  .btn-clear {
+    margin-right: 5px;
+  }
+
+  // Center checkboxes; by default they have weird margins here.
+  .form-check {
+    align-items: center;
+    display: flex;
+
+    .form-check-input {
+      margin-top: 0;
+    }
+  }
+
+  .operator-text {
+    flex: 1;
+    font-size: 14px;
+    line-height: 32px;
+    max-width: 40px;
+    text-align: center;
+  }
+}
+
+.filters-select2-dropdown {
+  // Above popover, below tooltip.
+  // https://getbootstrap.com/docs/4.0/layout/overview/#z-index
+  z-index: 1065 !important;
+}

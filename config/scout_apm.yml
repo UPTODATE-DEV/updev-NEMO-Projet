@@ -1,0 +1,37 @@
+# This configuration file is used for Scout APM.
+# Environment variables can also be used to configure Scout. See our help docs at https://docs.scoutapm.com#environment-variables for more information.
+common: &defaults
+
+  # key: Your Organization key for Scout APM. Found on the settings screen. This key does not provide API access.
+  # - Default: none
+  key: <%= Cnfg.scout_key %>
+
+  # log_level: Verboseness of logs.
+  # - Default: 'info'
+  # - Valid Options: debug, info, warn, error
+  # log_level: debug
+
+  # name: Application name in APM Web UI
+  # - Default: the application names comes from the Rails or Sinatra class name
+  #
+  # Take the first part of the hostname, e.g. cejp-web and cejp-db will both be "ELMO-prod-cejp"
+  name: <%= "ELMO-prod-#{`hostname`.strip.split("-")[0]}" %>
+
+  # monitor: Enable Scout APM or not
+  # - Default: none
+  # - Valid Options: true, false
+  monitor: true
+
+production:
+  <<: *defaults
+
+development:
+  <<: *defaults
+  name: <%= "ELMO-dev-#{`hostname`.strip}" %>
+
+test:
+  <<: *defaults
+  monitor: false
+
+staging:
+  <<: *defaults

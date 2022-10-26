@@ -1,0 +1,91 @@
+.index-links {
+  @include link-divider;
+
+  margin-bottom: 10px;
+
+  > a {
+    color: $darker-accent-color;
+    display: inline-block;
+    margin-#{$right}: 10px;
+
+    &.batch-link {
+      color: $accent-color;
+    }
+  }
+}
+
+.index_table {
+  $cell-top-bot-padding: 6px;
+
+  @include media-breakpoint-up(md) {
+    min-width: 480px;
+  }
+
+  tr:first-child td {
+    border-top: none;
+  }
+
+  tr:last-child td {
+    border-bottom: $light-border;
+  }
+
+  td {
+
+    border-top: $light-border;
+    height: 34px; // Ensure height is consistent even if icons not present.
+    padding-bottom: $cell-top-bot-padding;
+    padding-top: $cell-top-bot-padding;
+    vertical-align: middle;
+    padding-#{$left}: 3px;
+    padding-#{$right}: 20px;
+
+    &.action {
+      padding-#{$right}: 10px;
+    }
+
+    a:not(.badge) {
+      padding: 5px 0;
+    }
+  }
+
+  // For cells with tags, we remove padding and add it back on a span.text inside the cell.
+  // This prevents the tags from making the row too high.
+  td.has-tags {
+    padding-bottom: 0;
+    padding-top: 0;
+
+    span.text {
+      display: inline-block;
+      padding-bottom: $cell-top-bot-padding;
+      padding-top: $cell-top-bot-padding;
+    }
+  }
+
+  td.action {
+    white-space: nowrap;
+    width: 1px; // These shouldn't scale out on wider screens.
+  }
+
+  tbody tr.clickable {
+    cursor: pointer;
+  }
+
+  tbody tr:hover,
+  tbody tr.hovered {
+    background-color: #ecf1f5;
+  }
+
+  i.fa-certificate {
+    font-size: 1.5em;
+    margin-bottom: -5px;
+  }
+}
+
+table.index_table th,
+table.form th {
+  background-color: $super-light-gray;
+  color: #444;
+  font-size: 90%;
+  padding: 3px 10px 3px 3px;
+  text-align: $left;
+}

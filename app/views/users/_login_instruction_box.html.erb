@@ -1,0 +1,50 @@
+<div id="instructions">
+  <h1><%= current_mission_config.site_name %> <%= t("user.login_instructions.title") %></h1>
+  <p><%= t("user.login_instructions.welcome", site: current_mission_config.site_name) %></p>
+
+  <table class="form">
+    <tr>
+      <td class="name"><%= User.human_attribute_name("name") %></td>
+      <td class="value"><%= user.full_name %></td>
+    </tr>
+    <tr>
+      <td class="name"><%= t("user.login_instructions.site_url") %></td>
+      <td class="value"><%= @site_url %></td>
+    <tr>
+      <td class="name"><%= User.human_attribute_name("login") %></td>
+      <td class="value"><%= user.login %></td>
+    </tr>
+    <tr>
+      <td class="name"><%= User.human_attribute_name("password") %></td>
+      <td class="value">
+        <%= render("masked_value", value: password) %>
+      </td>
+    </tr>
+    <tr>
+      <td class="name"><%= User.human_attribute_name("sms_auth_code") %></td>
+      <td class="value">
+        <%= render("masked_value", value: user.sms_auth_code) %>
+      </td>
+    </tr>
+    <% unless admin_mode? %>
+      <tr>
+        <td class="name"><%= t("activerecord.models.mission.one") %></td>
+        <td class="value"><%= "#{@current_mission.name}" %></td>
+      </tr>
+    <% end %>
+    <tr>
+      <td class="name"><%= t("user.login_instructions.qr_code") %></td>
+      <td class="value qrcode"><%= raw @config_qr.as_html %></td>
+    </tr>
+  </table>
+
+  <% t("user.login_instructions.closing").each do |para| %>
+    <p><%= para %></p>
+  <% end %>
+</div>
+
+<%= javascript_doc_ready do %>
+  new ELMO.Views.UserLoginInstructionsView({
+    el: $('#instructions')
+  })
+<% end %>

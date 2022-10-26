@@ -1,0 +1,142 @@
+<%# ensures objects collection is paginated and .all is called %>
+<% objects = prepare_for_index(objects) %>
+<div class="index-table-wrapper" data-entries="<%= objects.total_entries rescue objects.count %>"
+  data-pages="<%= objects.total_pages rescue 1 %>">
+
+  <%# header links %>
+  <% unless options[:table_only] %>
+    <div class="index-links">
+      <% if paginable?(objects) %>
+        <%# explicitly load the objects here to work around counting behavior for grouped models %>
+        <% objects.load if objects.respond_to?(:load) %>
+        <%= page_entries_info(objects, model: klass) %>.
+        &nbsp;
+      <% elsif objects.empty? %>
+        <%= t("will_paginate.#{klass.model_name.i18n_key}.page_entries_info.single_page_html.zero") %>.
+        &nbsp;
+      <% end %>
+      <%= links %>
+    </div>
+    <div class="alert alert-compact" role="alert" style="display: none"></div>
+  <% end %>
+
+  <% unless objects.empty? %>
+
+    <%# wrap table in a form tag for batch operation support %>
+    <% unless options[:omit_form] %>
+      <%= form_tag %>
+    <% end %>
+
+    <input type="hidden" name="select_all_pages" value="<%= @selected_all_pages %>">
+    <input type="hidden" name="search" value="<%= @search_params %>">
+    <input type="hidden" name="pages">
+    <table class="index_table <%= options[:table_css_classes] %>">
+      <thead>
+        <tr class="header">
+          <% if batch_ops %>
+            <th></th>
+          <% end %>
+          <% fields.each do |f| %>
+            <% if f == "actions" %>
+              <% options[:max_actions].times do %>
+                <th></th>
+              <% end %>
+            <% else %>
+              <th>
+                <%# if field def is a hash, look for the :title key %>
+                <% if f.is_a?(Hash) && f[:title] %>
+                  <%= f[:title] %>
+                <% else %>
+                  <% key = f.is_a?(Hash) ? f[:attrib] : f %>
+                  <%= t("activerecord.table_headers.#{objects[0].class.model_name.i18n_key}.#{key}",
+                        default: objects[0].class.human_attribute_name(key)) %>
+                <% end %>
+              </th>
+            <% end %>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody class="index_table_body">
+        <% objects.each do |object| %>
+          <%# include the path for the current object in the tr tag so that we can support clicking anywhere on the row (may be nil) %>
+          <%= content_tag(:tr,
+                id: "#{klass.model_name.singular_route_key}_#{object.id}",
+                data: {href: object.default_path},
+                class: index_row_class(object, clickable: object.default_path.present?)) do %>
+
+            <% if batch_ops %>
+              <td class="cb_col">
+                <%= check_box_tag("selected[#{object.id}]", 1, @selected_ids&.include?(object.id),
+                      class: 'batch_op', data: {"#{klass.model_name.singular_route_key}-id": object.id}) %>
+              </td>
+            <% end %>
+            <% fields.each do |f| %>
+              <% formatted = send("format_#{klass.model_name.route_key}_field", object, f) %>
+              <% if f == "actions" && formatted.is_a?(Array) %>
+                <% formatted.each do |link| %>
+                  <td class="action">
+                    <%= link %>
+                  </td>
+                <% end %>
+                <% [options[:max_actions] - formatted.size, 0].max.times do %>
+                  <td></td>
+                <% end %>
+              <% else %>
+                <td class="<%= "#{f.is_a?(Hash) ? f[:css_class] : (f.gsub(/[^\w\d]/, "") << "_col")}" %>">
+                  <div><%= formatted %></div>
+                </td>
+              <% end %>
+            <% end %>
+
+          <% end %>
+
+          <%# do second row if requested %>
+          <% if respond_to?("#{klass.model_name.route_key}_second_row") && content = send("#{klass.model_name.route_key}_second_row", object) %>
+            <%= content_tag(:tr,
+                  data: {href: object.default_path},
+                  class: 'second_row' + (object.default_path ? ' clickable' : '')) do %>
+              <td colspan="<%= fields.size + 1 %>">
+                <%= content %>
+              </td>
+            <% end %>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+
+    <%# close the form tag if necessary %>
+    <% unless options[:omit_form] %>
+      </form>
+    <% end %>
+
+    <br/>
+
+    <%# create js view model for index table, only necessary if there are some objects %>
+    <%= javascript_doc_ready do %>
+      <% class_name = objects[0].object.class.name.underscore %>
+      // Clear previous event handlers in case reloading.
+      if (ELMO.batch_actions_views['<%= class_name %>'])
+        ELMO.batch_actions_views['<%= class_name %>'].undelegateEvents();
+
+      ELMO.batch_actions_views['<%= class_name %>'] = new ELMO.Views.BatchActionsView(<%=json(
+        class_name: class_name,
+        batch_ops: batch_ops,
+        is_search: params[:search].present?
+      ) %>, ELMO.searchFormView);
+
+      new ELMO.Views.IndexTableView(<%=json(
+        modified_obj_id: flash[:modified_obj_id],
+        no_whole_row_link: options[:no_whole_row_link],
+      ) %>);
+    <% end %>
+
+  <% end %>
+
+  <%# pagination links (don't show if there are no entries) %>
+  <% if !options[:table_only] && paginated && paginable?(objects) && objects.total_entries > 0 %>
+    <div class="pagination-container">
+      <%= will_paginate(objects, renderer: WillPaginate::ActionView::BootstrapLinkRenderer) %>
+    </div>
+  <% end %>
+
+</div>

@@ -1,0 +1,62 @@
+<translation lang="<%= language_name(lang) %>">
+
+  <%# group hint translations %>
+  <%= render("forms/odk/translation_group_node", node: @form.root_group, lang: lang) %>
+
+  <%# Regular question translations %>
+  <% @questionings.each do |qing| %>
+    <% if qing.enabled? %>
+      <% qing.subqings.each do |subq| %>
+        <text id="<%= subq.odk_code %>:label">
+          <value><%= subq.name(lang, fallbacks: true) %></value>
+          <% if subq.media_prompt? %>
+            <% question = ODK::DecoratorFactory.decorate(subq.question) %>
+            <value form="<%= question.media_prompt_type %>">
+              <%= question.media_prompt_odk_uri %>
+            </value>
+          <% end %>
+        </text>
+        <text id="<%= subq.odk_code %>:hint">
+          <value><%= subq.hint(lang, fallbacks: true) %></value>
+        </text>
+      <% end %>
+      <% if qing.constraints? %>
+        <text id="<%= qing.odk_code %>:constraintMsg">
+          <value><%= qing.constraint_msg(lang) %></value>
+        </text>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <% @option_sets.each do |option_set| %>
+    <%= option_set.translation_tags(lang) %>
+  <% end %>
+
+  <%# incomplete response question translations %>
+  <% if allow_incomplete? %>
+    <text id="<%= ODK::FormDecorator::IR_QUESTION %>:label">
+      <value><%= t("incomplete_response.missing_answers.label") %></value>
+    </text>
+    <text id="<%= ODK::FormDecorator::IR_QUESTION %>:hint">
+      <value><%= t("incomplete_response.missing_answers.hint") %></value>
+    </text>
+    <% [:no, :yes].each do |o| %>
+      <text id="<%= ODK::FormDecorator::IR_QUESTION %>:options:<%= o %>">
+        <value><%= t("incomplete_response.missing_answers.options.#{o}") %></value>
+      </text>
+    <% end %>
+    <text id="<%= ODK::FormDecorator::IR_CODE %>:label">
+      <value><%= t("incomplete_response.code_label") %></value>
+    </text>
+    <text id="<%= ODK::FormDecorator::IR_CODE %>:hint">
+      <%# no hint for this question currently %>
+      <value/>
+    </text>
+  <% end %>
+
+  <%# Include a 'blank' node in every file. Unfilled values referenced for $ naming come back as '[itext]' %>
+  <%# and we use this node with coalesce to display an empty string in that case %>
+  <text id="BLANK">
+    <value></value>
+  </text>
+</translation>

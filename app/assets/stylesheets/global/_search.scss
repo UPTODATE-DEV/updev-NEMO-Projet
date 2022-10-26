@@ -1,0 +1,32 @@
+form.search-form {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  input.search-str {
+    padding: 3px;
+    // Match the width of the filter buttons on most browsers.
+    width: 481px;
+    margin-#{$right}: 5px;
+  }
+
+  .form-control,
+  .btn {
+    height: 28px;
+  }
+
+  #search_examples {
+    color: #666;
+    display: inline-block;
+    font-size: 8pt;
+    margin: 4px 8px 10px 0;
+  }
+}
+
+#search-help-modal {
+  .modal-body {
+    max-height: 500px;
+    overflow: auto;
+  }
+}

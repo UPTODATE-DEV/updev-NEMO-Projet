@@ -1,0 +1,34 @@
+<% @title_args = {name: @operation.name} %>
+<%= elmo_form_for(@operation) do |f| %>
+  <%= ActionLinks::LinkBuilder.new(@operation, %i[destroy]) %>
+  <%= f.field :id %>
+  <% if admin_mode? %>
+    <%= f.field :mission, read_only_content: @operation.mission&.name || t("admin_mode.admin_mode") %>
+  <% end %>
+  <%= f.field :details, link: @operation.url %>
+  <% if @operation.notes.present? %>
+    <%= f.field :notes %>
+  <% end %>
+  <%= f.field :status, read_only_content: t("operation.status.#{@operation.status}") %>
+  <%= f.field :creator, read_only_content: if @operation.creator
+                                             link_to(@operation.creator.try(:name), @operation.creator)
+                                           else
+                                             t("common.system")
+                                           end %>
+  <%= f.field :job_started_at %>
+  <% if @operation.failed? %>
+    <%= f.field :job_failed_at %>
+  <% elsif @operation.completed? %>
+    <%= f.field :job_completed_at %>
+  <% end %>
+  <% if @operation.attachment.attached? %>
+    <%# This code is duplicated from the operations_helper but the plan is for this show page to go away. %>
+    <%= f.field :attachment,
+          read_only_content: link_to(t("operation.result_link_text.#{@operation.kind}"),
+                                     rails_blob_path(@operation.attachment, disposition: "attachment")) %>
+  <% end %>
+  <% if @operation.job_error_report.present? %>
+    <%= f.field :job_error_report,
+          read_only_content: BlueCloth.new(@operation.job_error_report).to_html.html_safe %>
+  <% end %>
+<% end %>

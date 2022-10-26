@@ -1,0 +1,69 @@
+<div class="modal fade" id="export-csv-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <%= elmo_form_for(@response_csv_export_options, url: responses_path(format: :csv), method: "get") do |f| %>
+        <div class="modal-header">
+          <h4 class="modal-title"><%= t('response.download') %></h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="fields">
+            <!-- Shown via JS. -->
+            <div id="export-count-error" class="alert alert-danger hide">
+              <%= t("response.export_options.export_error",
+                threshold: number_with_delimiter(ResponsesController::CSV_EXPORT_LIMIT)) %>
+            </div>
+            <div id="export-count-warning" class="alert alert-warning hide">
+              <%= t("response.export_options.export_warning",
+                threshold: number_with_delimiter(ResponsesController::CSV_EXPORT_WARNING)) %>
+            </div>
+
+            <!-- Placeholder replaced via JS. -->
+            <p id="export-options-summary">Calculating...</p>
+
+            <input type="hidden" name="search" value="<%= params[:search] %>" />
+            <%= f.field(:long_text_behavior, type: :select, required: true,
+                options: translate_options(ResponseCSVExportOptions::LONG_TEXT_BEHAVIOR_OPTIONS, [:response, :long_text_behavior_options])) %>
+
+            <div class="download-types">
+              <p><%= t("response.export_options.download_types") %></p>
+              <%= f.field(:download_csv, type: :check_box, label: t("response.export_options.download_csv"), checked: true) %>
+              <%= f.field(:download_media, type: :check_box, label: t("response.export_options.download_media")) %>
+              <%= f.field(:download_xml, type: :check_box, label: t("response.export_options.download_xml")) %>
+            </div>
+
+            <div class="calculating-info">
+              <%= image_tag("loader.gif") %>
+              <p><%= t("response.export_options.calculating") %></p>
+            </div>
+            <div class="media-info">
+              <%= t("response.export_options.media_size") %> <span id="media-size"></span>
+            </div>
+            <div class="xml-info">
+              <%= t("response.export_options.xml_size") %> <span id="xml-size"></span>
+            </div>
+            <div class="error-info">
+              <div id="export-error" class="error_box alert alert-danger"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="submit-buttons">
+            <%= f.submit(:export, class: "btn btn-primary") %>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              <%= t("common.cancel") %>
+            </button>
+          </div>
+        </div>
+      <% end %>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<%= javascript_doc_ready do %>
+  ELMO.ExportCsvView = new ELMO.Views.ExportCsvView(<%=json(
+    el: "#export-csv-modal",
+    search: params[:search],
+  )%>);
+<% end %>

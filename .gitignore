@@ -1,0 +1,67 @@
+.bundle
+.DS_Store
+db/*.sqlite3
+db/sphinx
+log
+tmp/
+railsenv
+config/railsenv
+config/database.yml
+config/mysql2postgres.yml
+config/thinking_sphinx.yml
+config/memcached_server
+TODO
+.sass-cache/
+NOTES
+
+# Frappe configuration
+frpc.ini
+
+# IDE
+.idea/*
+!/.idea/runConfigurations/
+
+# MS Office backup files
+~$*
+
+# compiled assets
+public/assets
+public/javascripts/i18n.js
+app/assets/javascripts/i18n/
+
+# these are auto generated
+config/*.sphinx.conf
+
+# Read the docs files
+*.mo
+docs/readthedocs/_build
+
+# manually generated files for quick searching
+rake_tasks.txt
+routes.txt
+
+# Theme-related things
+/app/assets/stylesheets/application_*.scss
+/app/assets/stylesheets/all/themes/_custom_theme.scss
+/app/assets/images/logos/custom
+/config/settings/themes/custom.yml
+/theme
+
+# file uploads
+/uploads/
+/storage/
+/public/form-attachments/
+
+# Bundle installs
+vendor/bundle/
+
+/public/packs
+/public/packs-test
+node_modules/
+yarn-*.log*
+.yarn-integrity
+
+# Configuration. We don't ignore the .env.development, .env.production, etc. files as per
+# the recommendation of the gem. We also don't ignore .env since that's where default values for
+# configurations will go.
+.env*.local

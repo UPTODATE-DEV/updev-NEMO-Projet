@@ -1,0 +1,55 @@
+<div id="userinfo" class="d-print-none">
+  <% if current_user %>
+    <div class="mission-operations-container">
+      <% unless admin_mode? %>
+        <% if @accessible_missions.any? %>
+          <form>
+            <%# Changing missions when on a post or put request doesn't make sense, so we disable with message in that case. %>
+            <%= select_tag("change_mission",
+              options_from_collection_for_select(@accessible_missions, 'compact_name', 'name', current_mission.try(:compact_name)),
+              id: "change-mission",
+              class: 'form-control',
+              prompt: "[#{I18n.t('common.none')}]",
+              disabled: !request.get?,
+              title: request.get? ? '' : I18n.t('layout.mission_change_get_only')) %>
+          </form>
+        <% end %>
+      <% end %>
+      <div class="operations">
+        <%= operations_status %>
+      </div>
+    </div>
+
+    <%# docs link %>
+    <div class="icon-btn">
+      <a href="https://getnemo.readthedocs.io" target="_blank">
+        <i class="fa fa-2x fa-book"></i>
+        <br/>
+        <%= t('common.docs') %>
+      </a>
+    </div>
+
+    <%# admin mode link %>
+    <% if current_user.admin? %>
+      <div class="icon-btn"><%= admin_mode_link %></div>
+    <% end %>
+
+    <%# user link %>
+    <div class="icon-btn">
+      <div class="dropdown">
+          <a href="#" class="user-dropdown-toggle" data-toggle="dropdown">
+            <div><%= profile_link %></div>
+            <i class="fa fa-caret-down"></i>
+          </a>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+          <li><%= link_to("Edit profile", edit_user_path(current_user.id)) %></li>
+          <li><%= link_to(t("common.logout"), logout_path(:mode => nil, :mission_name => nil), :method => :delete, :id => "logout_button") %></li>
+        </ul>
+      </div>
+    </div>
+
+  <% else %>
+    <%# login link %>
+    <%= link_to(t("common.login"), login_path, {:class => "btn btn-secondary login"}) %>
+  <% end %>
+</div>

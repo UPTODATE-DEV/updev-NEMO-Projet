@@ -1,0 +1,26 @@
+// Styles for all HTML forms, whether they're "elmo forms" or special ones with different styles.
+form {
+  margin: 0;
+
+  .submit-buttons {
+    display: flex;
+    // Display buttons in reverse order so the "primary" action
+    // can be added to the DOM first and still be on the right.
+    flex-direction: row-reverse;
+    margin-top: 20px;
+
+    .btn {
+      margin-#{$left}: 3px;
+    }
+  }
+
+  .btn {
+    padding: 6px 25px;
+  }
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  background-color: transparent;
+  border: 0;
+}

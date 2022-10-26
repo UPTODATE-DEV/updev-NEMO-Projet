@@ -1,0 +1,28 @@
+form.user_import_form {
+  /* special form */
+  div.batch_line_with_info {
+    border-top: $light-border;
+    padding: 10px 0;
+
+    input[type=text] {
+      display: inline-block;
+      vertical-align: top;
+      width: 400px;
+    }
+
+    div.info {
+      display: inline-block;
+      margin-left: 5px;
+      vertical-align: top;
+      width: 350px;
+    }
+
+    &.line_ok div.info {
+      color: $success-green;
+    }
+
+    &.line_error div.info {
+      color: $error-red;
+    }
+  }
+}

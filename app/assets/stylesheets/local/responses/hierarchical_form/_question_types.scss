@@ -1,0 +1,71 @@
+.response-form {
+  .answer-map {
+    display: none;
+    height: 90px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 180px;
+  }
+
+  .qtype-long-text {
+    .textarea-wrapper {
+      // Ensure background of WYSIWYG editor is white.
+      background-color: $white;
+    }
+
+    .trumbowyg-box {
+      margin: 0;
+    }
+
+    .trumbowyg-box,
+    .trumbowyg-editor {
+      min-height: 150px; // Overriding 300px in plugin SCSS.
+    }
+  }
+
+  .qtype-date,
+  .qtype-time,
+  .qtype-datetime {
+    select {
+      display: inline-block;
+      width: 75px;
+    }
+  }
+
+  .qtype-integer,
+  .qtype-decimal,
+  .qtype-counter {
+    input {
+      max-width: 300px;
+    }
+  }
+
+  .qtype-location .widget {
+    display: flex;
+
+    input {
+      flex-grow: 1;
+      max-width: 500px;
+    }
+
+    a {
+      margin-#{$left}: 5px;
+      line-height: 32px;
+    }
+
+    i.fa {
+      font-size: 20px;
+    }
+  }
+
+  .qtype-select-multiple {
+    .choice {
+      margin-bottom: 5px;
+
+      label {
+        font-weight: normal;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

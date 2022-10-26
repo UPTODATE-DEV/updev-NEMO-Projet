@@ -1,0 +1,100 @@
+/* elmo specific styles for the token input plugin */
+ul.token-input-list-elmo {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  clear: left;
+  cursor: text;
+  display: inline-block;
+  font-size: 12px;
+  height: 34px;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  vertical-align: middle;
+  width: 400px;
+  z-index: 999;
+}
+
+.control .widget ul.token-input-list-elmo li.token-input-input-token-elmo input[type=text] {
+  -webkit-appearance: caret;
+  border: 0;
+  height: 27px;
+  margin: 2px 0;
+  padding: 3px;
+  width: 100px;
+}
+
+.token-input-token-elmo {
+  @include tag;
+
+  float: left;
+  margin: 6px 3px;
+}
+
+.read-only .token-input-token-elmo {
+  margin: 3px;
+}
+
+li.token-input-selected-token-elmo {
+  border: 1px solid #3b5998;
+}
+
+div.token-input-dropdown-elmo {
+  background-color: $super-light-gray;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  cursor: default;
+  font-size: 13px;
+  overflow: hidden;
+  position: absolute;
+  width: 400px;
+  z-index: 1;
+}
+
+div.token-input-dropdown-elmo p {
+  color: #777;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px;
+}
+
+div.token-input-dropdown-elmo ul {
+  margin: 0;
+  padding: 0;
+}
+
+div.token-input-dropdown-elmo ul li {
+  background-color: $super-light-gray;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px;
+}
+
+div.token-input-dropdown-elmo ul li.token-input-dropdown-item-elmo {
+  background-color: $super-light-gray;
+}
+
+div.token-input-dropdown-elmo ul li.token-input-dropdown-item2-elmo {
+  background-color: $super-light-gray;
+}
+
+div.token-input-dropdown-elmo ul li em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+div.token-input-dropdown-elmo ul li div.details {
+  color: #999;
+  font-size: 11px;
+}
+
+div.token-input-dropdown-elmo ul li .details.create_new {
+  font-style: italic;
+}
+
+div.token-input-dropdown-elmo ul li.token-input-selected-dropdown-item-elmo {
+  background-color: $light-yellow;
+}

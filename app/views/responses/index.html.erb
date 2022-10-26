@@ -1,0 +1,16 @@
+<%= render("searches/form", search: @search) %>
+
+<%= index_table(responses) %>
+
+<%= render("export_csv_modal") %>
+<%= render("export_odata_modal") %>
+
+<%= javascript_doc_ready do %>
+  ELMO.responseListView = new ELMO.Views.ResponseListView(<%=json(
+    el: "#content",
+    refreshInterval: ResponsesController::REFRESH_INTERVAL,
+    showReloadCount: Rails.env.test?,
+    exportWarningThreshold: ResponsesController::CSV_EXPORT_WARNING,
+    exportErrorThreshold: ResponsesController::CSV_EXPORT_LIMIT,
+  )%>);
+<% end %>

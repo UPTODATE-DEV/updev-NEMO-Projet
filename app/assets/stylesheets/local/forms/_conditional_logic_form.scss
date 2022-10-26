@@ -1,0 +1,115 @@
+.display-logic-container,
+.skip-logic-container,
+.constraints-container {
+  a {
+    cursor: pointer;
+  }
+
+  //////////////////////////////////////////////////////////////////
+  // Vertical spacing (tricky for this stuff, so separated out here)
+  // General rule is to prefer adding space below things unless there is a clear reason to add on top.
+  // Top padding is also always needed when there is a border.
+
+  .rule-set {
+    // We do top spacing here instead of bottom on the above control because this one is not always visible.
+    margin-top: 10px;
+  }
+
+  .rule-attribs,
+  .rule,
+  .condition-fields,
+  .accept-if {
+    margin-bottom: 10px;
+  }
+
+  .rule {
+    // Padding needed under top border.
+    padding-top: 10px;
+  }
+
+  .rule-add-link-wrapper {
+    // Padding needed between border and link.
+    padding-top: 10px;
+  }
+
+  // Undo the above margins when inside a popover, such as a filter.
+  .popover-body {
+    .condition-set {
+      margin-#{$left}: 0;
+    }
+
+    .condition-set,
+    .rule-set {
+      margin-top: 0;
+    }
+  }
+
+  ////////////////////////////////////////////////////////////////////
+
+  .rule-add-link-wrapper {
+    border-top: $light-border;
+  }
+
+  .rule {
+    border-top: $light-border;
+    display: flex;
+    margin-#{$left}: 20px;
+
+    .rule-main {
+      flex: auto;
+    }
+
+    .rule-attribs {
+      display: flex;
+
+      select {
+        flex: 1;
+
+        &:first-child {
+          margin-#{$right}: 10px;
+        }
+      }
+    }
+  }
+
+  .condition-fields {
+    display: flex;
+
+    .form-control[name$=\[left_qing_id\]] {
+      flex: 2;
+      width: 150px;
+    }
+
+    .form-control[name$=\[op\]] {
+      flex: 1;
+      margin: 0 10px;
+      width: 75px;
+    }
+
+    .condition-right-side {
+      flex: 2;
+    }
+
+    .condition-right-side-type {
+      margin-bottom: 3px;
+    }
+
+    .condition-remove {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+      width: 20px;
+
+      i {
+        color: $deemphasized-accent-color;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .accept-if {
+    label {
+      font-weight: normal;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+<%# This partial represents a question in the form form item list. %>
+<% href = !read_only && can?(:update, qing) ? edit_questioning_path(qing) : questioning_path(qing) %>
+<li class="form-item form-item-question<%= qing.disabled? ? " form-item-disabled" : "" %>"
+  data-id="<%= qing.id %>" data-href="<%= href %>">
+  <div class="inner">
+
+    <%# Standard question? %>
+    <% if qing.standardized? %>
+      <i class="standardized fa fa-certificate"></i>
+    <% else %>
+      <%# Spacing placeholder for styling purposes %>
+      <div class="standardized"></div>
+    <% end %>
+
+    <%# Question type icon %>
+    <div class="type"><%= form_item_icon(qing.qtype_name) %></div>
+
+    <%# Filled in by CSS %>
+    <div class="rank"></div>
+
+    <div class="base-info">
+      <div class="wrapper"><%# Need this so we can handle wrapping nicely %>
+        <div>
+          [<%= qing.code %>] <%= qing.name %>
+
+          <%# Required question? %>
+          <%= content_tag(:span, '*', class: 'required-sym') if qing.required %>
+
+          <%# Tags %>
+          <% if qing.tags.length != 0 %>
+            <% qing.tags.each do |tag| %>
+              <span class="badge badge-custom"><%= tag.name %></span>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div> <%# End of question base info %>
+
+    <div class="actions">
+
+      <%# Ranks of questions to which this question refers, by either display or skip logic.
+          Used to inform the user, and data in data-ref-id used by the drag-drop system for constraint
+          enforcement. %>
+      <% if qing.refd_qings.any? %>
+        <div class="refd-qing-links">
+          <i class="fa fa-link"></i>
+          <% qing.refd_qings.each do |q| %>
+            <div class="refd-qing" data-ref-id="<%= q.id %>">#<span><%= q.full_dotted_rank %></span></div>
+          <% end %>
+        </div>
+      <% end %>
+
+      <% if qing.skip_rules.any? %>
+        <div class="skip-rule-links">
+          <i class="fa fa-mail-forward"></i>
+          <% qing.skip_rule_targets.each do |t| %>
+            <div class="skip-rule-link"><span><%= t %></span></div>
+          <% end %>
+        </div>
+      <% end %>
+
+      <% if qing.hidden? %>
+        <div class="hidden-icon">
+          <i class="fa fa-eye-slash"></i>
+        </div>
+      <% end %>
+
+      <% unless read_only %>
+        <%= action_link(:edit, edit_questioning_path(qing), label: false) if can?(:update, qing) %>
+        <% if can?(:destroy, qing) %>
+          <%= action_link(:destroy, "#", label: false, data:
+            {message: I18n.t('activerecord.attributes.questioning.delete', code: qing.code)}) %>
+        <% end %>
+      <% end %>
+
+    </div>
+
+  </div><%# End of question content %>
+  <div class="hidden-curtain"></div><%# Used to washout the row if it's hidden. %>
+</li>

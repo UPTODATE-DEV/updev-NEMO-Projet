@@ -1,0 +1,19 @@
+<%# NOTE this template does not use elmo_form_for because it is rendered inside the control area of
+    an elmo form field and therefore doesn't need all the structure that comes with an elmo form field %>
+<% if read_only || cannot?(:update_core, form_item) %>
+  <% if form_item.display_if == "always" %>
+    <%= t("form_item.display_if_options.#{form_item.model_name.param_key}.always") %>
+  <% else %>
+    <dl>
+      <dt>
+        <%= t("form_item.display_if_options.#{form_item.model_name.param_key}.#{form_item.display_if}") %>
+      </dt>
+      <% form_item.display_conditions.each do |condition| %>
+        <dd><%= condition.decorate.human_readable(codes: true) %></dd>
+      <% end %>
+    </dl>
+  <% end %>
+<% else %>
+  <%= react_component("conditions/DisplayLogicFormField",
+        ConditionalLogicForm::FormItemSerializer.render_as_json(form_item)) %>
+<% end %>

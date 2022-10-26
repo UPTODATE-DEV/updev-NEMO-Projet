@@ -1,0 +1,27 @@
+.response-form .metadata {
+  background-color: $super-light-gray;
+  margin-bottom: 20px;
+  padding: 20px;
+
+  .form-field {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  label {
+    margin-bottom: 0;
+  }
+
+  [data-field-name=reviewed] {
+    @include left-checkbox;
+
+    @include media-breakpoint-down(sm) {
+      @media screen {
+        margin-top: 20px;
+      }
+    }
+  }
+}

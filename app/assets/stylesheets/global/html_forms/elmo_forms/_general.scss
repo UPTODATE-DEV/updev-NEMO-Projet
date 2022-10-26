@@ -1,0 +1,36 @@
+// "elmo forms" are the standard, consistent-looking forms in the app
+.elmo-form-wrapper {
+  // Standard form width so forms don't look super silly wide.
+  max-width: $max-form-width;
+}
+
+.elmo-form {
+  // This one can be removed once all forms have elmo-form-wrapper.
+  max-width: $max-form-width;
+
+  label {
+    font-weight: bold;
+  }
+
+  .instructions {
+    margin-bottom: 20px;
+  }
+
+  // Minimal form has no horiz lines and no hints
+  &.minimal {
+    .form-field {
+      border-bottom: 0;
+    }
+
+    // We need to hide this because otherwise the bottom buttons don't line up nicely.
+    .hint-wrapper {
+      display: none;
+    }
+  }
+
+  .form-errors {
+    color: $error-red;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+}

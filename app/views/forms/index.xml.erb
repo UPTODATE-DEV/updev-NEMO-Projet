@@ -1,0 +1,16 @@
+<% cache(@cache_key) do %><?xml version='1.0' encoding='UTF-8' ?>
+  <xforms xmlns="http://openrosa.org/xforms/xformsList">
+    <% @forms.each do |f| %>
+      <xform>
+        <formID>cceom.org:<%= f.id %></formID>
+        <name><%= f.full_name %></name>
+        <hash>md5:<%= f.odk_xml_md5 %></hash>
+        <version><%= f.number %></version>
+        <downloadUrl><%= odk_form_url(mission_name: f.mission.compact_name, id: f.id, locale: nil) %></downloadUrl>
+        <% if ODK::DecoratorFactory.decorate(f).needs_manifest? %>
+          <manifestUrl><%= odk_form_manifest_url(mission_name: f.mission.compact_name, id: f.id, locale: nil) %></manifestUrl>
+        <% end %>
+      </xform>
+    <% end %>
+  </xforms>
+<% end %>

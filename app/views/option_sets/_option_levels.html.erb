@@ -1,0 +1,10 @@
+<div id="option-levels-wrapper" class="draggable-list-wrapper" style="display: none"></div>
+
+<% unless read_only || @option_set.huge? %>
+  <% if can?(:add_options, @option_set) %>
+    <span class="action">
+      <%= icon_tag(:plus) %>
+      <%= link_to(t('option_set.add_level'), '#', class: 'add-link') %>
+    </span>
+  <% end %>
+<% end %>

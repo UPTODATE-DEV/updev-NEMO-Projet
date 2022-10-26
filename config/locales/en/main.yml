@@ -1,0 +1,2464 @@
+en:
+  # This should be the name of the language as written in that language, e.g. English, Français, Español, etc.
+  locale_name: "English"
+
+  # common words (should be capitalized except for those that obviously shouldn't like and, or, e.g., etc.)
+  common:
+    accept: "Accept"
+    active: "Active"
+    add: "Add"
+    and: "and"
+    AND: "AND"
+    apply: "Apply"
+    back: "Back"
+    blank: "Blank"
+    by: "By"
+    cancel: "Cancel"
+    choose: "Choose"
+    choose_file:
+      one: "Choose File..."
+      other: "Choose Files..."
+    clear: "Clear"
+    clipped: "Clipped"
+    clone: "Clone"
+    close: "Close"
+    contact: "Contact"
+    create: "Create"
+    created: "Created"
+    custom: "Custom"
+    copy: "Copy"
+    data: "Data"
+    delete: "Delete"
+    design: "Design"
+    docs: "Docs"
+    edit: "Edit"
+    either: 'Either'
+    endDate: "End"
+    endDatePlaceholder: "End Date"
+    error:
+      zero: "Errors"
+      one: "Error"
+      two: "Errors"
+      few: "Errors"
+      many: "Errors"
+      other: "Errors"
+    jsError: "Sorry, something went wrong. Please try reloading the page."
+    example:
+      zero: "Examples"
+      one: "Example"
+      two: "Examples"
+      few: "Examples"
+      many: "Examples"
+      other: "Examples"
+    example_abbr: "e.g."
+    export: "Export"
+    file_drop_message: "Click or drop file here"
+    found: "Found"
+    generate: "Generate"
+    group: "Group"
+    inactive: "Inactive"
+    import: "Import"
+    incoming: "Incoming"
+    is: "is"
+    language: "Language"
+    login: "Login"
+    confirm_login: "Confirm Login"
+    logout: "Logout"
+    manage: "Manage"
+    less_settings: "Fewer settings"
+    more_settings: "More settings"
+    near: "Near"
+    next: "Next"
+    _no: "No" # using 'no' by itself as a key causes an error in i18n-js
+    none: "None"
+    ok: "OK"
+    or: "or"
+    OR: "OR"
+    outgoing: "Outgoing"
+    pending: "Pending"
+    previous: "Previous"
+    print: "Print"
+    regenerate: "Regenerate"
+    remove: "Remove"
+    report: "Report"
+    reset: "Reset"
+    result:
+      zero: "Results"
+      one: "Result"
+      two: "Results"
+      few: "Results"
+      many: "Results"
+      other: "Results"
+    review: "Review"
+    run: "Run"
+    save: "Save"
+    save_and_add_another: "Save and Add Another"
+    save_and_close: "Save and Close"
+    search: "Search"
+    send: "Send"
+    showing: "Showing"
+    startDate: "Start"
+    startDatePlaceholder: "Start Date"
+    step: "Step"
+    suggest: "Suggest"
+    submit: "Submit"
+    success:
+      one: "Success"
+      other: "Successes"
+    successfully: "Successfully"
+    system: "System"
+    thanks_excl: "Thank You!"
+    this: "This"
+    total: "Total"
+    try_again: "Try Again"
+    updated: "Updated"
+    upload_progress_notice:
+      one: "Upload in progress..."
+      other: "Upload(s) in progress..."
+    view: "View"
+    _yes: "Yes" # using 'yes' by itself as a key causes an error in i18n-js
+
+  # general attribute names
+  attributes:
+    access_level: "API Security Level"
+    name: "Name"
+    code: "Code"
+    copy_count: "Copies"
+    created_at: "Creation Time"
+    email: "Email"
+    hint: "Hint"
+    password: "Password"
+    questions: "Questions"
+    std_icon: "" # left blank on purpose to achieve blank table header
+    title: "Title"
+    type: "Type"
+    value: "Value"
+    media_prompt: "Media Prompt"
+
+  access_levels:
+    public: "Public"
+    private: "Private"
+    protected: "Protected"
+    inherit: "Inherit"
+
+  metadata_types:
+    formstart: "Form Start Time"
+    formend: "Form End Time"
+
+  sms_guide_formatting_options:
+    auto: Automatic
+    inline: Inline
+    appendix: Appendix
+    treat_as_text: Treat as text
+
+  # general error messages (there are others under activerecord.errors)
+  errors:
+    # our messages are all complete sentences so we use the colon
+    format: "%{attribute}: %{message}"
+    file_upload:
+      error: "There was an error uploading the file."
+      login_error: "You are no longer signed in, please refresh the page and try again."
+      file_missing: "No file selected for import."
+      invalid_format: "The uploaded file was not an accepted format."
+      internal: "An internal error occurred while processing your upload."
+    messages:
+      deleted_successfully: "deleted successfully"
+      generic_delete_error: "Error during deletion."
+
+  helpers:
+    submit:
+      create: "Save"
+      update: "Save"
+      option_sets_import:
+        create: "Import"
+      user_import:
+        create: "Import"
+
+  flash_message_types:
+    success: "Success"
+    error: "Error"
+    alert: "Alert"
+    notice: "Notice"
+
+  # model names, attrib names, hints, and errors for activerecord models
+  activerecord:
+    models:
+      answer:
+        zero: "Answers"
+        one: "Answer"
+        two: "Answers"
+        few: "Answers"
+        many: "Answers"
+        other: "Answers"
+      assignment:
+        zero: "Assignments"
+        one: "Assignment"
+        two: "Assignments"
+        few: "Assignments"
+        many: "Assignments"
+        other: "Assignments"
+      broadcast:
+        zero: "Broadcasts"
+        one: "Broadcast"
+        two: "Broadcasts"
+        few: "Broadcasts"
+        many: "Broadcasts"
+        other: "Broadcasts"
+      choice:
+        zero: "Choices"
+        one: "Choice"
+        two: "Choices"
+        few: "Choices"
+        many: "Choices"
+        other: "Choices"
+      condition:
+        zero: "Conditions"
+        one: "Condition"
+        two: "Conditions"
+        few: "Conditions"
+        many: "Conditions"
+        other: "Conditions"
+      form:
+        zero: "Forms"
+        one: "Form"
+        two: "Forms"
+        few: "Forms"
+        many: "Forms"
+        other: "Forms"
+      mission:
+        zero: "Missions"
+        one: "Mission"
+        two: "Missions"
+        few: "Missions"
+        many: "Missions"
+        other: "Missions"
+      operation:
+        zero: "Operations"
+        one: "Operation"
+        two: "Operations"
+        few: "Operations"
+        many: "Operations"
+        other: "Operations"
+      option:
+        zero: "Options"
+        one: "Option"
+        two: "Options"
+        few: "Options"
+        many: "Options"
+        other: "Options"
+      option_set:
+        zero: "Option Sets"
+        one: "Option Set"
+        two: "Option Sets"
+        few: "Option Sets"
+        many: "Option Sets"
+        other: "Option Sets"
+      password_reset:
+        zero: "Password Resets"
+        one: "Password Reset"
+        two: "Password Resets"
+        few: "Password Resets"
+        many: "Password Resets"
+        other: "Password Resets"
+      question:
+        zero: "Questions"
+        one: "Question"
+        two: "Questions"
+        few: "Questions"
+        many: "Questions"
+        other: "Questions"
+      questioning: # should be same as question
+        zero: "Questions"
+        one: "Question"
+        two: "Questions"
+        few: "Questions"
+        many: "Questions"
+        other: "Questions"
+      report/calculation:
+        zero: "Calculations"
+        one: "Calculation"
+        two: "Calculations"
+        few: "Calculations"
+        many: "Calculations"
+        other: "Calculations"
+      report/report:
+        zero: "Reports"
+        one: "Report"
+        two: "Reports"
+        few: "Reports"
+        many: "Reports"
+        other: "Reports"
+      report/tally_report:
+        zero: "Tally Reports"
+        one: "Tally Report"
+        two: "Tally Reports"
+        few: "Tally Reports"
+        many: "Tally Reports"
+        other: "Tally Reports"
+      report/answer_tally_report:
+        zero: "Answer Tally Reports"
+        one: "Answer Tally Report"
+        two: "Answer Tally Reports"
+        few: "Answer Tally Reports"
+        many: "Answer Tally Reports"
+        other: "Answer Tally Reports"
+      report/response_tally_report:
+        zero: "Response Tally Reports"
+        one: "Response Tally Report"
+        two: "Response Tally Reports"
+        few: "Response Tally Reports"
+        many: "Response Tally Reports"
+        other: "Response Tally Reports"
+      report/list_report:
+        zero: "List Reports"
+        one: "List Report"
+        two: "List Reports"
+        few: "List Reports"
+        many: "List Reports"
+        other: "List Reports"
+      report/standard_form_report:
+        zero: "Standard Form Reports"
+        one: "Standard Form Report"
+        two: "Standard Form Reports"
+        few: "Standard Form Reports"
+        many: "Standard Form Reports"
+        other: "Standard Form Reports"
+      response:
+        zero: "Responses"
+        one: "Response"
+        two: "Responses"
+        few: "Responses"
+        many: "Responses"
+        other: "Responses"
+      response_decorator:
+        many: "Responses"
+      search/search:
+        zero: "Searches"
+        one: "Search"
+        two: "Searches"
+        few: "Searches"
+        many: "Searches"
+        other: "Searches"
+      setting: # should always be plural
+        zero: "Settings"
+        one: "Settings"
+        two: "Settings"
+        few: "Settings"
+        many: "Settings"
+        other: "Settings"
+      sms/message:
+        zero: "SMSes"
+        one: "SMS"
+        two: "SMSes"
+        few: "SMSes"
+        many: "SMSes"
+        other: "SMSes"
+      user:
+        zero: "Users"
+        one: "User"
+        two: "Users"
+        few: "Users"
+        many: "Users"
+        other: "Users"
+      user_group:
+        zero: "User Groups"
+        one: "User Group"
+        two: "User Groups"
+        few: "User Groups"
+        many: "User Groups"
+        other: "User Groups"
+      tag:
+        zero: "Tags"
+        one: "Tag"
+        two: "Tags"
+        few: "Tags"
+        many: "Tags"
+        other: "Tags"
+
+    attributes:
+      broadcast:
+        body: "Message"
+        created_at: "Send Time"
+        errors: "Errors?"
+        medium: "Medium"
+        sent_at: "Sent/Errored At"
+        send_errors: "Delivery Errors"
+        subject: "Subject"
+        to: "To"
+        which_phone: "Which Phone(s)"
+        recipient_selection: "Recipients"
+        recipient_ids: "Users/Groups"
+      condition:
+        left_qing_id: "Question"
+        op: "Comparison"
+        value: "Value"
+      form:
+        allow_incomplete: "Allow Incomplete?"
+        copy_responses_count: "Copy Responses"
+        downloads: "Downloads"
+        responses: "Responses"
+        smsable: "SMSable?"
+        sms_relay: "SMS Forwarding?"
+        recipient_ids: "SMS Forward Recipients"
+        authenticate_sms: "Authenticate SMS?"
+        updated_at: "Last Modified"
+        current_version_name: "Current Version"
+        item_list_heading: "Questions"
+        default_response_name: "Default Response Name"
+        minimum_version_id: "Minimum Accepted Version"
+      mission:
+        compact_name: "Compact Name"
+        locked: "Locked?"
+      operation:
+        created_at: "Time Started"
+        creator: "Started By"
+        details: "Details"
+        job_started_at: "Started At"
+        job_failed_at: "Failed At"
+        job_completed_at: "Completed At"
+        job_outcome_url: "Outcome URL"
+        job_error_report: "Error Report"
+        status: "Status"
+        result: "Result"
+      option:
+        base: "" # this is a sort of hack to get error msg to display properly
+        coordinates: "Coordinates"
+        shortcode: "Shortcode"
+        value: "Value"
+      option_set:
+        allow_coordinates: "With Coordinates?"
+        answers: "Answers"
+        geographic: "Is Geographic?"
+        multilevel: "Is Multilevel?"
+        options: "Options"
+        option_levels: "Levels"
+        sms_guide_formatting: "SMS Guide Formatting"
+      option_sets/import:
+        name: "Option Set Name"
+        file: "File to Import"
+      password_reset:
+        identifier: "Email or Username"
+      qing_group:
+        group_name: "Name"
+        group_hint: "Hint"
+        group_item_name: "Repeat Item Name"
+        new: "Add Group"
+        edit: "Edit Group"
+        delete: "Are you sure you want to delete the group '%{name}'?"
+        repeatable: "Repeatable?"
+        one_screen: "Show on One Screen?"
+        show: "Group: %{name}"
+        display_logic: "Display Logic"
+      question:
+        base: "" # this is a sort of hack to get error msg to display properly
+        code: "Code"
+        answer_count: "Answers"
+        form_count: "Forms"
+        key: "Is Key Question?"
+        minimum: "Minimum"
+        maximum: "Maximum"
+        auto_increment: "Auto Increment Counter?"
+        casted_minimum: "Minimum"
+        casted_maximum: "Maximum"
+        name: "Title"
+        option_set_id: "Option Set"
+        qtype_name: "Type"
+        metadata_type: "Metadata Type"
+        tag_ids: "Tags"
+        sms_guide_formatting: "SMS Guide Formatting"
+      questions/import:
+        file: "File to Import"
+      questioning:
+        name: "Title"
+        condition: "Condition?"
+        display_logic: "Display Logic"
+        skip_logic: "Skip Logic"
+        hidden: "Hidden?"
+        disabled: "Disabled?"
+        rank: "Rank"
+        required: "Required?"
+        all_levels_required: "Required Levels"
+        preload_last_saved: "Preload Last Answer?"
+        default: "Default Answer"
+        delete: "Are you sure you want to remove the question '%{code}' from this form?"
+        read_only: "Read Only?"
+      response:
+        age: "Age"
+        answers: "Answers"
+        old_id: "Old ID"
+        id: "Response ID"
+        created_at: "Submission Time"
+        form_id: "Form"
+        reviewed: "Reviewed?"
+        reviewer_notes: "Notes"
+        reviewer_id: "Reviewer"
+        shortcode: "Response ID"
+        source: "Source"
+        user_id: "User/Team"
+        incomplete: "This is an incomplete response"
+      report/report:
+        aggregation: "Operation"
+        aggregation_id: "Operation"
+        bar_style: "Bar Style"
+        display_type: "Display Type"
+        fields: "Attributes/Questions"
+        name: "Title"
+        percent_type: "Percent Type"
+        pri_grouping: "Grouping 1"
+        sec_grouping: "Grouping 2"
+        submit_edit: "Save Changes"
+        submit_new: "Generate Report"
+        unique_rows: "Hide Duplicate Rows"
+        unreviewed: "Allow Unreviewed Responses"
+        view_count: "Views"
+        viewed_at: "Last Viewed"
+      setting:
+        incoming_sms_numbers_str: "Incoming Number(s)"
+        incoming_sms_token: "Incoming SMS Token"
+        universal_sms_token: "Universal SMS Token"
+        preferred_locales_str: "Preferred Languages"
+        default_outgoing_sms_adapter: "Default Outgoing Provider"
+        override_code: "Override Code"
+        external_sql: "External SQL"
+        timezone: "Time Zone"
+        twilio_account_sid: "Account SID"
+        twilio_auth_token1: "Auth Token"
+        twilio_phone_number: "Outgoing Number"
+        frontlinecloud_api_key1: "API Key"
+        generic_sms_config_str: "Configuration"
+      sms/message:
+        adapter_name: "Adapter"
+        body: "Body"
+        from: "From"
+        sent_at: "Time Sent"
+        to: "To"
+        received_at: "Time Received"
+      sms/test:
+        from: "From"
+        body: "Body"
+      user:
+        admin: "Is Admin?"
+        assignments: "Assignments"
+        birth_year: "Birth Year"
+        nationality: "Nationality"
+        gender: "Gender"
+        gender_custom: "Specify Gender"
+        latest_mission: "Latest Mission"
+        login: "Username"
+        name: "Full Name"
+        notes: "Notes"
+        password_confirmation: "Retype Password"
+        phone: "Main Phone"
+        phone2: "Alternate Phone"
+        pref_lang: "Preferred Language"
+        role: "Role"
+        api_key: "API Key"
+        sms_auth_code: "SMS Auth Code"
+        user_group_ids: "Groups"
+        user_groups: "Groups"
+      user_import:
+        file: "File to Import"
+
+    # these strings override the attribute strings above in table headers only
+    table_headers:
+      response:
+        incomplete: "Incomplete?"
+      user:
+        admin: "Admin?"
+
+    placeholders:
+      question:
+        code: "e.g. MyQuestion"
+      user:
+        phone: "e.g. +17123241235"
+        phone2: "e.g. +2348123456789"
+
+    hints:
+      form:
+        name: "A descriptive name for the form."
+        smsable: "Whether the form accepts SMS submissions. This can affect when the version number is incremented."
+        sms_relay: "Whether to enable forwarding incoming SMS responses to users and user groups"
+        recipient_ids: "If you enter user or user group names here, any incoming SMS responses will be forwarded to them automatically."
+        authenticate_sms: "Whether to authenticate SMS responses. Disabling this can allow anyone who knows the phone number of an enumerator to spoof submissions."
+        allow_incomplete: "If checked, allows forms with incomplete required questions to be submitted anyway (via web and ODK Collect only). Enumerators using ODK Collect must enter an override code (see the Settings page) to do so."
+        current_version_name: "Each form version has a 10-digit ID and a 3-letter code. The form versioning system is intended to indicate small changes in the form design so that enumerators can update their copies of the form."
+        access_level: "Public: Any user can access the data via the API. Protected: Only specific users can access data via the API. Private: Nobody can access the data via the API."
+        default_response_name: "Text entered here will be used as the default name of filled forms in ODK Collect. You can enter $QuestionCode to include the value of a question in the form.\n\nFor example, entering:\n\n&nbsp;&nbsp;&nbsp;Survey for $VillageNum-$Household\n\nmight name the form:\n\n&nbsp;&nbsp;&nbsp;Survey for 7-Smith\n\nassuming you have questions with codes 'VillageNum' and 'Household'\n\nYou can also enter an XPath calculate expression by wrapping it with <code>calc()</code>:\n\n&nbsp;&nbsp;&nbsp;<code>calc($VillageNum + 100 div 2)</code>"
+      mission:
+        name: "A name for this Mission. Maximum 32 characters. Must be unique. Think about including the year if there will be future missions with the same name."
+        locked: "If a mission is locked, Responses and Forms cannot be created or edited and Users cannot be added or deleted."
+      option:
+        name: "The textual description of this option that users will see."
+      option_set:
+        allow_coordinates: "Whether this option set allows options with geographic coordinates."
+        geographic: "Whether this option set represents geographic information, e.g. a set of provinces or regions."
+        name: "A name that summarizes this set of options. Normal users will not see this name."
+        multilevel: "Whether the option set has multiple levels of options, such as country -> state -> city."
+        options:
+          editable: "Add existing options by typing them and clicking 'Add'. If you do not see an option in the drop down, you can add a new one by clicking 'Create New Option'."
+          read_only: "The options that will appear for questions using this option set."
+        option_levels: "The names of each level of options, e.g. 'Country', 'State', 'City'. Note that these are distinct from the options themselves (e.g. 'United States', 'Illinois', 'Chicago'), which are defined below."
+        sms_guide_formatting: "The meanings of the options are as follows:
+          Auto: Automatically determine whether to use 'inline' or 'appendix'.
+          Inline: Show the list of options on the SMS Guide.
+          Appendix: Include the list of options in an appendix created by a Coordinator.
+          Treat as text: Accept options for this option set as if they were text entries"
+      qing_group:
+        group_item_name: "You can enter $QuestionCode to include the value of a question (for ODK Collect only).\n\nFor example, suppose you are making a repeat group where the code for the first question is 'HouseholdID' and you enter\n\n&nbsp;&nbsp;&nbsp;Household: $HouseholdID \n\n You create one group and answer '123' for 'HouseholdID.' Then you create a second group and answer '789' for 'HouseholdID.' The first group item name will be 'Household: 123.' The second group item name will be 'Household: 789.'"
+      question:
+        media_prompt: "Attach a media file that enumerators can view or listen to when viewing the question in ODK Collect. Video (mp4), audio (mp3, ogg, wav, flac), and image (png, jpg) files are all acceptable. File can be up to %{max_size_mib}MiB in size."
+        code: "A short codename (between 2-20 characters). Should contain only letters and numbers, e.g. BallotBoxSealed, DepartTime."
+        hint: "Additional instructions, e.g. 'Enter an approximate count of the people waiting to vote.'"
+        key: "Answers to key questions help summarize responses and appear in the response listing. Common key questions are location and overall evaluation."
+        minimum: "The minimum value for the response. Check the box if the minimum itself is not valid."
+        maximum: "The maximum value for the response. Check the box if the maximum itself is not valid."
+        auto_increment: "If this box is checked and you are using ODK Collect, the value will be incremented each time you fill out a new form."
+        name: "The main question text, e.g. 'How many people are in line?'"
+        option_set_id: "The set of options the user will be able to choose from."
+        qtype_name: "The kind of information the user will be entering."
+        access_level: "Inherit: Same access level as parent form. Private: No one can access the data via the API, regardless of parent form access level."
+        metadata_type: "A special value that can be pre-filled into this question. If chosen, this question will be automatically hidden and not required, and any conditions will be removed."
+        reference: "A URL that supports the question. Must start with http:// or https://."
+      questioning:
+        default: |-
+          Text entered here will be pre-filled in the answer space (for ODK Collect only).
+          You can enter previous question values, repeat group numbers, and XPath expressions. Read more in the
+          <a href="https://getnemo.readthedocs.io/en/latest/content/formsquestions/formsquestions.html#default-answer" _target="blank">documentation</a>
+        display_logic: "Conditions which must be met in order for this question to be shown to the user."
+        hidden: "ODK Collect only: Hide question but still collect default answer"
+        hidden_more_info: "Read more about hidden questions in the documentation."
+        disabled: "Hide question and do not collect anything"
+        read_only: "ODK Collect only: Cannot change default answer"
+        required: "Whether this question must be completed"
+        skip_logic: "Rules for which question should be shown to the user after this question."
+        constraints: "Conditions which must be met in order for an answer to be accepted. Currently for ODK Collect only."
+        all_levels_required: "For a multi-level select question, should the enumerator be required to enter a value for every level of the question?"
+        preload_last_saved: "ODK Collect only: Pre-load the last-saved answer as default"
+      report/report:
+        name: "A descriptive title for this report."
+        aggregation_id: "The operation you want to perform on the combined data."
+        kind: "The type of data you want to work with."
+        display_type: "The way you want the results to be presented."
+        unreviewed: "Whether unreviewed responses should be included in the report."
+        unique_rows: "Whether duplicate rows should be omitted in the report."
+        pri_grouping: "An attribute or question by which the response count should be grouped (e.g. state, overall rating)."
+        percent_type: "Whether and how percentages should be calculated for the report."
+        bar_style: "Whether bars should be stacked or side-by-side."
+      response:
+        incomplete: "Check this box if there are required questions for which you can't provide answers. You will then be able to save this response without answering those questions and this response will be marked as 'incomplete'."
+      response_csv_export_options:
+        long_text_behavior: "Some programs limit the number of characters and lines each data cell can contain. You can optionally modify the exported data as follows:\n\n&nbsp;&nbsp;&nbsp;<b>Exclude</b>: Export all answers of type Long Text as blank. This is the fastest option.\n\n&nbsp;&nbsp;&nbsp;<b>Truncate</b>: Data will be trimmed to not exceed Excel cell limits. This may break HTML contained in the exported answer. This is the slowest option.\n\n&nbsp;&nbsp;&nbsp;<b>Include</b>: No modification will be made."
+      setting:
+        preferred_locales_str: |-
+          Enter the <a href='http://www.loc.gov/standards/iso639-2/php/code_list.php' target='_blank'>two-letter codes</a>, separated by commas, for the languages for this mission, in order of preference.
+
+          This setting determines:
+
+          * The default language preference for new users
+          * The default language for SMS replies
+          * The languages for Questions and Options
+        override_code: |-
+          This code should be given to enumerators if the ability to send incomplete responses is needed. ODK Collect will not allow submission of incomplete responses without this code.
+
+          If generating a new code, please record the old code if there are previous live forms. The new code will only work for forms downloaded after the code is regenerated.
+        incoming_sms_numbers_str: "Enter the phone number(s) (including country code, separated by commas) to which incoming SMSes for SMS forms should be sent. Only needed if using SMS submissions."
+        incoming_sms_token: |-
+          This token is included in the URL used by the incoming SMS provider to prevent the submission of unauthorized messages.
+        theme: "Choose a theme for the application. You may want to check out <a href='https://github.com/thecartercenter/nemo/blob/main/docs/production-setup.md#custom-theme'>instructions for creating a custom theme</a>."
+        universal_sms_token: |-
+          This token is included in the URL used by the incoming SMS provider to prevent the submission of unauthorized messages. Use this URL if you need to allow multiple missions to submit via the same URL.
+        using_incoming_sms_token_title: Using the Incoming SMS Token
+        using_incoming_sms_token_body: |-
+          Please register the following incoming SMS URL with your gateway provider:
+
+          %{url}
+        default_outgoing_sms_adapter: "The adapter used to send outgoing SMSes. Note that SMS replies may be sent out on via a different adapter, depending the adapter by which they arrived."
+        twilio_phone_number: "The phone number registered with Twilio. Outgoing SMS broadcasts won't work unless this number is owned by your Twilio account. This number must include the country code. Example: +25680344523"
+        twilio_account_sid: "The Account SID for the Twilio account."
+        twilio_auth_token1: "The Auth Token for the Twilio account."
+        frontlinecloud_api_key1: "The API Key for the FrontlineCloud activity."
+        external_sql: "The SQL code used to extract data for use in external applications. Click 'Select All' and then press Ctrl-C to copy."
+        timezone: "The time zone in which times are displayed throughout the site."
+        generic_sms_config_str: "A JSON formatted configuration string for the generic adapter. Example: <pre>{&quot;params&quot;:{&quot;from&quot;:&quot;num&quot;,&quot;body&quot;:&quot;msg&quot;}, &quot;response&quot;:&quot;&lt;message&gt;%{reply}&lt;/message&gt;&quot;}</pre>"
+      sms/test:
+        from: "Enter the phone number from which this SMS should appear to originate. This number must include the country code (e.g. +1 404 555 1212, +23476543212)."
+        body: "Enter the body of the message."
+      user:
+        name: "The user's full name. Example: 'John Doe' or 'Team 1.1'"
+        login: "The username will be used to log in. It may contain only letters, numbers, periods, and underscores."
+        phone: "Phone number must include the country code. Example: +25680344523"
+        phone2: "Phone number must include the country code. Example: +25680344523"
+        admin: "Whether this user is a system-wide administrator. You can control per-mission permissions using the fields below."
+        assignments: "The missions this user is assigned to."
+        password: "Enter a new password here if you'd like to change your existing password."
+        password_confirmation: "Enter the new password again."
+        pref_lang: "The language in which you would like to use the system."
+        role: "The role of the user in the current mission, and whether or not they are presently active. Inactive users cannot access the mission at all."
+        api_key: "Use this key to connect to other applications."
+        sms_auth_code: "Use this code to submit SMS responses."
+
+    # all error messages should be full sentences with a period, for consistency.
+    errors:
+      # here we override some of the default rails messages to be full sentences
+      messages:
+        taken: "Please enter a unique value."
+        is_invalid: "Please enter a valid value."
+        blank: "This field is required."
+        empty: "This field can't be empty."
+        not_a_number: "Please enter a valid number."
+        not_an_integer: "Please enter a valid integer."
+        did_not_match: "The passwords did not match."
+        too_long:
+          one: "Please enter at most one character."
+          other: "Please enter at most %{count} characters."
+        too_short:
+          one: "Please enter at least one character."
+          other: "Please enter at least %{count} characters."
+        wrong_length:
+          one: "Please enter at exactly one character."
+          other: "Please enter exactly %{count} characters."
+        must_be_group: "Parent must be a group."
+        invalid_password: "Password must include at least one number, one lowercase letter, and one capital letter."
+        all_required: "All fields are required."
+      models:
+        answer:
+          required: "Please enter a value."
+          invalid_latitude: "Latitude is out of range."
+          invalid_longitude: "Longitude is out of range."
+          invalid_altitude: "Altitude is out of range."
+          invalid_accuracy: "Accuracy is out of range."
+          invalid_date: "Date is invalid."
+          invalid_datetime: "Date/Time is invalid."
+          accuracy_negative: "Accuracy can't be negative."
+        assignment:
+          blank: "is required."
+        broadcast:
+          no_recipients: "Nobody would receive this broadcast."
+        condition:
+          all_required: "All condition fields are required."
+        constraint:
+          attributes:
+            conditions:
+              blank: "There must be at least one condition."
+        form:
+          cant_delete_if_has_responses: "You can't delete this Form because it has associated responses."
+          ranks_break_conditions: "The new rankings invalidate one or more conditions."
+          general: "Form is invalid (see below)."
+          attributes:
+            default_response_name:
+              calc_must_wrap_all: "calc(...) must surround the entire name."
+        mission:
+          cant_delete_if_assoc: "You can't delete this Mission because it has associated Forms, Responses, or other objects."
+          let_num_spc_only: "Please use only letters, numbers, and spaces."
+          not_unique: "The name is too much like the existing Mission '%{existing}'"
+          general: "Mission is invalid (see below)."
+        option:
+          cant_delete_if_has_response: "You can't delete this Option because it is included in at least one Response."
+          names_cant_be_all_blank: "At least one name translation must be given for each option."
+          names_too_long: "Names must be at most 30 characters in length."
+          invalid_coordinates: "The provided coordinates are not valid."
+        option_set:
+          at_least_one: "You must choose at least one option."
+          cant_delete_if_has_questions: "You can't delete this Option Set because one or more Questions are associated with it."
+          cant_delete_if_has_answers: "You can't delete this Option Set because it is included in at least one Answer."
+          duplicate: "That option set name already exists in this mission, please enter a unique name."
+          general: "There was a problem saving the option set."
+          wrong_depth: "You have %{levels} option levels but your option tree is %{depth} options deep."
+        option_sets/import:
+          general: "Option Set import is invalid (see below)."
+          blank_interior_cell: "Error on row %{row_num}: blank interior cell."
+          option_too_long: "Error on row %{row_num}: options can't be more than %{limit} characters."
+          header_too_long: "Error on row %{row_num}: headers can't be more than %{limit} characters."
+        question:
+          at_least_one_name: "You must enter a title in at least one language."
+          code: "Question code is required."
+          option_set: "Option set does not exist."
+          qtype_unrecognized: "Question type unrecognized."
+          attributes:
+            code:
+              invalid: "Should start with a letter, use only letters and numbers, and be a maximum of 20 characters."
+            media_prompt:
+              invalid_type: "The file type is invalid."
+            media_prompt_content_type:
+              invalid_type: "The file type is invalid."
+            reference:
+              invalid: "Your reference link must begin with https or http."
+          cant_change_if_conditions: "You can't change the Type or Option Set because there are Conditions that refer to this Question."
+          cant_change_if_responses: "You can't change the Type or Option Set because there are already Responses for this Question."
+          cant_delete_if_has_answers: "You can't delete this Question because it is referred to in at least one Answer."
+          general: "Question is invalid (see below)."
+        questioning:
+          attributes:
+            code:
+              invalid: "Should start with a letter, use only letters and numbers, and be a maximum of 20 characters."
+            default:
+              calc_must_wrap_all: "calc(...) must surround the entire default answer."
+              must_use_calc: "You must use the calc(...) wrapper for this question type if using $ references."
+          cant_delete_if_has_answers: "You can't remove this Question because it has one or more answers for this Form."
+          invalid_condition: "Condition is invalid (see below)."
+          question: "Question"
+        report/report:
+          attributes:
+            fields:
+              blank: "You must choose at least one question or attribute."
+            form_id:
+              blank: "You must choose a form to report on."
+            name:
+              blank: "You must enter a report title."
+            question_order:
+              blank: "You must choose a question order."
+            questions:
+              blank: "You must choose at least one question or one option set."
+            tally_type:
+              blank: "You must choose a tally type."
+            text_responses:
+              blank: "You must choose how to display text responses."
+            type:
+              blank: "You must choose a report type."
+          no_calc_or_opt_set: "The report '%{name}' has no questions or option sets selected. Please edit the report to correct this."
+        response:
+          general: "Response is invalid (see below)."
+          checked_out: "This response has been checked out by:"
+          no_form_xml: "This form is not yet rendered, so it can't be viewed in Enketo. Try publishing it first."
+          no_response_xml: "Currently, you can only use the Enketo editor for responses submitted via Enketo or ODK Collect."
+          missing_xml: "No XML file attached."
+          form_unavailable: "The specified form does not exist in this mission."
+        setting:
+          attributes:
+            generic_sms_config_str:
+              invalid_keys: "Valid keys are params, response, and matchHeaders."
+              missing_keys: "Configuration must include params.from, params.body, and response keys."
+              invalid_json: "JSON error: %{msg}"
+            preferred_locales_str:
+              invalid_code: "The language code '%{code}' is invalid."
+              one_must_have_translations: "Please choose at least one language that has translations (%{locales})."
+          general: "Settings are invalid (see below)."
+        skip_rule:
+          attributes:
+            dest_item_id:
+              blank_unless_goto_end: "This field is required unless you choose 'skip to end of form'."
+        user:
+          at_least_digits: "Please enter at least %{num} digits."
+          cant_delete_if_has_responses: "You can't delete this user because they have associated responses."
+          cant_delete_if_has_reviewed_responses: "You can't delete this user because they have reviewed responses."
+          cant_delete_if_has_sms_messages: "You can't delete this user because they have associated SMS messages."
+          duplicate_assignments: "There are duplicate assignments."
+          no_missions: "You are not assigned to any missions."
+          phone_assigned_to_other: "This number has already been assigned to another user."
+          general: "User is invalid (see below)."
+          attributes:
+            assignments:
+              cant_be_empty_if_not_admin: "At least one assignment is required if user is not an admin."
+            login:
+              invalid: "Please use only letters, numbers, periods, and underscores."
+            reset_password_method:
+              cant_passwd_email: "Not allowed unless an email address is provided."
+        user_import:
+          general: "User import batch is invalid (see below)."
+          internal: "An internal error occurred while proccessing your upload."
+          invalid_headers:
+            one: "The following column header was not recognized: %{headers}."
+            other: "The following column headers were not recognized: %{headers}."
+          too_many_errors: "The uploaded CSV file has too many errors. Processing stopped at row %{row}."
+        user_group:
+          general: "User group is invalid."
+          attributes:
+            name:
+              blank: "Please enter a name for your group."
+
+  # application-wide strings
+  layout:
+    about: "About %{site_name}"
+    actions: "Actions"
+    are_you_sure: "Are you sure?"
+    changelog: "Changelog"
+    change_language: "Change Language"
+    created_by: "Created by"
+    copy_to_clipboard: "Copy to Clipboard"
+    delete_warning: "Are you sure you want to permanently delete the %{obj_description}?"
+    deselect_all: "Deselect All"
+    loading: "Loading..."
+    locale_change_get_only: "Changing languages from this page might cause data loss. Please complete or cancel the form and try again."
+    logged_in_as: "Logged in as"
+    mission_change_get_only: "Changing missions from this page might cause data loss. Please complete or cancel the form and try again."
+    must_be: "Must be"
+    no_selection: "You haven't selected anything."
+    reqd_sym_definition: "Required fields are marked with a %{reqd_sym}."
+    select_all: "Select All"
+    server_contact_error: "Couldn't contact server."
+    system_error: "System error. Administrator has been notified."
+    system_version: "System Version"
+    time_ago: "%{time} ago"
+    time_zone: "Time Zone"
+    updated_at: "Updated at"
+    no_live_forms: "No available forms"
+
+  actions:
+    cancel: "Cancel"
+    clone: "Clone"
+    close: "Close"
+    edit: "Edit"
+    go_live: "Go Live"
+    pause: "Pause"
+    print: "Print"
+    sms_guide: "SMS Guide"
+
+  action_links:
+    show: "View"
+    edit: "Edit"
+    close: "Close"
+    destroy: "Delete"
+    index: "List"
+    clone: "Clone"
+    import_standard: "Import Standard"
+    import_from_csv: "Import from CSV"
+    export_csv: "Export CSV"
+    export: "Export"
+    models:
+      form:
+        new: "Create Form"
+        sms_guide: "SMS Guide"
+        sms_console: "SMS Test Console"
+        go_live: "Go Live"
+        pause: "Pause"
+        return_to_draft: "Return to Draft Status"
+        print: "Print"
+        re_cache: "Re-cache OData"
+        view_raw_odata: "View raw OData"
+      mission:
+        new: "Create Mission"
+      operation:
+        clear: "Clear All Completed"
+        destroy: "Clear"
+      option_set:
+        new: "Create Option Set"
+        export: "Export to CSV"
+      option_sets/import:
+        new: "Import from CSV"
+      question:
+        new: "Create Question"
+        add_to_form: "Add to Form"
+      questions/import:
+        new: "Import from CSV"
+      report/report:
+        new: "Create Report"
+        export: "Export to CSV"
+      user:
+        new: "Create User"
+        export_to_vcard: "Export to vCard"
+        add_to_group: "Add to Group"
+        remove_from_group: "Remove from Group"
+        send_broadcast: "Send Broadcast"
+      user_group:
+        new: "New Group"
+        members: "List Members"
+      broadcast:
+        send: "Send Broadcast"
+
+  # pagination translations
+  will_paginate:
+    previous_label: "&#171;"
+    next_label: "&#187;"
+    page_gap: "&hellip;" # this entry should be the same for all languages
+    # please preserve <b> and </b> tags in the below
+    broadcast:
+      page_entries_info:
+        single_page_html:
+          zero:  "No Broadcasts found"
+          one:   "Displaying <b>1</b> Broadcast"
+          other: "Displaying <b>all %{count}</b> Broadcasts"
+        multi_page_html: "Displaying Broadcasts <b>%{from} - %{to}</b> of <b>%{count}</b> in total"
+    form:
+      page_entries_info:
+        single_page_html:
+          zero:  "No Forms found"
+          one:   "Displaying <b>1</b> Form"
+          other: "Displaying <b>all %{count}</b> Forms"
+    mission:
+      page_entries_info:
+        single_page_html:
+          zero:  "No Missions found"
+          one:   "Displaying <b>1</b> Mission"
+          other: "Displaying <b>all %{count}</b> Missions"
+    option:
+      page_entries_info:
+        single_page_html:
+          zero:  "No Options found"
+          one:   "Displaying <b>1</b> Option"
+          other: "Displaying <b>all %{count}</b> Options"
+    option_set:
+      page_entries_info:
+        single_page_html:
+          zero:  "No Option Sets found"
+          one:   "Displaying <b>1</b> Option Set"
+          other: "Displaying <b>all %{count}</b> Option Sets"
+    question:
+      page_entries_info:
+        single_page_html:
+          zero:  "No Questions found"
+          one:   "Displaying <b>1</b> Question"
+          other: "Displaying <b>all %{count}</b> Questions"
+        multi_page_html: "Displaying Questions <b>%{from} - %{to}</b> of <b>%{count}</b> in total"
+    questioning: # should be same as question
+      page_entries_info:
+        single_page_html:
+          zero:  "No Questions found"
+          one:   "Displaying <b>1</b> Question"
+          other: "Displaying <b>all %{count}</b> Questions"
+        multi_page_html: "Displaying Questions <b>%{from} - %{to}</b> of <b>%{count}</b> in total"
+    report/report:
+      page_entries_info:
+        single_page_html:
+          zero:  "No Reports found"
+          one:   "Displaying <b>1</b> Report"
+          other: "Displaying <b>all %{count}</b> Reports"
+    response:
+      page_entries_info:
+        single_page_html:
+          zero:  "No Responses found"
+          one:   "Displaying <b>1</b> Response"
+          other: "Displaying <b>all %{count}</b> Responses"
+        multi_page_html: "Displaying Responses <b>%{from} - %{to}</b> of <b>%{count}</b> in total"
+    sms/message:
+      page_entries_info:
+        single_page_html:
+          zero:  "No SMSes found"
+          one:   "Displaying <b>1</b> SMS"
+          other: "Displaying <b>all %{count}</b> SMSes"
+        multi_page_html: "Displaying SMSes <b>%{from} - %{to}</b> of <b>%{count}</b> in total"
+    user:
+      page_entries_info:
+        single_page_html:
+          zero:  "No Users found"
+          one:   "Displaying <b>1</b> User"
+          other: "Displaying <b>all %{count}</b> Users"
+        multi_page_html: "Displaying Users <b>%{from} - %{to}</b> of <b>%{count}</b> in total"
+    operation:
+      page_entries_info:
+        single_page_html:
+          zero:  "No Operations found"
+          one:   "Displaying <b>1</b> Operation"
+          other: "Displaying <b>all %{count}</b> Operations"
+        multi_page_html: "Displaying Operation <b>%{from} - %{to}</b> of <b>%{count}</b> in total"
+
+  # authlogic translations
+  authlogic:
+    error_messages:
+      consecutive_failed_logins_limit_exceeded: "You have exceeded the consecutive failed login limit. Your account has been disabled."
+      email_invalid: "should look like an email address"
+      login_blank: "Please enter a username."
+      login_invalid: "Should use only letters, numbers, spaces, and .-_@"
+      login_not_found: "Not valid."
+      no_authentication_details: "You did not provide any details for authentication."
+      not_active: "Your account is not active."
+      not_approved: "Your account is not approved."
+      not_confirmed: "Your account is not confirmed."
+      password_blank: "Please enter a password."
+      password_invalid: "Not valid."
+    models:
+      user_session: "User Session"
+    attributes:
+      user_session:
+        login: "Username"
+        password: "Password"
+        remember_me: "Remember Me"
+        verify: "Verify"
+
+  # time/date formats (see http://www.ruby-doc.org/core-2.0/Time.html#method-i-strftime for code meanings)
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      short: "%b %d"
+  time:
+    formats:
+      default: "%Y-%m-%d %H:%M:%S"
+      short: "%b %d %H:%M"
+      time_only: "%H:%M:%S"
+
+  # all search qualifier translations should have NO SPACES and NO CAPS. use '-'s instead
+  search_qualifiers:
+    text: "text"
+    email: "email"
+    form: "form"
+    exact_form: "exact-form"
+    form_id: "form-id"
+    login: "login"
+    name: "name"
+    option_set: "option-set"
+    phone: "phone"
+    question: "question"
+    question_type: "question-type"
+    reviewed: "reviewed"
+    role: "role"
+    shortcode: "shortcode"
+    source: "source"
+    submit_date: "submit-date"
+    submitter: "submitter"
+    submitter_id: "submitter-id"
+    group: "group"
+    group_id: "group-id"
+    code: "code"
+    title: "title"
+    type: "type"
+    tag: "tag"
+    date: "date"
+    datetime: "datetime"
+    username: "username"
+    content: "content"
+    number: "number"
+    group: "group"
+
+  # all page titles by controller and action
+  # controller names are usually plural (rails convention)
+  page_titles:
+    broadcasts:
+      index: "Broadcasts"
+      new: "Send Broadcast"
+      new_with_users: "Send Broadcast"
+      show: "Broadcast"
+    forms:
+      choose_questions: "Adding Questions to Form: %{name}"
+      edit: "Edit Form: %{name}"
+      index: "Forms"
+      new: "New Form"
+      show: "Form: %{name}"
+    missions:
+      edit: "Edit Mission: %{name}"
+      index: "Missions"
+      new: "New Mission"
+      show: "Mission: %{name}"
+    operations:
+      index: "Operations"
+      show: "Operation: %{name}"
+    option_sets:
+      edit: "Edit Option Set: %{name}"
+      index: "Option Sets"
+      new: "New Option Set"
+      show: "Option Set: %{name}"
+    option_set_imports:
+      new: "Import New Option Set"
+    options:
+      edit: "Edit Option: %{name}"
+      index: "Options"
+      new: "New Option"
+      show: "Option: %{name}"
+    password_resets:
+      all: "Reset Password"
+    questions:
+      edit: "Edit Question: %{code}"
+      index: "Questions"
+      new: "New Question"
+      show: "Question: %{code}"
+    question_imports:
+      new: "Import New Questions"
+    questionings:
+      edit: "Edit Question: %{code}"
+      index: "Questions"
+      new: "New Question"
+      show: "Question: %{code}"
+    responses:
+      edit: "Edit Response: %{id}"
+      index: "Responses"
+      new: "New Response"
+      show: "Response: %{id}"
+    responses:
+      edit: "Edit Response: %{id}"
+      index: "Responses"
+      new: "New Response"
+      show: "Response: %{id}"
+    reports:
+      index: "Reports"
+      new: "New Report"
+      edit: "Edit Report"
+    settings:
+      all: "Settings"
+    sms:
+      index: "SMS Log"
+    sms_tests:
+      all: "SMS Test Console"
+    user_imports:
+      all: "Import Users"
+    user_sessions:
+      new: "Login"
+      login_confirmation: "Confirm Login"
+      logged_out: "Logged Out"
+    users:
+      edit: "Edit User: %{name}"
+      edit_profile: "Edit Profile"
+      show_profile: "Profile: %{name}"
+      index: "Users"
+      login_instructions: "Login Instructions"
+      new: "New User"
+      show: "User: %{name}"
+    welcome:
+      index: "Home"
+      unauthorized: "Unauthorized"
+
+  ##############################
+  # the rest of these string groups should be kept in alphabetical order by key
+
+  admin_mode:
+    admin_mode: "Admin Mode"
+    exit_admin_mode: "Exit Admin Mode"
+    goto_admin_mode: "Admin Mode"
+
+  answer:
+    no_name: "No Name"
+    this_answer: "This answer"
+
+  attrib_fields:
+    form: "Form"
+    submitter: "Submitter Name"
+    submitter_username: "Submitter Username"
+    source: "Source"
+    time_submitted: "Time Submitted"
+    date_submitted: "Date Submitted"
+    response_id: "Response ID"
+    reviewed: "Reviewed"
+    reviewer: "Reviewer"
+
+  broadcast:
+    chars: # these are for informing the user how many chars they have left in their sms
+      remaining: "characters remaining"
+      too_many: "characters too many"
+    email_intro: "This is a broadcast message from"
+    email_error: "Email Error"
+    group_count:
+      one: "1 group"
+      other: "%{count} groups"
+    instructions: "To send a broadcast, first select the recipients below, and then click 'Send Broadcast'."
+    may_not_be_enough: "This may not be enough."
+    mediums:
+      names:
+        sms: "SMS"
+        email: "Email"
+        sms_only: "SMS Only"
+        email_only: "Email Only"
+        both: "Both SMS and Email"
+      options:
+        sms: "SMS preferred (use email if a recipient has no phone)"
+        email: "Email preferred (use SMS if a recipient has no email)"
+        sms_only: "SMS only (don't send any emails)"
+        email_only: "Email only (don't send any SMSes)"
+        both: "Both SMS and email"
+    recipient_selection_options:
+      all_users: "All users in mission"
+      all_enumerators: "All enumerators in mission"
+      specific: "Specific users/groups in mission"
+    send_success: "Broadcast sent successfully."
+    send_error: "Error sending broadcast (see below)."
+    sms_error: "SMS Error"
+    user_count:
+      one: "1 user"
+      other: "%{count} users"
+    which_phone_options:
+      main_only: "Main phone only"
+      alternate_only: "Alternate phone only"
+      both: "Both phones"
+
+  condition:
+    operators:
+      select:
+        eq: "= equals"
+        lt: "< less than"
+        gt: "> greater than"
+        leq: "≤ less than or equal to"
+        geq: "≥ greater than or equal to"
+        neq: "≠ does not equal"
+        inc: "includes"
+        ninc: "excludes"
+      human_readable:
+        eq: "is equal to"
+        lt: "is less than"
+        gt: "is greater than"
+        leq: "is less than or equal to"
+        geq: "is greater than or equal to"
+        neq: "is not equal to"
+        inc: "includes"
+        ninc: "excludes"
+    no_refable_qings: "There are no questions on this form to which a condition could refer."
+    op: "Comparison"
+    value: "Value"
+    left_qing_prompt: "Choose question ..."
+    right_side_type:
+      literal: "A specific value ..."
+      qing: "Another question ..."
+    this_question: "This question"
+
+  dashboard:
+    close_dashboard: "Close Dashboard"
+    enter_full_screen: "Enter Full Screen"
+    exit_full_screen: "Exit Full Screen"
+    expand_map: "Expand Map"
+    my_responses: "My Responses"
+    no_map_offline: "The map is disabled because the server has no internet connection."
+    no_map_key: "The map is disabled because no Google Maps key has been specified in the settings."
+    no_reports: "No reports have been created for this mission yet."
+    create_report: "You can create one."
+    create_report_also: "You can also create a new one."
+    recent_responses: "Latest Responses"
+    shrink_map: "Shrink Map"
+    response_locations: "Response Locations"
+    response_locations_truncated: "Only the most recent %{max} locations are shown."
+    report_placeholder: "Select a report above to explore your data. Reports auto-refresh every 30 seconds."
+    summary: "Summary"
+    top_forms: "Top Forms"
+
+  filter:
+    form: "Form"
+    choose_form: "Choose a form"
+    question: "Question"
+    date: "Date"
+    showing_questions_from: "Showing questions from %{form_list} only."
+    reviewed: "Reviewed"
+    is_reviewed: "Is marked 'reviewed'"
+    submitter: "Submitter"
+    choose_submitter:
+      submitter: "Choose a user"
+      group: "Choose a group"
+    search_box_placeholder: "Search"
+
+  form:
+    select_api_users: "Select all users who can access form data via the API:"
+    add_group: "Add Group"
+    add_questions: "Add Questions"
+    back_to_questions: "Back to Questions List"
+    choose_form: "Choose a Form..."
+    clone_confirm: "Are you sure you want to make a copy of the form '%{form_name}'?"
+    clone_error: "There was a problem cloning the form (%{msg})."
+    clone_success: "Form '%{form_name}' cloned successfully."
+    no_mission: "No Misison"
+    no_questions_yet: "No questions yet."
+    increment_version: "Increment Version"
+    increment_version_warning: "Are you sure you want to increment this form's version? Older versions will still be accepted unless you change the Minimum Accepted Version attribute below."
+    invalid_drop_location:
+      parent_must_be_group: "The parent must be a group."
+      max_depth: "Groups can't be children of other groups."
+      invalid_condition: "This position would invalidate a condition."
+    print_form: "Print Form"
+    print_format_tips:
+      title: "Print Format Tips"
+      body: "To ensure form prints correctly, please enable the printing of background colors and images in your system's print options dialog window. That window should appear as soon as you click 'OK' below."
+    question_remove_error: "There was a problem removing the questions (%{msg})."
+    question_remove_answer_error: "One or more of the selected questions has answers and can't be removed."
+    questions_add_error: "There was a problem adding the questions (%{msg})."
+    questions_add_success: "Questions added successfully."
+    questions_remove_success: "Questions removed successfully."
+    remove_selected: "Remove Selected"
+    remove_question_confirm:
+      zero: "Are you sure you want to remove zero questions from the form?"
+      one: "Are you sure you want to remove this question from the form?"
+      two: "Are you sure you want to remove these %{count} questions from the form?"
+      few: "Are you sure you want to remove these %{count} questions from the form?"
+      many: "Are you sure you want to remove these %{count} questions from the form?"
+      other: "Are you sure you want to remove these %{count} questions from the form?"
+    reqd_sym_definition: "Required questions are marked with a"
+    return_to_draft:
+      modal:
+        title: "Warning: Returning to Draft Status"
+        body_html: "Returning to Draft status will allow you to make significant changes to the form such as deleting questions and modifying option sets. This may result in loss of responses. Consider <a href='%{clone_url}' data-method='put'>cloning this form</a> instead."
+        confirm: "Accept Risks & Change Status"
+        prompt_html: "Type <strong>\"%{override}\"</strong> below to acknowledge the risks and return to draft status anyway:"
+        override: "override"
+    save_and_go_live: "Save and Go Live"
+    saving_order: "Saving order..."
+    statuses:
+      draft: "Draft"
+      live: "Live"
+      paused: "Paused"
+    unsaved_rank_notice: "You have not yet saved the changes you made to the Question order. You should click the 'Save' button if you want to save these changes."
+
+  forms:
+    sms_guide:
+      appendix:
+        one: "The following appendix should be included with this form:"
+        other: "The following appendices should be included with this form:"
+      header: "SMS Composition Guide"
+      auth_code: "User authorization code (required)"
+      header: "SMS Guide"
+      draft_error: "You can't view the SMS guide for the form '%{form_name}' because it is currentlly a draft. Make the form live or paused to view the SMS guide."
+      for_paper_record: "For paper record only"
+      form_code: "Unique form code (required)"
+      multiple_sms_numbers: "Multiple SMS submission numbers"
+      sms_message: "SMS Message"
+      pointers:
+        text: "Write your answer in the box. Abbreviate if necessary."
+        barcode: "Write your answer in the box."
+        number: "Write your answer in the box."
+        select_one: "Write the letter for your choice in the box. Write only one letter."
+        select_one_as_text: "Write your answer in the box. Be sure to write the exact option name."
+        select_one_with_appendix: "Write the shortcode for your choice in the box. See the appendix for your options."
+        select_multiple: "Write the letters for each of your choices separated by commas in the box."
+        select_multiple_with_appendix: "Write the letters for each of your choices separated by commas in the box. See the appendix for your options."
+        datetime: "Write your answer in the box. Use YYYYMMDD HHMM format."
+        date: "Write your answer in the box. Use YYYYMMDD format."
+        time: "Write your answer in the box. Use HHMM format."
+      instructions:
+        instructions: "Instructions"
+        intro: "Please read all instructions to begin. You will use this paper first and then your phone."
+        paper: "Paper"
+        1a: "Write your user/team name here:"
+        1b: "First answer all the questions below and fill in each dashed box, e.g.:"
+        phone: "Phone"
+        2a_appendix: "With your phone, begin an SMS to one of the numbers on the attached sheet."
+        2a_number_html: "With your phone, begin an SMS to <strong>%{number}</strong>."
+        2b: "Enter the contents of each line on the right side of the page, going from top to bottom."
+        2c_html: "Periods are denoted by %{period} and spaces are denoted by %{spc}. It is important to enter both periods and spaces."
+        example_sms: "Example SMS"
+        example_sms_body: 1.c 2.c,f 3.27 4.d 5.door was locked 6.20160401 7.c
+      unique_code: "This is the unique code for the form"
+      unknown_number: "[unknown number]"
+
+  form_item:
+    accept_if_options:
+      all_met: "All above must be true"
+      any_met: "At least one of above must be true"
+    add_condition: "Add Condition"
+    add_rule: "Add Rule"
+    delete_rule: "Delete Rule"
+    display_if_options:
+      qing_group:
+        always: "Always display this group"
+        all_met: "Display this group if all of these conditions are met"
+        any_met: "Display this group if any of these conditions are met"
+      questioning:
+        always: "Always display this question"
+        all_met: "Display this question if all of these conditions are met"
+        any_met: "Display this question if any of these conditions are met"
+    display_if_operator:
+      all_met: "and"
+      any_met: "or"
+    skip_logic_options:
+      dont_skip: "After this question, go to the next question"
+      skip: "After this question, skip ..."
+      end_of_form: "Skip to the end of the form"
+    constrain_options:
+      dont_constrain: "Accept any answer to this question"
+      constrain: "Only accept an answer if ..."
+    rejection_message:
+      add: "Add Rejection Message"
+      edit: "Edit Rejection Message"
+    all_levels_required_options:
+      "true": "All levels of the question are required"
+      "false": "At least one level of the question is required"
+
+  incomplete_response:
+    missing_answers:
+      label: "Is this form missing any required answers?"
+      hint: "This form allows submission of incomplete responses in special situations. If you are not sure whether any required answers are missing, choose 'I don't think so' and then save."
+      foo: "bar"
+      options:
+        # these keys need to be quoted
+        "no": "I don't think so"
+        "yes": "Yes"
+    code_label: "Enter the incomplete override code"
+
+  index_table:
+    messages:
+      searched_rows_selected: "Note that <strong>all</strong> %{count} rows matching the current search are now selected"
+      selected_rows_page: "All %{count} %{class_name} on this page are selected."
+      select_all_rows: "Select all %{count} %{class_name}"
+      selected_all_rows: "<strong>All</strong> %{count} %{class_name} are selected."
+
+  integrity_warnings:
+    more_suffix: "%{count} more"
+    titles:
+      careful_with_changes: "Be Careful with Edits"
+      features_disabled: "Some Features Disabled"
+    reasons:
+      form:
+        published: "This form is published (not a draft)"
+        data: "This form has associated responses"
+      qing_group:
+        published: "This group's form is published (not a draft)"
+        standard_copy: "This group's form is based on a standard"
+      question:
+        in_use: "This question appears on forms: %{form_list}"
+        published: "This question appears on at least one published (not-draft) form"
+        standard_copy: "This question is based on a standard"
+        data: "This question has associated responses"
+      option_set:
+        in_use: "This option set appears on questions: %{question_list}"
+        published: "This option set appears on at least one published (not-draft) form"
+        standard_copy: "This option set is based on a standard"
+        data: "This option set has associated responses"
+
+  location_picker:
+    choose_location: "Choose Location"
+    current_location: "Current Location"
+    enter_query: "Enter a query into the box above to search for a location in Google's geo-database."
+    search_locations: "Search Locations..."
+
+  notifier:
+    if_link_doesnt_work: "If the above link does not work try copying and pasting it into your browser."
+    if_you_made_it: "If you did make this request just click the link below:"
+    login_name: "Your login name is %{login}."
+    to_choose: "To choose a password, please go here:"
+    must_choose: "You MUST choose a password before you can use any systems, including mobile phone based systems."
+    password_reset_instructions: "Password Reset Instructions"
+    request_made: "A request to reset your %{site} password has been made. If you did not make this request, simply ignore this email."
+    welcome: "Welcome to %{site}!"
+    sms_token_change:
+      subject: "Incoming SMS Token changed for %{mission_name}"
+      body: "The Incoming SMS Token for %{site_name} - %{mission_name} was regenerated by you or another coordinator under your mission settings. This means you will need to update the incoming SMS URL with your gateway provider before new SMS submissions can be accepted."
+
+  option_set:
+    add_level: "Add Level"
+    add_option: "Add Option"
+    and_n_more: "... and %{count} more options."
+    clone_confirm: "Are you sure you want to make a copy of the Option Set '%{name}'?"
+    clone_error: "There was a problem cloning the Option Set (%{msg})."
+    clone_success: "Option Set '%{name}' cloned successfully."
+    create_new: "[Create New Option]"
+    create_for_question: "Create Option Set for Question: %{identifier}"
+    create_for_new_question: "Create Option Set for New Question"
+    new_option: "New Option"
+    edit_option: "Edit Option"
+    edit_option_level: "Edit Option Level"
+    huge_notice: "This Option Set is very large (%{count} Options) and thus only a small sample of its Options are displayed below. You may edit its name and other properties here but please use the import/export features to edit the Options themselves."
+    leave_page_warning: "Leaving this page will abandon your changes to this Option Set."
+    multilevel_forbidden_notice: "This Option Set is currently used by at least one select-multiple Question and thus it cannot be converted to a multi-level set."
+    new_option_level: "New Option Level"
+    none_found: "No matching options found"
+    searching: "Searching..."
+    type_to_add_new: "Type an option name"
+    option_prompt: "Choose option ..."
+    option_prompt_with_level: "Choose %{level} ..."
+    latitude: "Latitude"
+    longitude: "Longitude"
+    value: "Numeric Value"
+  option_set_import:
+    instructions_html: |-
+      Upload a CSV file with your options. CSV templates with <a href="%{csv_url_1}">multilevel options</a> and <a href="%{csv_url_2}">single-level translated optoins</a> are available as a starting point.
+
+      Notes:
+
+      * Only CSV files are accepted. They must be UTF-8 encoded. You can export XLSX files to CSV using any standard spreadsheet software.
+      * You can find more documentation <a href="https://getnemo.readthedocs.io/en/main/content/formsoptionsets/formsoptionsets.html#import-new-option-set">here</a>.
+
+  tag:
+    none_found: "No matching tags found"
+    searching: "Searching..."
+    type_to_add_new: "Type a tag name"
+    new_tag: "New tag"
+    click_to_filter: "Click to filter by this tag"
+
+  password_reset:
+    check_email: "Instructions to reset your password have been emailed to you. Please check your email."
+    enter_new_pass: "%{name}, please enter a new password for your account."
+    fill_out_form: "Enter your email or username below and instructions to reset your password will be emailed to you. If there is no email address associated with your account your password will have to reset by an administrator."
+    multiple_accounts: "There are multiple accounts associated with that email address. Please try entering your username, or contact an administrator."
+    no_associated_email: "There is no email address associated with that account. Please contact an administrator to have your password changed."
+    success: "Password updated successfully."
+    success_but_inactive: "Password updated successfully, but your account is not active, so you cannot log in."
+    token_not_found: |-
+      We're sorry, but we could not locate your account. If you are having issues try copying and pasting the URL
+      from your email into your browser or restarting the reset password process.
+    user_not_found: "No user was found with that email address or username."
+
+  permission_error:
+    need_mission: "You can't view this without selecting a mission"
+    need_login: "You must login to view that page."
+    no_permission: "You don't have permission to view that page."
+    no_permission_action: "Your account doesn't have permission to make this change."
+    processing_error: "Error processing permission."
+    enumerators_cant_change_submitter: "Enumerators can't change the submitter for responses."
+    must_be_admin: "You must be an administrator to view that page."
+    must_be_logged_out: "You must be logged out to view that page."
+
+  question:
+    answer_only_caps: "ANSWER ONLY IF"
+    bulk_destroy_confirm:
+      zero: "Are you sure you want to delete zero questions?"
+      one: "Are you sure you want to delete this question?"
+      two: "Are you sure you want to delete these %{count} questions?"
+      few: "Are you sure you want to delete these %{count} questions?"
+      many: "Are you sure you want to delete these %{count} questions?"
+      other: "Are you sure you want to delete these %{count} questions?"
+    bulk_destroy_deleted:
+      zero: "No questions deleted successfully."
+      one: "%{count} question deleted successfully."
+      two: "%{count} questions deleted successfully."
+      few: "%{count} questions deleted successfully."
+      many: "%{count} questions deleted successfully."
+      other: "%{count} questions deleted successfully."
+    bulk_destroy_skipped:
+      zero: "No question skipped."
+      one: "%{count} question skipped."
+      two: "%{count} questions skipped."
+      few: "%{count} questions skipped."
+      many: "%{count} questions skipped."
+      other: "%{count} questions skipped."
+    maxmin:
+      gt: "greater than"
+      lt: "less than"
+      or_eq: "or equal to"
+      strictly_lt: "Strictly less than"
+      strictly_gt: "Strictly greater than"
+    opt_set_warning: "Changing the option set will cause one or more conditions to be deleted."
+
+  qing_group:
+    one_screen_disabled: "Not available because the group contains either a condition or another group"
+    tooltips:
+      repeatable: "Repeatable"
+      one_screen: "Shows on one screen in ODK Collect"
+      multi_screen: "Shows on multiple screens in ODK Collect"
+
+  question_type:
+    text: "Text"
+    long_text: "Long Text"
+    integer: "Integer"
+    barcode: "Barcode"
+    counter: "Counter"
+    decimal: "Decimal"
+    location: "Location"
+    select_one: "Select One"
+    select_multiple: "Select Multiple"
+    datetime: "Date/Time"
+    date: "Date"
+    time: "Time"
+    image: "Image"
+    annotated_image: "Annotated Image"
+    signature: "Signature"
+    sketch: "Sketch"
+    audio: "Audio"
+    video: "Video"
+
+  recaptcha:
+    errors:
+      verification_failed: "Verification response is incorrect, please try again."
+      recaptcha_unreachable: "Oops, we failed to validate your verification response. Please try again."
+
+  recipient:
+    prefixes:
+      user: "User"
+      user_group: "Group"
+
+  report/report:
+    add_column: "Add Column"
+    answered_only_if: "Answered only if"
+    attribute:
+      zero: "Attributes"
+      one: "Attribute"
+      two: "Attributes"
+      few: "Attributes"
+      many: "Attributes"
+      other: "Attributes"
+    back_to_list: "Back To Report List"
+    blank: "Blank" # should be very short
+    choose_attrib_question: "Choose an attribute or question"
+    choose_disagg_qing: "Choose a Question..."
+    choose_form: "Choose a Form..."
+    choose_report: "Select Report..."
+    columns: "Columns"
+    display_options: "Options"
+    edit_report: "Edit Report"
+    enter_name: "What is the report title?"
+    export_to_csv: "Export Data To CSV Format"
+    fields: "Fields"
+    form: "Form"
+    form_selection: "Select Forms"
+    generated_at: "Generated at"
+    group_by_tag: "Group questions by tag?"
+    grouping: "Group by"
+    groupings: "Groupings"
+    how_to_disaggregate: "Split report by a special question?"
+    how_to_display_questions: "How should questions be displayed?"
+    how_to_display_results: "How would you like to display the results?"
+    how_to_order_questions: "How should questions be ordered?"
+    questions_with_option_sets: "Questions with these option sets"
+    missing_enumerators: "Non-reporting Enumerators"
+    missing_enumerators_total_count: "%{user_count} in total"
+    mission: "Mission"
+    no_match: "No matching data were found."
+    question_selection: "Select Questions"
+    report_type: "Report Type"
+    response_count: "Total Submissions"
+    questions_tagged: "Questions tagged"
+    show_examples: "Show Examples"
+    see_dependent_questions:
+      one: "See dependent question"
+      other: "See dependent questions"
+    show_examples: "Show Examples"
+    show_text_responses: "Show text responses?"
+    showing_limited_answers: "Showing only the first %{count} answers"
+    submitted_by_at: "By %{user} at %{datetime}"
+    subset_intro: "Data for responses in which the answer to the '%{question}' question was '%{disagg_value}'"
+    tally: "Tally"
+    tally_type: "What would you like to tally?"
+    these_questions: "These specific questions"
+    total_rows: "Total Rows: %{count}"
+    untagged: "Untagged questions"
+    view_response: "Response #%{id}"
+    what_attrib_col_headers: "What attribute or question would you like for the column headers (optional)?"
+    what_attrib_row_headers: "What attribute or question would you like for the row headers?"
+    what_bar_style: "What bar style would you like?"
+    what_percent_style: "What percentage style would you like?"
+    what_columns_in_list: "What columns would you like to see in the list?"
+    what_form: "What form would you like to report on?"
+    what_type: "What type of report would you like?"
+    which_calculation: "Which calculation (if any) would you like to apply?"
+    which_forms: "Which forms are you interested in?"
+    which_questions: "Which question(s) would you like to include?"
+    zero_missing_enumerators: "None"
+    bar_styles:
+      side_by_side: "Side By Side"
+      stacked: "Stacked"
+    calculation_descriptions:
+      identity: "None"
+      zero_nonzero: "Whether an answer is 0 or greater than 0"
+    display_types:
+      table: "Table"
+      bar_chart: "Bar Chart"
+    descriptions:
+      tally_report: "Aggregated tallies of answers or responses, grouped by attributes of interest."
+      list_report: "A raw listing of answers and attributes for a set of responses."
+      standard_form_report: "A question-by-question summary of the responses for a specific form."
+    examples:
+      tally_report:
+        - "Number of Very Good, Good, etc. answers for the Overall question"
+        - "Percentage of Yes and No for all Yes-No questions"
+        - "Number of responses per form for each team"
+        - "Percentage of Zero and Non-zero answers per State for the DomesticEnumerators question"
+      list_report:
+        - "List of answers to the Complaints and OtherIrreg questions along with the polling place number"
+        - "List of all polling place numbers, with no duplicates"
+        - "List of submitter name, date, and answer to the NeedSecurityContact question"
+      standard_form_report:
+        - "Summaries (percentage, averages, medians, etc.) of all questions on a form"
+        - "Can be grouped by question type or question tag"
+        - "Can be split by the answer to a specific question (e.g. region or urban/rural)"
+    percent_types:
+      none: "No Percentage"
+      overall: "Percentage Overall"
+      by_row: "Percentage By Row"
+      by_col: "Percentage By Column"
+    question_labels:
+      code: "Codes Only (Saves Space)"
+      title: "Full Titles (Easier to Read)"
+    question_orders:
+      number: "By Number"
+      type: "By Type"
+    standard_form_report:
+      overall_headers:
+        dates: "Dates"
+        responses: "Responses"
+      stat_headers:
+        mean: "Average"
+        median: "Median"
+        min: "Minimum"
+        max: "Maximum"
+      type_sets:
+        categorical: "Categorical Data"
+        numbers: "Statistical Data"
+        dates: "Dates"
+        times: "Times"
+        short_text: "Short Text Answers"
+        long_text: "Long Text Answers"
+    tally_types:
+      answer: "Answers per Question"
+      response: "Responses per Answer/Attribute"
+    tally_type_examples:
+      answer: "Tally of Yes's and No's for all Yes/No questions"
+      response: "Tally of responses per form for each team"
+    text_response_options:
+      all: "Show All"
+      short_only: "Don't Show Long Text Questions"
+      none: "Show None"
+
+  response:
+    reviewed: "This response has been reviewed"
+    edit_this_response: "Edit This Response"
+    view_with_enketo: "View with Enketo"
+    edit_with_enketo: "Edit with Enketo"
+    view_with_nemo: "View with NEMO"
+    edit_with_nemo: "Edit with NEMO"
+    download_csv: "Download"
+    connect_odata: "Connect to OData"
+    download: "Download Responses"
+    export:
+      export: "Export"
+      to_csv: "CSV Format"
+      to_odata: "OData via API"
+      odata_prompt_html: "Use the NEMO API to access data using the OData standard. You can copy this URL into your data processing software, such as Power BI."
+    export_options:
+      summary:
+        zero: "No responses to be exported."
+        one: "%{count} response to be exported."
+        two: "%{count} responses to be exported."
+        few: "%{count} responses to be exported."
+        many: "%{count} responses to be exported."
+        other: "%{count} responses to be exported."
+      download_media: "Media attachments"
+      download_xml: "Original XML (ODK)"
+      download_csv: "CSV"
+      calculating: "Calculating file size"
+      download_types: "Download the following:"
+      mb: "MB"
+      no_space: "There is not enough space on disk to export the selected responses. Try a smaller selection."
+      media_size: "Total size of media:"
+      xml_size: "Total size of XML:"
+      try_again: "There was an error. Please try again."
+      export_error: "Exporting more than %{threshold} responses is not permitted. Please select fewer responses or use the OData API."
+      export_warning: "Exporting more than %{threshold} responses may take a long time. Consider selecting fewer responses or use the OData API."
+    loading: "Loading Response..."
+    observation_time: "Observation Time"
+    save_and_mark_reviewed: "Save & Mark Reviewed"
+    view_response: "View Response"
+    checked_out: "This response has been checked out by:"
+    modified_by_web: "This response was most recently modified by the NEMO editor on %{date}, so the data shown here may be stale. Use the NEMO editor instead of Enketo for the latest version."
+    modified_by_enketo: "This response was most recently created or modified by the Enketo editor on %{date}. If you modify it with the NEMO editor, you won't be able to see those changes in Enketo."
+    remove_media_object_confirm:
+      image: "Are you sure you want to delete this image?"
+      audio: "Are you sure you want to delete this audio?"
+      video: "Are you sure you want to delete this video?"
+    drop_more_info: "More info"
+    drop_hint:
+      image: "The image should be at most %{max_size_mib} MiB in size. Accepted formats are: jpg, png."
+      video: "The video should be at most %{max_size_mib} MiB in size. Accepted formats are: 3gp, mp4, webm, mpg, wmv, avi."
+      audio: "The audio should be at most %{max_size_mib} MiB in size. Accepted formats are: mp3, ogg, webm, wav."
+    csv_headers:
+      response_id: "ResponseID"
+      reviewed: "Reviewed"
+      form_name: "Form"
+      user_name: "Submitter"
+      submit_time: "DateSubmitted"
+      shortcode: "Shortcode"
+      latitude: "Latitude"
+      longitude: "Longitude"
+      altitude: "Altitude"
+      accuracy: "Accuracy"
+      parent_group_name: "GroupName"
+      parent_group_depth: "GroupLevel"
+    add_to_group: "Add to '%{group_name}'"
+    empty_group_notice: "This group is empty"
+    bulk_destroy_confirm:
+      zero: "Are you sure you want to delete zero responses?"
+      one: "Are you sure you want to delete this response?"
+      two: "Are you sure you want to delete these %{count} responses?"
+      few: "Are you sure you want to delete these %{count} responses?"
+      many: "Are you sure you want to delete these %{count} responses?"
+      other: "Are you sure you want to delete these %{count} responses?"
+    bulk_destroy_deleted:
+      zero: "No responses deleted successfully."
+      one: "%{count} response deleted successfully."
+      two: "%{count} responses deleted successfully."
+      few: "%{count} responses deleted successfully."
+      many: "%{count} responses deleted successfully."
+      other: "%{count} responses deleted successfully."
+    long_text_behavior_options:
+      exclude: "Exclude"
+      truncate: "Truncate for Excel (slower)"
+      include: "Include"
+
+  role:
+    role: "Role"
+    enumerator: "Enumerator"
+    reviewer: "Reviewer"
+    staffer: "Staffer"
+    coordinator: "Coordinator"
+    admin: "Admin"
+    blank: "None"
+
+  search:
+    blank: "blank"
+    examples:
+      responses:
+        - "bed nets"
+        - "submitter:\"john smith\""
+        - "group:western"
+        - "form:polling"
+        - "reviewed:1"
+        - "submit-date < 2013-10-15"
+        - "{QuestionCode}:(disruption security)"
+      users:
+        - "john smith"
+        - "phone:+443726458364"
+        - "login:jsmith"
+        - "email:jsmith@example.com"
+        - group:"The Smiths"
+        - "role:staffer"
+      questions:
+        - "poll workers"
+        - "code:BallotBoxes"
+        # select-one below should not be translated.
+        - "type:select-one"
+      sms:
+        - "poll workers"
+        - "1.b"
+        - "+1234567890"
+        - "john smith"
+        - "jsmith"
+        - "type:reply"
+        - "date >= 2015-01-29"
+        - datetime < "2015-01-12 14:00"
+    expected: "Expected"
+    help_link: "Search Help"
+    help_title: "Search Help"
+    help_text:
+      responses: |-
+        ## Qualifiers
+
+        A simple search such as:
+
+        * __romeo juliet__
+
+        searches the answers to questions. To search on response attributes, use a qualifier, e.g.:
+
+        * __form:Widgets__
+
+        will only show responses to the 'Widgets' form.
+
+        Combine both of the above to narrow your search:
+
+        * __romeo juliet form:Widgets__
+
+        will show responses to the 'Widgets' form containing the words 'romeo' and 'juliet'.
+
+        The full set of qualifiers you can use is as follows:
+
+        * __form__ The responses's form
+        * __submitter__ The name of the user that submitted the response (partial matches allowed)
+        * __group__ The name of a user group to which the submitting user belongs (partial matches allowed)
+        * __submit-date__ The date the response was submitted (e.g. 1985-03-22)
+        * __reviewed__ Whether the response has been marked 'reviewed' (1 = yes or 0 = no)
+        * __source__ The medium via which the response was submitted ('web', 'odk', or 'sms')
+        * __{QuestionCode}__ The answer to a qustion with the code QuestionCode
+
+        ## Exact Phrases
+
+        Exact phrases can be matched by enclosing the phrase in double quotes:
+
+        * __submitter:"John Smith"__
+
+        Double quoted phrases can currently only be used with qualifiers other than "text".
+
+        ## All Terms vs. Any Term
+
+        By default, all terms in the search must be matched. For example,
+
+        * __alpha lima peru__
+
+        matches only responses with all three of those words. Use the vertical bar ('|') character to match several words/phrases:
+
+        * __form:( Lions | "Bears and Sharks" | Tigers )__
+
+        matches responses for any of the above forms. The '|' can only be used with qualifiers other than "text".
+
+        ## Operators
+
+        You can negate a qualified search by using the negation operator:
+
+        * __form != Widgets__
+
+        will match responses for any form except the 'Widgets' form.
+
+        For answer searches, negation works differently:
+
+        * __ballot -box__
+
+        will match any response with an answer containing the word 'ballot' but not the word 'box'. There must be at least one non-negated term in any such search.
+
+        For some qualifiers (e.g. __submit-date__), greater-than and less-than comparisons are also allowed:
+
+        * __submit-date > 2000-01-01__
+
+        Several of these can be combined to narrow the search to a range:
+
+        * __submit-date >= 2000-01-01 submit-date < 2000-02-01__
+
+        will match responses submitted in the month of January 2000.
+
+        ## Answer format
+
+        Certain types of questions expect a specific format to search for answers: for example, searching for answers to a Date-type question with question code DateQ1 might look like "{DateQ1}:2021-01-01"
+
+        * Date: YYYY-MM-DD, e.g. "2021-01-01"
+        * Time: HHhMMmSSs, e.g. "13h00m00s" (1 pm in 24-hour time)
+        * DateTime: YYYY-MM-DD HHhMMmSSs, e.g. "2021-01-01 13h00m00s"
+
+        These values are treated like plain text, so you could also for example seach just "13h" to find any Time, DateTime, or Text-based answer that matches this word.
+
+      users: |-
+        ## Qualifiers
+
+        A simple search such as:
+
+        * __romeo juliet__
+
+        matches user names, login IDs, and emails on each word. To search based on specific attributes, use a qualifier, e.g.:
+
+        * __email:@example.com__
+
+        will search for users with email addresses matching '@example.com'.
+
+        Combine both of the above to narrow your search:
+
+        * __Susan email:@example.com__
+
+        will search for users named Susan with an example.com email address.
+
+        You can match blank values using '[blank]':
+
+        * __phone: [blank]__
+
+        The full set of qualifiers you can use is as follows:
+
+        * __email__ The user's email address
+        * __group__ The user's group membership
+        * __login__ The user's login name
+        * __name__ The user's full name
+        * __phone__ The user's phone number (no dashes or other punctuation)
+        * __role__ The user's role ('enumerator', 'reviewer', 'staffer', 'coordinator')
+
+
+        Partial matches are allowed for all qualifiers.
+
+        ## Exact Phrases
+
+        Exact phrases can be matched by enclosing the phrase in double quotes:
+
+        * __"john smith"__
+
+        ## All Terms vs. Any Term
+
+        By default, all terms in the search must be matched. For example,
+
+        * __john smith__
+
+        matches only users with 'john' and 'smith' both appearing in their name. Use the vertical bar ('|') character to match several names:
+
+        * __abdul | juanita | clarice__
+
+        The '|' character can also be used with qualifiers:
+
+        * __email:( john@example.com | patty@foo.com )__
+
+        matches users with any of the above email addresses.
+
+        ## Negation
+
+        You can negate a qualified search by using the negation operator:
+
+        * __name != Oluwaseun__
+
+        will match users not named 'Oluwaseun'.
+
+      questions: |-
+        ## Qualifiers
+
+        A simple search such as:
+
+        * __romeo juliet__
+
+        searches the question titles for each word. To search based on question attributes, use a qualifier, e.g.:
+
+        * __code:BallotBox__
+
+        will show questions with 'BallotBox' in their code.
+
+        Combine both of the above to narrow your search:
+
+        * __romeo juliet code:BallotBox__
+
+        will show questions with 'BallotBox' in their code whose titles also contain the words 'romeo' and 'juliet'.
+
+        The full set of qualifiers you can use is as follows:
+
+        * __title__ The question title (partial matches allowed)
+        * __code__ The question code (partial matches allowed)
+        * __type__ The question type (%{question_types})
+        * __tag__ Searches tags applied to the question
+
+        ## Exact Phrases
+
+        Exact phrases can be matched by enclosing the phrase in double quotes:
+
+        * __"the rain in spain"__
+
+        Double quoted phrases can be mixed with non-quoted terms:
+
+        * __apples oranges "passion fruit"__
+
+        ## All Terms vs. Any Term
+
+        By default, all terms in the search must be matched. For example,
+
+        * __alpha lima peru__
+
+        matches only questions with all three of those words. Use the vertical bar ('|') character to match several words/phrases:
+
+        * __apples | oranges | "passion fruit"__
+
+        The '|' character can also be used with qualifiers:
+
+        * __code:( Lions | "Bears and Sharks" | Tigers )__
+
+        matches questions with any of the above codes.
+
+        ## Negation
+
+        You can negate a qualified search by using the negation operator:
+
+        * __code != Widgets__
+
+        will match questions with any code not containing 'Widgets'.
+
+      sms: |-
+        ## Qualifiers ##
+
+        A simple search such as:
+
+        * __romeo juliet__
+
+        searches the message content, username, user's full name, and phone number for each word.
+        To search based on question attributes, use a qualifier, e.g.:
+
+        * __type:incoming__
+
+        will show incoming messages only.
+
+        Combine both of the above to narrow your search:
+
+        * __romeo juliet type:incoming__
+
+        will show incoming messages that also contain the words 'romeo' and 'juliet'.
+
+        The full set of qualifiers you can use is as follows:
+
+        * __content__ The message content (partial matches allowed)
+        * __type__ The message type (incoming, reply, or broadcast) (partial matches allowed)
+        * __username__ The username of the sender or receiver (partial matches allowed)
+        * __name__ The full name of the sender or receiver (partial matches allowed)
+        * __number__ The phone number of the sender or receiver (partial matches allowed)
+        * __date__ The date the message was sent or received (e.g. 2015-01-29)
+        * __datetime__ The date and time the message was sent or received (use quotation marks and 24-hr time: e.g. "2015-01-29 14:00")
+
+        ## Exact Phrases ##
+
+        Exact phrases can be matched by enclosing the phrase in double quotes:
+
+        * __"the rain in spain"__
+
+        Double quoted phrases can be mixed with non-quoted terms:
+
+        * __apples oranges "passion fruit"__
+
+        ## All Terms vs. Any Term
+
+        By default, all terms in the search must be matched. For example,
+
+        * __alpha lima peru__
+
+        matches only questions with all three of those words. Use the vertical bar ('|') character to match several words/phrases:
+
+        * __apples | oranges | "passion fruit"__
+
+        The '|' character can also be used with qualifiers:
+
+        * __content:( Lions | "Bears and Sharks" | Tigers )__
+
+        matches questions with any of the above codes.
+
+        ## Negation
+
+        You can negate a qualified search by using the negation operator:
+
+        * __type != broadcast__
+
+        will match messages whose type does not contain "broadcast".
+
+    invalid_op: "The operator '%{op}' is not valid for the qualifier '%{qualifier}'."
+    multiple_terms_not_allowed: "Multiple terms aren't allowed for '%{qualifier}' searches unless OR is used."
+    must_use_qualifier: "You must use a qualifier for all search terms."
+    or_not_allowed_between: "OR is not allowed between expressions."
+    invalid_qualifier: "'%{chunk}' is not a valid search qualifier."
+    search_error: "Search Error"
+    unexpected: "Your search query could not be understood due to unexpected text near '%{str}'."
+    unexpected_end: "Your search query could not be understood due to unexpected text near the end."
+    boolean_error: "The qualifier '%{qualifier}' must be set to 'yes' or 'no' ('1' and '0' are also accepted)."
+    invalid_date: "'%{value}' is not a valid date."
+
+  setting:
+    admin_mode_notice: "The below settings are copied as defaults to all new missions, and serve as fallbacks in certain cases where a mission context is not available. Some of them also affect admin mode itself (e.g. theme, preferred locales)."
+    change_sms_password: "Change Password"
+    change_twilio_auth_token: "Change Auth Token"
+    change_api_key: "Change API Key"
+    override_code_warning: "Note that the new override code will not work with forms that have already been downloaded. You should record the existing code if this is a problem. Are you sure you want to regenerate the code?"
+    sms_token_warning: "Note that this will invalidate the previous SMS token for this mission. All incoming SMSes will be rejected until your SMS gateway settings are updated accordingly. Are you sure you want to regenerate the token?"
+    api_key_warning: "Note that this will invalidate the previous API key for this user. Are you sure you want to regenerate the key?"
+    sms_auth_code_warning: "Note that this will invalidate the previous SMS auth code for this user. Are you sure you want to regenerate the code?"
+    using_incoming_sms_token: "How do I use this?"
+    headings:
+      general: "General Settings"
+      generic: "Generic SMS Adapter Settings"
+      sms: "Shared SMS Settings"
+      twilio: "Twilio Settings"
+      frontlinecloud: "FrontlineCloud Settings"
+
+  skip_rule:
+    end: "End"
+    skip_if_options:
+      always: "in all cases"
+      all_met: "if all of these conditions are met"
+      any_met: "if any of these conditions are met"
+    skip_to_item: "Skip to %{label}"
+    dest_prompt: "Choose destination ..."
+    instructions:
+      with_conditions: "SKIP TO %{destination} if %{conditions}"
+      without_conditions: "SKIP TO %{destination}"
+    end_of_form: "end of form"
+
+  constraint:
+    accept_if_options:
+      all_met: "Valid only if all of these conditions are met"
+      any_met: "Valid only if any of these conditions are met"
+    instructions: "VALID ONLY IF %{conditions}"
+    odk_message: "Valid only if: %{conditions}"
+
+  sms:
+    extra_recipients_html: "<br/>... and %{count} more"
+    error: "Error"
+    when_sending_reply: "When sending reply"
+    no_valid_adapter: "There is no valid outgoing SMS adapter. Please check the settings."
+    outgoing_provider: "Outgoing SMS Provider"
+    timestamp_with_diff_html: "%{time}<br/>(sent %{time_diff} earlier)"
+
+  sms_console:
+    back_to_forms: "Back to Forms"
+    no_reply: "No reply."
+    submit_error: "There was an error submitting your test."
+
+  sms_form:
+    decoding:
+      account_locked: "Sorry, your account has been temporarily locked. Please check your auth code and wait a few minutes before trying again."
+      answer_error_intro: "Sorry, your answer '%{value}' for question %{rank} on form '%{form_code}'"
+      answer_not_date: "was not a valid date"
+      answer_not_datetime: "was not a valid datetime"
+      answer_not_decimal: "was not a valid number"
+      answer_not_integer: "was not a valid integer number"
+      answer_too_large: "was not less than or equal to %{maximum}"
+      answer_too_large_strict: "was not less than to %{maximum}"
+      answer_too_small: "was not greater than or equal to %{minumum}"
+      answer_too_small_strict: "was not greater than to %{minumum}"
+      answer_not_time: "was not a valid time"
+      answer_not_valid_option: "was not a valid option"
+      answer_not_valid_long_option_multi: "contained multiple invalid options"
+      answer_not_valid_option_multi: "contained the invalid option '%{invalid_options}'"
+      answer_not_valid_options_multi: "contained invalid options '%{invalid_options}'"
+      congrats: "Your response to form '%{form_code}' was received. Thank you!"
+      duplicate_answer: "Sorry, your submission contained duplicate answers for question %{rank}."
+      duplicate_submission: "Sorry, your response is a duplicate of one submitted recently."
+      first_answer_invalid: "Sorry, but %{token} is not a valid answer. Be sure to include a period after the question number."
+      form_not_found: "Sorry, there is no form with code '%{form_code}'."
+      form_not_permitted: "Sorry, you don't have permission to submit to form '%{form_code}'."
+      form_not_live: "Sorry, form '%{form_code}' is not currently available for submissions."
+      form_not_smsable: "Sorry, form '%{form_code}' is not currently available for SMS submissions."
+      form_version_outdated: "Sorry, the form code '%{form_code}' refers to an old version. Please obtain an updated submission guide."
+      invalid_form_code: "Sorry, '%{form_code}' is not a valid form code."
+      question_doesnt_exist: "Sorry, question %{rank} doesn't exist on form '%{form_code}'."
+      user_not_found: "Sorry, we couldn't find you in the system."
+      no_answers: "Sorry, you must provide at least one answer."
+    incoming_numbers:
+      id: "id"
+      phone_number: "phone_number"
+    validation:
+      invalid_answer: "Sorry, the answer to question %{rank} %{error}."
+      missing_answer: "Sorry, the answer to the required question %{ranks} was missing from your response to form '%{form_code}'."
+      missing_answers: "Sorry, the answers to the required questions %{ranks} were missing from your response to form '%{form_code}'."
+
+  standard:
+    import: "Import"
+    import_choose_one:
+      forms: "Please choose at least one Form to import."
+      option_sets: "Please choose at least one Option Set to import."
+      questions: "Please choose at least one Question to import."
+    import_errors: "There were errors."
+    import_instructions:
+      forms: "Check the boxes next to the Forms you'd like to import. Then click the 'import' button."
+      option_sets: "Check the boxes next to the Option Sets you'd like to import. Then click the 'import' button."
+      questions: "Check the boxes next to the Questions you'd like to import. Then click the 'import' button."
+    import_standard:
+      forms: "Import Standard Forms"
+      option_sets: "Import Standard Option Sets"
+      questions: "Import Standard Questions"
+    import_success:
+      forms:
+        zero: "Successfully imported %{count} Forms."
+        one: "Successfully imported %{count} Form."
+        two: "Successfully imported %{count} Forms."
+        few: "Successfully imported %{count} Forms."
+        many: "Successfully imported %{count} Forms."
+        other: "Successfully imported %{count} Forms."
+      option_sets:
+        zero: "Successfully imported %{count} Option Sets."
+        one: "Successfully imported %{count} Option Set."
+        two: "Successfully imported %{count} Option Sets."
+        few: "Successfully imported %{count} Option Sets."
+        many: "Successfully imported %{count} Option Sets."
+        other: "Successfully imported %{count} Option Sets."
+      questions:
+        zero: "Successfully imported %{count} Questions."
+        one: "Successfully imported %{count} Question."
+        two: "Successfully imported %{count} Questions."
+        few: "Successfully imported %{count} Questions."
+        many: "Successfully imported %{count} Questions."
+        other: "Successfully imported %{count} Questions."
+    no_importable:
+      forms: "There is nothing available to import. Either there are no standard Forms, or they have all been imported already."
+      option_sets: "There is nothing available to import. Either there are no standard Option Sets, or they have all been imported already."
+      questions: "There is nothing available to import. Either there are no standard Questions, or they have all been imported already."
+    standard: "Standard"
+    standard_forms: "Standard Forms"
+    there_were_errors:
+      zero: "There were %{count} errors."
+      one: "There was %{count} error."
+      two: "There were %{count} errors."
+      few: "There were %{count} errors."
+      many: "There were %{count} errors."
+      other: "There were %{count} errors."
+
+  tabular_import:
+    errors:
+      wrong_type: "The uploaded file must be a valid CSV file."
+      no_rows: "No rows to import."
+      bad_csv: "There was an issue with your CSV file: %{msg}"
+
+  question_import:
+    instructions_html: |-
+      Upload a CSV file with your questions. A <a href="%{csv_url}">CSV template</a> is available as a starting point.
+
+      Notes:
+
+      * Only CSV files are accepted. They must be UTF-8 encoded. You can export XLSX files to CSV using any standard spreadsheet software.
+      * Code must be a short codename (between 2-20 characters). Should contain only letters and numbers, e.g. BallotBoxSealed, DepartTime.
+      * QType must be a valid question type, for example: integer, select\_one, select\_multiple, text, long\_text, decimal.
+      * The option set name must match an existing option set name, if specified.
+      * You can find more documentation <a href="https://getnemo.readthedocs.io/en/latest/content/formsquestions/formsquestions.html#import-new-questions">here</a>.
+    errors:
+      missing_headers: "Your CSV was missing some columns, please see the template/docs."
+
+  unauthorized:
+    default: "You are not authorized to access that page or operation."
+    must_login: "You must login to access that page."
+    expired: "Your request has expired, please try again."
+
+  user_import:
+    instructions_html: |-
+      Upload a CSV file with your users. A <a href="%{csv_url}">CSV template</a> is available as a starting point.
+
+      Notes:
+
+      * Only CSV files are accepted. They must be UTF-8 encoded. You can export XLSX files to CSV using any standard spreadsheet software.
+      * Please do not alter top row of template in any way.
+      * Phone numbers should include country code (e.g. +17095551212).
+      * Gender may be one of 'Man', 'Woman', or 'Decline to Answer', or can be any other value.
+      * Nationality should be the name of a country such as 'Canada' or 'Bangladesh'.
+      * Multiple user group names should be separated by a semicolon. If a named user group does not exist, it will be created.
+      * You can find more documentation <a href="https://getnemo.readthedocs.io/en/main/content/users/users.html#import-users">here</a>.
+
+  user:
+    add_assignment: "Add Assignment"
+    api_key:
+      regenerate: "Regenerate"
+    back_to_index: "Back to Users List"
+    bulk_destroy_confirm:
+      zero: "Are you sure you want to delete zero users?"
+      one: "Are you sure you want to delete this user?"
+      two: "Are you sure you want to delete these %{count} users?"
+      few: "Are you sure you want to delete these %{count} users?"
+      many: "Are you sure you want to delete these %{count} users?"
+      other: "Are you sure you want to delete these %{count} users?"
+    bulk_destroy_deleted:
+      zero: "No users deleted successfully."
+      one: "%{count} user deleted successfully."
+      two: "%{count} users deleted successfully."
+      few: "%{count} users deleted successfully."
+      many: "%{count} users deleted successfully."
+      other: "%{count} users deleted successfully."
+    bulk_destroy_deactivated:
+      zero: "No users deactivated."
+      one: "%{count} user could not be deleted, so they were deactivated."
+      two: "%{count} users could not be deleted, so they were deactivated."
+      few: "%{count} users could not be deleted, so they were deactivated."
+      many: "%{count} users could not be deleted, so they were deactivated."
+      other: "%{count} users could not be deleted, so they were deactivated."
+    bulk_destroy_skipped:
+      zero: "No users skipped."
+      one: "%{count} user skipped."
+      two: "%{count} users skipped."
+      few: "%{count} users skipped."
+      many: "%{count} users skipped."
+      other: "%{count} users skipped."
+    bulk_destroy_skipped_current: "Not deleting the current user."
+    edit_profile: "Edit Profile"
+    forgot_password: "Forgot Password?"
+    gender_options:
+      man: "Man"
+      woman: "Woman"
+      no_answer: "Decline to Answer"
+      specify: "Specify..."
+    add_to_group: "Add to Group"
+    remove_from_group: "Remove from Group"
+    login_instructions:
+      closing:
+        - "Please note the 's' in 'https' in the site URL."
+        - |-
+          If you'd like to choose a more memorable password, you can change your password by visiting
+          the URL above, logging in, and clicking your username in the top-right corner.
+        - |-
+          The above credentials will also work on your Android device. To enter your credentials,
+          open 'ODK Collect', tap the ⋮ button > Admin Settings > Import/Export Settings, and then
+          scan the barcode above.
+      preamble_singular: |-
+        Login instructions are shown below. Please print this page now and ensure the user below receives it.
+        Since the user's password is stored in encrypted format, it will be irretrievable after you leave this page.
+      preamble_plural: |-
+        Login instructions are shown below. Please print these pages now and ensure the users below receive their instructions.
+        Since the users' passwords are stored in encrypted format, they will be irretrievable after you leave this page.
+      qr_code: "ODK Collect QR Code"
+      site_url: "Site URL"
+      title: "Login Instructions"
+      welcome: "Welcome to %{site}. Your credentials are as follows:"
+    logout_success: "You have logged out successfully."
+    profile_updated: "Profile updated successfully."
+    reset_password_hint_choose: "Select how this user should get their password."
+    reset_password_hint_reset: "Choose whether and how to reset this user's password."
+    reset_password_label_choose: "Password Creation"
+    set_admin_password: "Set your admin password and profile nformation"
+    reset_password_label_reset: "Password"
+    password_options:
+      dont: "No change"
+      email: "Send password reset instructions via email"
+      print: "Generate a new password and show printable login instructions"
+      enter: "Enter a new password"
+      enter_and_show: "Enter a new password and show printable login instructions"
+
+  user_group:
+    create_prompt: "Please enter the name of your group."
+    add_users_success: "Successfully added %{count} users to group %{group}"
+    remove_users_success: "Successfully removed %{count} users from group %{group}"
+    new_group: "New Group"
+    no_groups: "There are currently no user groups in this mission. Create a group by adding a group to a single user when editing or creating the user. Then it will be available here."
+
+  welcome:
+    awaiting_review: "**%{count}** Awaiting Review"
+    by_you: "**%{count}** Submissions By You"
+    form_count: "**%{count}** Forms"
+    in_the_past_day: "**%{count}** in the Past Day"
+    in_the_past_hour: "**%{count}** in the Past Hour"
+    in_the_past_month: "**%{count}** in the Past Month"
+    in_the_past_week: "**%{count}** in the Past Week"
+    in_the_past_year: "**%{count}** in the Past Year"
+    no_mission_selected:
+      title: "No Mission Selected"
+      choose: "Please select a mission from the dropdown in the top-right of the screen."
+      choose_or_create: "Please select a mission from the dropdown in the top-right of the screen, or you can "
+      create_link: "create a new mission"
+      need_to_create: "There are currently no missions. Please "
+      no_missions: "There are currently no missions in the system. Please contact an administrator."
+    no_recent: "**0** Recent Responses"
+    select_a_form: "Select a Form To Submit"
+    select_a_report: "Select a Report To View"
+    total_responses: "**%{count}** Total Responses"
+    total_users: "**%{count}** Total Users"

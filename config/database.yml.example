@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+
+production:
+  <<: *default
+  database: nemo_production
+
+# Alternatively, if you have split servers (e.g. web on one server and database on another)
+#production:
+#  <<: *default
+#  database: nemo_production
+#  host: 10.0.0.2 # Wherever the DB can be accessed locally
+#  username: deploy # Database user
+#  password: 123ChangeMe # Database user password, set via psql
+
+test:
+  <<: *default
+  database: nemo_test
+
+development:
+  <<: *default
+  database: nemo_development

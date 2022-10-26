@@ -1,0 +1,10 @@
+<% context = local_assigns[:context] %>
+<label class="question-label" for="<%= context && context.input_id(:value) %>">
+  <div class="title">
+    <%= reqd_sym if node.questioning.required? %>
+    <%= node.questioning.name || "[#{t('answer.no_name')}]" %>
+  </div>
+  <div class="code">
+    <%= "[#{node.questioning.code}]" %>
+  </div>
+</label>

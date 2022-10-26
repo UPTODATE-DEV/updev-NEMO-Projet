@@ -1,0 +1,30 @@
+extends:
+  - cooperka/react
+parser: '@babel/eslint-parser'
+env:
+  browser: true
+  jest: true
+globals:
+  $: true
+  _: true
+  I18n: true
+  ELMO: true
+  ReactRailsUJS: true
+  Backbone: true
+  Clipboard: true
+  Dropzone: true
+  google: true
+rules:
+  import/no-unresolved: ['error', { ignore: ['^javascripts/'] }]
+  react/prefer-stateless-function: off
+  jsx-a11y/label-has-for: ['error', { required: { some: ['nesting', 'id']}}]
+  no-new: off
+
+overrides:
+  -
+    files:
+      - '*.test.js'
+      - 'setupTests.js'
+    rules:
+      global-require: off
+      import/no-extraneous-dependencies: off

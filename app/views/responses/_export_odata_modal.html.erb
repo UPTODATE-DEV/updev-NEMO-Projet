@@ -1,0 +1,23 @@
+<div class="modal fade" id="export-odata-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><%= "#{t('response.export.export')}: #{t('response.export.to_odata')}" %></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <%= elmo_form_for(@response_odata_export_options, url: "") do |f| %>
+          <div class="fields">
+            <p><%= t("response.export.odata_prompt_html") %></p>
+            <%= f.field(:api_url, type: :pre, class: "mb-1", copyable: true) %>
+          </div>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          <%= t("common.close") %>
+        </button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

@@ -1,0 +1,50 @@
+<div class="elmo-form-wrapper">
+  <%= alerts(flash) %>
+  <% if form_mode == :edit %>
+    <%= Forms::IntegrityWarnings::Builder.new(@option_set) %>
+    <%= multilevel_forbidden_notice if @option_set.select_multiple_questions? %>
+    <%= huge_notice if @option_set.huge? %>
+  <% end %>
+  <%= ActionLinks::LinkBuilder.new(@option_set, %i[show edit clone export destroy]) unless request.xhr? %>
+  <%= elmo_form_for(@option_set) do |f| %>
+    <%= f.field(:name, required: true, read_only: cannot?(:update_core, @option_set)) %>
+    <%= f.field(:sms_guide_formatting,
+          type: :select,
+          options: translate_options(OptionSet::SMS_GUIDE_FORMATTING_OPTIONS, 'sms_guide_formatting_options'),
+          required: true,
+          read_only: cannot?(:update_core, @option_set) || @option_set.published?,
+          prompt: false) %>
+    <%= f.field(:geographic, type: :check_box, read_only: cannot?(:update_core, @option_set)) %>
+    <%= f.field(:allow_coordinates, type: :check_box, read_only: cannot?(:update_core, @option_set)) %>
+    <%= f.field(:multilevel, type: :check_box,
+          read_only: cannot?(:update_core, @option_set) || !@option_set.can_be_multilevel? )%>
+    <%= f.field(:option_levels, partial: "option_levels") %>
+    <%= f.field(:options, required: true, partial: "options") %>
+
+    <%= render(partial: "option_sets/option_levels_modal") %>
+    <%= render(partial: "option_sets/options_modal") %>
+
+    <div class="submit-buttons">
+      <%= f.submit(class: "btn btn-primary") unless params[:modal_mode] %>
+    </div>
+  <% end %>
+</div>
+
+<%= javascript_doc_ready do %>
+  new ELMO.Views.OptionSetForm(<%=json(
+    option_set: @option_set.as_json(for_option_set_form: true),
+
+    edit_link: action_link(:edit, "#", label: false),
+    remove_link: action_link(:remove, "#", label: false),
+
+    # Options and option levels are not editable if Option Set is huge.
+    options_levels_read_only: read_only || @option_set.huge?,
+
+    # Whether the form is being loaded in a modal.
+    modal_mode: params[:modal_mode].present?,
+
+    can_reorder: can?(:reorder_options, @option_set),
+    can_remove_options: can?(:remove_options, @option_set),
+    max_option_name_length: Option::MAX_NAME_LENGTH
+  )%>);
+<% end %>

@@ -1,0 +1,57 @@
+<div class="question_fields">
+  <%= f.base_errors %>
+
+  <%= f.field(:code, required: true, maxlength: 20, read_only: cannot?(:update_code, @question)) %>
+
+  <%# core fields should not be editable if don't have update_core permission %>
+  <% cant_update_core = cannot?(:update_core, @question) %>
+
+  <%= f.field(:qtype_name, type: :select, required: true, read_only: cant_update_core,
+        options: translate_options(@question_types.map(&:name), :question_type)) %>
+
+  <%# this is a partial because it contains more complex controls %>
+  <%# the partial path is fully qualified because THIS partial might be included in several different contexts %>
+  <%= f.field(:option_set_id, partial: "questions/option_set_select", read_only: cant_update_core) %>
+
+  <%# title and hint boxes, one for each language %>
+  <div class="names_hints">
+    <% current_mission_config.preferred_locales.each_with_index do |lang, rank| %>
+      <%= render("questions/title_and_hint", f: f, lang: lang, rank: rank) %>
+    <% end %>
+  </div>
+
+  <%= f.field(:reference, type: :text) %>
+  <%= f.field(:media_prompt, type: :file, hint: t("activerecord.hints.question.media_prompt",
+        max_size_mib: Cnfg.max_upload_size_mib)) %>
+
+  <div class="minmax">
+    <%= f.field(:casted_minimum, partial: "questions/min_max_condition") %>
+    <%= f.field(:casted_maximum, partial: "questions/min_max_condition") %>
+  </div>
+
+  <%= f.field(:auto_increment, type: :check_box) %>
+  <%= f.field(:metadata_type, type: :select,
+    options: translate_options(Question::METADATA_TYPES, :metadata_types)) %>
+  <% unless admin_mode? %>
+    <%= f.field(:key, type: :check_box) %>
+    <%= f.field(:access_level, type: :select,
+      options: translate_options(Question::API_ACCESS_LEVELS, :access_levels)) %>
+  <% end %>
+  <%= f.field(:tag_ids, partial: "questions/tags") %>
+
+  <%= render(partial: "questions/option_set_modal") %>
+</div>
+
+<%= javascript_doc_ready do %>
+  // This view is deprecated. Use QuestionFormView instead.
+  new ELMO.Views.QuestionForm(<%=json(
+    new_option_set_path: new_option_set_path
+  )%>);
+
+  new ELMO.Views.QuestionFormTagField(<%=json(
+    suggest_tags_path: suggest_tags_path,
+    # Using sort_by instead of order because order nukes non-saved records.
+    question_tags: @question.tags.sort_by(&:name),
+    mission_id: @current_mission.try(:id) || "",
+  )%>);
+<% end %>

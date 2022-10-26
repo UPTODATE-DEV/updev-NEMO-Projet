@@ -1,0 +1,55 @@
+body.dashboard {
+  .title {
+    float: none;
+  }
+
+  #content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .panes {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: space-between;
+  }
+
+  .links {
+    text-align: $right;
+  }
+
+  .left-col,
+  .right-col {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 10px);
+
+    .recent-responses {
+      flex: 3 0 0;
+    }
+
+    .response-locations {
+      flex: 4 0 0; // Map slightly bigger than responses
+    }
+
+    .report { // Report takes up max space, stats don't grow
+      flex: 1 0 0;
+    }
+  }
+
+  a.expand-map {
+    float: right;
+    margin-top: 20px;
+  }
+
+  h2 {
+    color: $gray-text;
+    font-size: 18px;
+    margin: 0 0 15px;
+    text-transform: uppercase;
+
+    &.interior {
+      margin-top: 15px;
+    }
+  }
+}

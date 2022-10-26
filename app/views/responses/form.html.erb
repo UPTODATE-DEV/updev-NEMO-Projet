@@ -1,0 +1,72 @@
+<% content_for(:per_page_js, google_maps_js) %>
+<% @title_args = {id: @response.decorate.shortcode} %>
+
+<%# This needs to be up here so it runs before the FileUploaderViews are initialized. %>
+<%= javascript_doc_ready do %>
+  ELMO.fileUploaderManager = new ELMO.Views.FileUploaderManager({el: ".response-form"});
+<% end %>
+
+<% enketo_link = link_to(
+  t(%(new edit).include?(params[:action]) ? "response.edit_with_enketo" : "response.view_with_enketo"),
+  params.permit!.merge("enketo": "1")) %>
+<% action_links = @response.new_record? ? [enketo_link] : %i[show edit destroy].concat([link_divider, enketo_link]) %>
+
+<div id="response-form-wrapper">
+  <%= elmo_form_for(@response, read_only: @read_only, override_class: "response-form") do |f| %>
+    <%= ActionLinks::LinkBuilder.new(@response, action_links, show_on_new: true) %>
+    <%= f.base_errors %>
+    <%= f.field(:form_id, type: :hidden) %>
+
+    <%= render("metadata", f: f, context: @context) %>
+
+    <%# root_node can be expected to be nil when there are no questions at all on the form. %>
+    <% unless @response.root_node.nil? %>
+      <%= render("responses/answers/nodes", nodes: [@response.root_node], context: @context) %>
+    <% end %>
+
+    <div class="row">
+      <div class="col-md-6">
+        <% if @context.read_only? %>
+          <% if @response.incomplete %>
+            <div class="answer">
+              <div data-field-name="incomplete">
+                <div class="hint-wrapper">
+                  <div class="hint">
+                    <em>This is an incomplete response</em>
+                    <i class="hint fa fa-2x fa-info-circle"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% else %>
+          <%= f.field(:incomplete, type: :check_box) if can?(:submit_incomplete, @response) %>
+        <% end %>
+      </div>
+      <div class="col-md-6">
+        <div class="submit-buttons">
+          <%= render("file_upload/upload_in_progress_button", single_file: false) %>
+          <% unless @context.read_only? %>
+            <%= f.submit(class: "btn btn-primary") %>
+          <% end %>
+          <% if form_mode == :edit && can?(:review, @response) %>
+            <%= f.submit(t("response.save_and_mark_reviewed"),
+                  class: "btn btn-secondary", name: "commit_and_mark_reviewed", read_only: false) %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <%= render("layouts/location_picker") %>
+</div>
+
+<%= javascript_doc_ready do %>
+  new ELMO.Views.ResponseFormView(<%=json(
+    el: "#response-form-wrapper",
+    submitter_url: @response.new_record? ? possible_submitters_responses_path :
+      possible_submitters_responses_path(response_id: @response.id),
+    reviewer_url: @response.new_record? ? possible_reviewers_responses_path :
+      possible_reviewers_responses_path(response_id: @response.id)
+  )%>);
+<% end %>

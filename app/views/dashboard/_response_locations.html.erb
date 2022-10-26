@@ -1,0 +1,19 @@
+<div>
+  <a href="#" class="expand-map toggle-map">
+    <i class="fa fa-expand"></i>
+    <%= t("dashboard.expand_map") %>
+  </a>
+  <h2 class="interior">
+    <%= t("dashboard.response_locations") %>
+  </h2>
+</div>
+<div class="map-canvas"></div>
+<div class="response-locations-disabled response-locations-offline" style="display: none">
+  <%= t("dashboard.no_map_offline") %>
+</div>
+<div class="response-locations-disabled response-locations-no-key" style="display: none">
+  <%= t("dashboard.no_map_key") %>
+</div>
+<div class="response-locations-truncated">
+  <%= t('dashboard.response_locations_truncated', max: DashboardController::MAX_MAP_LOCATIONS) %>
+</div>

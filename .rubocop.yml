@@ -1,0 +1,189 @@
+require: rubocop-rails
+
+# Disable defaults
+AllCops:
+  # Enable future cops not specified here.
+  NewCops: enable
+  Exclude:
+    - "bin/**/*"
+    - "db/schema.rb"
+    - "script/**/*"
+    - "tmp/**/*"
+    - "uploads/**/*"
+    - "vendor/**/*"
+    - "node_modules/**/*"
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/CaseIndentation:
+  EnforcedStyle: end
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+Layout/FirstArgumentIndentation:
+  EnforcedStyle: consistent
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
+Layout/LineLength:
+  Enabled: true
+  Max: 110
+  IgnoredPatterns:
+    # Test descriptors
+    - ^\s*(describe|it|context|scenario) ".+" do$
+
+Lint/RedundantCopDisableDirective:
+  Enabled: false
+
+Lint/UnusedMethodArgument:
+  # Otherwise we have to remove named args from the method signature altogether which seems to reduce
+  # clarity of the code.
+  AllowUnusedKeywordArguments: true
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - db/migrate/*
+    - config/routes.rb
+    - spec/**/*
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+  Exclude:
+    - db/migrate/*
+
+Metrics/MethodLength:
+  Max: 20
+  Exclude:
+    - db/migrate/*
+
+Metrics/AbcSize:
+  Max: 30
+  Exclude:
+    - db/migrate/*
+
+Metrics/PerceivedComplexity:
+  Max: 10
+  Exclude:
+    - db/migrate/*
+
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+
+Naming/MethodParameterName:
+  AllowedNames:
+    - _
+    - a
+    - b
+    - i
+    - n
+    - k
+    - v
+    - x
+    - y
+    - id
+    - op
+    - to
+    - tz
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/CommentAnnotation:
+  Keywords: # Only care about these, the other defaults like "NOTE" are annoying.
+    - "TODO"
+
+Style/Documentation:
+  Exclude:
+    - "app/controllers/**/*"
+    - "app/decorators/**/*"
+    - "app/serializers/**/*"
+    - db/migrate/*
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: true
+  IgnoredMethods:
+    - to
+    - not_to
+    - require
+    - raise
+    - puts
+    - validates # Sometimes this is called in a with_options block, confusing the cop.
+    - class_eval
+  Exclude:
+    - Gemfile
+    - db/migrate/*
+
+Style/NestedTernaryOperator:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+# Minor performance increase but doesn't work everywhere.
+Style/HashEachMethods:
+  Enabled: false
+
+Bundler:
+  Enabled: true
+
+Rails:
+  Enabled: true
+
+# Helpers are deprecated so this only ever fires for legacy code, which we don't want to spend time
+# refactoring to get around this cop.
+Rails/HelperInstanceVariable:
+  Enabled: false
+
+Rails/Blank:
+  # This harms readability in many cases.
+  UnlessPresent: false
+
+# This is annoying to do and doesn't really help in most cases.
+Rails/BulkChangeTable:
+  Enabled: false
+
+Rails/Output:
+  Enabled: true
+  Exclude:
+    - db/migrate/**/*
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+# This is generally bad advice, defaults are often set in code.
+Rails/NotNullColumn:
+  Enabled: false
+
+# This would be lovely but it breaks our custom ODK wrapper.
+Rails/ContentTag:
+  Enabled: false
+
+# This seems unnecessary to me and kind of ugly.
+Rails/SquishedSQLHeredocs:
+  Enabled: false
+
+# Important to see errors on save!
+Rails/SaveBang:
+  Enabled: true

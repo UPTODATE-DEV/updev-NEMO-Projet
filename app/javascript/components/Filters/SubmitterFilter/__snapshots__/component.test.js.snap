@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`popover handles callbacks 1`] = `1`;
+
+exports[`popover handles callbacks 2`] = `
+Array [
+  Object {
+    "type": "return",
+    "value": undefined,
+  },
+]
+`;
+
+exports[`renders as expected 1`] = `
+<FilterOverlayTrigger
+  buttonClass="btn-margin-left"
+  hints={
+    Array [
+      "User A",
+    ]
+  }
+  id="submitter-filter"
+  onSubmit={[MockFunction]}
+  popoverClass="popover-multi-select2"
+  popoverContent={
+    <React.Fragment>
+      <Select2
+        data={
+          Array [
+            Object {
+              "id": "B",
+              "text": "User B",
+            },
+          ]
+        }
+        id="submitter"
+        onSelect={[Function]}
+        onUnselect={[Function]}
+        options={
+          Object {
+            "ajax": Object {
+              "url": "mock",
+            },
+            "allowClear": true,
+            "dropdownCssClass": "filters-select2-dropdown",
+            "placeholder": "Choose a user",
+            "width": "100%",
+          }
+        }
+        value="B"
+      />
+      <Select2
+        data={
+          Array [
+            Object {
+              "id": "B",
+              "text": "Group B",
+            },
+          ]
+        }
+        id="group"
+        onSelect={[Function]}
+        onUnselect={[Function]}
+        options={
+          Object {
+            "ajax": Object {
+              "url": "mock",
+            },
+            "allowClear": true,
+            "dropdownCssClass": "filters-select2-dropdown",
+            "placeholder": "Choose a group",
+            "width": "100%",
+          }
+        }
+        value="B"
+      />
+    </React.Fragment>
+  }
+  title="Submitter"
+/>
+`;

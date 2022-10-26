@@ -1,0 +1,6 @@
+<% if read_only %>
+  <%= t("access_levels.#{form.object.access_level}") %>
+<% else %>
+  <%= form.select(:access_level, translate_options(Form::API_ACCESS_LEVELS, 'access_levels'),
+        {}, class: "form-control") %>
+<% end %>

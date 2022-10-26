@@ -1,0 +1,25 @@
+<div id="group-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">
+          <%= @qing_group.modal_title %>
+        </h4>
+        <button type="button" class="close group-cancel" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+
+      <%= render(partial: "modal_body") %>
+
+      <% if action_name != "show" %>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary cancel" data-dismiss="modal">
+            <%= I18n.t("common.cancel") %>
+          </button>
+          <button type="button" class="btn btn-primary save">
+            <%= I18n.t("common.save") %>
+          </button>
+        </div>
+      <% end %>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`popover handles callbacks 1`] = `1`;
+
+exports[`popover handles callbacks 2`] = `
+Array [
+  Object {
+    "type": "return",
+    "value": undefined,
+  },
+]
+`;
+
+exports[`renders as expected 1`] = `
+<FilterOverlayTrigger
+  buttonClass="btn-margin-left"
+  buttonsContainerClass="condition-margin"
+  hints={
+    Array [
+      "One",
+    ]
+  }
+  id="question-filter"
+  onSubmit={[MockFunction]}
+  popoverClass="wide display-logic-container"
+  popoverContent={
+    <div>
+      <p
+        className="mb-2"
+      >
+        Showing questions from Two only.
+      </p>
+      <ConditionSetFormField />
+      <AddConditionLink />
+    </div>
+  }
+  title="Question"
+/>
+`;

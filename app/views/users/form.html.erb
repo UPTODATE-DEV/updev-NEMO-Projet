@@ -1,0 +1,66 @@
+<%# special title if user is editing self %>
+<% @title_args = {name: @user.name || ""} %>
+<% @title_args[:name] += " (#{t("common.inactive")})" if !@user.active? %>
+<% @title = t("page_titles.users.#{form_mode}_profile", name: @user.name) if @user == current_user %>
+
+<%= elmo_form_for(@user) do |f| %>
+  <%= ActionLinks::LinkBuilder.new(@user, %i[show edit destroy]) %>
+
+  <%= f.field(:name, required: true) %>
+  <%= f.field(:login, required: true) %>
+  <%= f.field(:email) %>
+  <%= f.field(:phone) %>
+  <%= f.field(:phone2) %>
+  <%= f.field(:birth_year, type: :select, options: birth_year_options,
+        read_only_content: @user.birth_year.try(:to_s)) %>
+  <%= f.field(:gender, type: :select, options: translate_options(User::GENDER_OPTIONS, [:user, :gender_options])) %>
+  <%= f.field(:gender_custom) %>
+  <%= f.field(:nationality, type: :select, options: translate_options(I18n.t("countries").keys, [:countries]).sort) %>
+  <%= f.field(:admin, type: :check_box) if can?(:adminify, @user) && admin_mode? %>
+  <%= f.field(:active, type: :check_box) if can?(:activate, @user) %>
+
+  <% if can?(:change_assignments, @user) %>
+    <%# field name depends on whether we're in admin mode or not. under the hood it's all the same though %>
+    <%= f.field(admin_mode? ? :assignments : :role, partial: "assignments", required: !admin_mode?) %>
+  <% end %>
+
+  <% if can?(:manage, UserGroup.new(mission: current_mission)) %>
+    <%= f.field(:user_group_ids, type: :select, multiple: true,
+      options: sel_opts_from_objs(@user.user_groups),
+      read_only_content: render_tags(@user.user_groups)) %>
+  <% end %>
+
+  <%= f.field(:pref_lang, type: :select, options: I18n.available_locales.map{|l| [language_name(l), l]}) %>
+
+  <%= f.field(:notes, type: :textarea) %>
+
+  <% unless read_only %>
+    <%# Password reset %>
+    <% verb = @user.new_record? ? "choose" : "reset" %>
+    <% label = t("user.reset_password_label_#{verb}") %>
+    <% hint = t("user.reset_password_hint_#{verb}") %>
+    <%= f.field(:reset_password_method, label: label, hint: hint, type: :select, prompt: false,
+      options: translate_options(reset_password_options(@user), [:user, :password_options])) %>
+
+    <div class="d-none password-fields">
+      <%= f.field(:password, type: :password) %>
+      <%= f.field(:password_confirmation, type: :password) %>
+    </div>
+  <% end %>
+  <% if !@user.new_record? && can?(:regenerate_api_key, @user) %>
+    <%= f.regenerable_field(:api_key, confirm: t("setting.api_key_warning")) %>
+  <% end %>
+  <% if !@user.new_record? && can?(:regenerate_sms_auth_code, @user) %>
+    <%= f.regenerable_field(:sms_auth_code, confirm: t("setting.sms_auth_code_warning")) %>
+  <% end %>
+  <div class="submit-buttons">
+    <%= f.submit(class: "btn btn-primary") %>
+  </div>
+
+<% end %>
+
+<%= javascript_doc_ready do %>
+  new ELMO.Views.UserProfileFormView(
+    <%= json(user_group_options_url: possible_groups_user_groups_path) if mission_mode? %>
+  );
+<% end %>

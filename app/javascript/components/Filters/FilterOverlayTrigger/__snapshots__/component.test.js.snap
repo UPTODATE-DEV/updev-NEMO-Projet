@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders as expected 1`] = `
+<OverlayTrigger
+  containerPadding={25}
+  id="id"
+  onExit={[Function]}
+  overlay={
+    <FilterPopover
+      buttonsContainerClass="buttonsContainer"
+      className="popover"
+      id="id"
+      onSubmit={[MockFunction]}
+    >
+      content
+    </FilterPopover>
+  }
+  placement="bottom"
+  rootClose={true}
+  trigger="click"
+>
+  <Button
+    className={
+      Array [
+        "button",
+        "active-filter",
+      ]
+    }
+    id="id"
+    variant="secondary"
+  >
+    title (hint)
+    <i
+      className="fa fa-chevron-down inline"
+    />
+  </Button>
+</OverlayTrigger>
+`;

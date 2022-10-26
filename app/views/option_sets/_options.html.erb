@@ -1,0 +1,15 @@
+<%# form for drag and drop and option dialog %>
+<div id="options-wrapper" class="draggable-list-wrapper" style="display: none"></div>
+
+<% if !read_only && !@option_set.huge? && can?(:add_options, @option_set) %>
+  <span class="add-options action">
+    <%= icon_tag(:plus) %>
+    <%= link_to(t("option_set.add_option"), '#', class: "add-option") if can?(:add_options, @option_set) %>
+  </span>
+<% end %>
+
+<% if @option_set.huge? %>
+  <strong class="and-n-more">
+    <%= t("option_set.and_n_more", count: number_with_delimiter(@option_set.options_not_serialized)) %>
+  </strong>
+<% end %>

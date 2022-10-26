@@ -1,0 +1,15 @@
+<%# TODO the id attrib below should be deprecated as its not well scoped. %>
+<%= content_tag(:div, class: wrapper_classes, id: field_name, data: {field_name: field_name}) do %>
+  <%# This appears first here but is usually moved to the end using flex box %>
+  <%# We do it this way so we can move the control to its own line in certain cases %>
+  <%= hint_popover(hint_html) %>
+  <%= label_tag %>
+  <div class="control <%= options[:read_only] ? 'read-only' : '' %>">
+    <%# errors %>
+    <%= content_tag(:div, errors.join(' '), :class => 'form-errors') if errors.present? %>
+    <div class="widget<%= inline_hint_html.present? ? " inline-hint" : "" %>">
+      <%= field_html %>
+      <%= inline_hint_html %>
+    </div>
+  </div>
+<% end %>

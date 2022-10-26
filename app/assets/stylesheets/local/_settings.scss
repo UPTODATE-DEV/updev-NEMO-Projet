@@ -1,0 +1,16 @@
+form.setting_form {
+  .adapter-settings .credential-fields {
+    display: none;
+  }
+
+  .setting_generic_sms_config_str textarea {
+    font-family: $font-family-monospace;
+    font-size: 8pt;
+  }
+
+  #external_sql .control {
+    pre {
+      height: 100px;
+    }
+  }
+}

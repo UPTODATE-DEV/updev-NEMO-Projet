@@ -1,0 +1,19 @@
+.btn-primary {
+  color: $text-over-accent-color;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited,
+  &:disabled {
+    color: $text-over-accent-color;
+  }
+}
+
+// Remove Bootstrap button styling to make it look like a regular <a>
+.btn-link.btn-a {
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  vertical-align: baseline;
+}

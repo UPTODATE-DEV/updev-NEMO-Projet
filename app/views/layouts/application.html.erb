@@ -1,0 +1,159 @@
+<% body = yield %>
+<% ctlr_action_name = "#{route_key}_#{controller.action_name.gsub('update', 'edit').gsub('create', 'new')}" %>
+<!DOCTYPE html>
+<html dir="<%= current_direction %>">
+<head>
+  <title>
+    <%= [current_mission_config.site_name,
+         title(text_only: true, **(@title_args || {}))].compact.join(": ") %>
+  </title>
+
+  <%= main_stylesheet_tag(params) %>
+  <%= stylesheet_link_tag("disable_bootstrap_modal_transitions") if Rails.env.test? %>
+  <%= javascript_include_tag("application") %>
+  <%= javascript_pack_tag("application") %>
+  <%= csrf_meta_tags %>
+
+  <%= javascript_doc_ready do %>
+    // handles general client side stuff that appears in the template (e.g. language chooser form)
+    // appears at top of file because it needs to be loaded first
+    ELMO.app = new ELMO.App(<%=json(
+      mode: current_mode,
+      rails_env: Rails.env,
+      mission_name: current_mission&.compact_name,
+      locale: I18n.locale,
+      default_locale: I18n.default_locale,
+      preferred_locales: current_mission_config.preferred_locales,
+      logged_in: !current_user.nil?,
+      site_name: current_mission_config.site_name,
+      session_timeout: User::SESSION_TIMEOUT,
+      login_path: login_path
+    )%>);
+    ELMO.batch_actions_views = {}
+    new ELMO.Views.MissionChangeDropdown({el: 'select#change-mission'});
+  <% end %>
+
+  <%= yield(:per_page_js) %>
+</head>
+<body class="<%= controller_name %>">
+  <header>
+    <%= render('layouts/userinfo') %>
+
+    <%# Logo and mission if selected %>
+    <div id="logo" class="d-print-none">
+      <%= link_to(logo_image, current_root_path) %>
+      <%# Stripping title name since we have a logo now %>
+      <h2>
+        <% if admin_mode? %>
+          <i class="fa fa-key"></i>
+          <%= t('admin_mode.admin_mode') %>
+        <% else %>
+          <%= current_mission.try(:name) %>
+          <% if current_mission.try(:locked) %>
+            <i class="fa fa-lock"></i>
+          <% end %>
+        <% end %>
+      </h2>
+    </div>
+
+    <%# navigation bar %>
+    <nav id="main-nav" class="navbar navbar-expand-sm navbar-light bg-light d-print-none" role="navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <% if current_user && (current_mission || admin_mode?) %>
+            <% if admin_mode? %>
+              <div class="navbar-header std"><%= t("standard.standard") %></div>
+            <% end %>
+
+            <ul class="nav navbar-nav mr-auto">
+              <% if !admin_mode? %>
+                <% if can?(:create, Response) %>
+                  <%# submit response dropdown %>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <i class="fa fa-share-square-o"></i><%= t('common.submit') %><b class="caret"></b>
+                    </a>
+                    <%# empty until ajax call %>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><%= inline_load_ind %></li>
+                    </ul>
+                  </li>
+                <%# else mission is locked %>
+                <% else %>
+                  <%# keep nav spacing %>
+                  <li>&nbsp;</li>
+                <% end %>
+
+                <%= nav_links(Response, Report::Report) %>
+
+                <%# divider %>
+                <li class="d-none d-sm-block"><div class="line"></div></li>
+
+              <% end %><%# end unless admin mode %>
+
+              <%= nav_links(Form, Question, OptionSet) %>
+
+              <%# divider %>
+              <li class="d-none d-sm-block"><div class="line"></div></li>
+
+              <%= nav_links(User, Broadcast, Sms::Message, Setting, Mission) %>
+
+            </ul>
+        <% end %>
+      </div>
+    </nav>
+  </header>
+  <div id="content" class="<%= ctlr_action_name %>">
+    <%# Show errors or alerts if any %>
+    <%= alerts(flash) %>
+    <%= yield(:alerts) %>
+    <% unless @dont_print_title %>
+      <div id="title-container">
+        <%= h1_title(content: yield(:title_content), **(@title_args || {})) %>
+      </div>
+    <% end %>
+    <%= body %>
+  </div>
+
+  <div id="footer" class="d-print-none">
+    <%= yield(:powered_by) %>
+
+    <div class="footer-row">
+      <%= link_to(t("layout.change_language"), "#", :id => "locale_form_link") %>
+
+      <%= form_tag(nil, :id => "locale_form") do %>
+        <%# We can't change language unless the request is GET since no way to redirect browser to POST, etc. %>
+        <%# So we disable with message in that case. %>
+        <%= select_tag(:locale, options_for_select(I18n.available_locales.map{|l| [language_name(l), l]}, I18n.locale),
+          class: 'form-control', disabled: !request.get?, title: request.get? ? '' : I18n.t('layout.locale_change_get_only')) %>
+      <% end %>
+      &nbsp;|&nbsp;
+      <%= t("layout.time_zone") %>: <%= Time.zone.to_s %>
+      &nbsp;|&nbsp;
+      <%= t("layout.system_version") %>: <%= Cnfg.system_version %>
+    </div>
+    <div class="footer-row">
+      <%= link_to(t("layout.about", site_name: current_mission_config.site_name), "https://getnemo.org", target: "_blank", rel: "noopener") %>
+      &nbsp;|&nbsp;
+      <%= link_to(t("common.docs"), "https://getnemo.readthedocs.io", target: "_blank", rel: "noopener") %>
+      &nbsp;|&nbsp;
+      <%= link_to(t("layout.changelog"), "https://github.com/thecartercenter/nemo/releases", target: "_blank", rel: "noopener") %>
+    </div>
+  </div>
+
+  <div id="glb-load-ind">
+    <%= image_tag('glb-load-ind.gif') %>
+    <%= t('layout.loading') %>
+  </div>
+
+  <%# Force the pre-loading of logo-dark so that when it's included elsewhere %>
+  <%# (e.g. just-in-time ajax loading for printing), it's already available to the browser. %>
+  <%= logo_image(style: :dark, class: "d-none") if controller_name == "forms" %>
+
+  <%# insert any audio objects at the end %>
+  <%= yield(:audio) %>
+</body>
+</html>

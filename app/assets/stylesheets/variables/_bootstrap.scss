@@ -1,0 +1,60 @@
+/**
+ * Override Bootstrap variables here.
+ * Some defaults from bootstrap-sass v3.3.7; many removed after upgrading to Bootstrap v4.
+ */
+
+//== Scaffolding
+//
+/**
+ * Background color for `<body>`.
+ * This needs to be footer color so that the footer goes fully to the bottom of the page on
+ * pages with short content.
+ */
+$body-bg: $footer-background-color !default;
+
+//== Typography
+//
+$font-family-sans-serif: 'Open Sans', Helvetica, sans-serif !default;
+
+$px-per-rem: 16;
+$font-size-base: (12 / $px-per-rem) * 1rem !default;
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base: 1.3 !default;
+
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed: $font-size-base * $line-height-base; // ~20px
+
+//== Components
+//
+$padding-base-vertical: (6 / $px-per-rem) * 1rem;
+
+//== Buttons
+//
+$theme-colors: (
+  'primary': $accent-color,
+  'secondary': $faint-gray,
+) !default;
+
+//== Forms
+//
+$input-border: #ccc;
+$input-placeholder-color: #bbb !default;
+
+//** Default `.form-control` height
+$input-height-base: ($line-height-computed + ($padding-base-vertical * 2) + (2 / $px-per-rem));
+
+//== Form states and alerts
+//
+$state-info-text: #31708f;
+$alert-info-text: $state-info-text;
+
+//== Code
+//
+$pre-bg: #f5f5f5;
+
+//== Alerts
+//
+
+// Make match y padding
+$alert-padding-x: 0.75rem;

@@ -1,0 +1,11 @@
+<% @title_args = {name: @mission.name} %>
+
+<%= elmo_form_for(@mission) do |f| %>
+  <%= ActionLinks::LinkBuilder.new(@mission, %i[edit destroy]) %>
+  <%= f.field(:name, :required => true, :maxlength => 32) %>
+  <%= f.field(:compact_name) if read_only %>
+  <%= f.field(:locked, :type => :check_box) %>
+  <div class="submit-buttons">
+    <%= f.submit(:class => "btn btn-primary") %>
+  </div>
+<% end %>

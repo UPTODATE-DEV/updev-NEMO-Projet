@@ -1,0 +1,146 @@
+nav.navbar-light {
+  @include media-breakpoint-up(sm) {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  @include if-rtl {
+    .navbar-header {
+      float: right;
+    }
+  }
+
+  /* For standard label in admin mode */
+  .navbar-header.std {
+    color: $nav-text-color;
+    font-weight: bold;
+    margin-right: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  // Overriding bootstrap navbar prefs causing RTL bug
+  .navbar-collapse {
+    flex-grow: unset;
+  }
+
+  ul.navbar-nav {
+    float: $left;
+
+    @include if-rtl {
+      display: flex;
+      height: 49px; //absolute needed with flex
+      padding-right: 0;
+    }
+
+    li {
+      margin-bottom: 0;
+      padding: 14px 6px;
+
+      &:hover,
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+
+      /* Overriding bootstrap navbar prefs */
+      &.active a {
+        background-color: transparent !important;
+      }
+
+      a {
+        color: $nav-text-color;
+        display: inline-block;
+        font-family: 'Raleway';
+        font-size: 11pt;
+        font-weight: bold;
+
+        // Bootstrap sets this to 11px which causes spacing issues.
+        line-height: inherit;
+        padding: 0;
+        text-decoration: none;
+        vertical-align: middle;
+
+        @include if-rtl {
+          display: flex;
+          flex-direction: row-reverse;
+
+          .caret {
+            margin-top: 8px;
+          }
+        }
+
+        &.dropdown-toggle {
+          // Add the same padding as regular nav-link items.
+          @include media-breakpoint-up(sm) {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+          }
+        }
+
+        &:hover,
+        &:focus {
+          color: $accent-color !important;
+          text-decoration: none;
+        }
+      }
+
+      i {
+        color: $nav-icon-color;
+        display: inline-block;
+        font-size: 13pt;
+        margin-right: 5px;
+        vertical-align: top;
+
+        @include if-rtl {
+          vertical-align: middle;
+        }
+      }
+
+      &.active {
+        background-color: $nav-active-background-color;
+      }
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+
+    .line {
+      border-right: 1px solid $nav-icon-color;
+      display: inline-block;
+      height: 20px;
+      width: 2px;
+    }
+
+    ul.dropdown-menu {
+      left: auto;
+      margin-top: 5px;
+      text-align: $left;
+      top: auto;
+
+      li {
+        font-family: $font-family-sans-serif;
+        font-weight: normal;
+        padding: 4px 9px 6px 15px;
+
+        &:hover,
+        &:focus {
+          background: none;
+        }
+
+        a {
+          display: block;
+          font-family: $font-family-sans-serif;
+          font-size: 10pt;
+          font-weight: normal;
+
+          &:hover,
+          &:focus {
+            background: none;
+            color: $accent-color;
+          }
+        }
+      }
+    }
+  }
+}

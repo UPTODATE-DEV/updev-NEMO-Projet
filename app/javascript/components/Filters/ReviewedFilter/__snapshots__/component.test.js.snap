@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`popover handles callbacks 1`] = `1`;
+
+exports[`popover handles callbacks 2`] = `
+Array [
+  Object {
+    "type": "return",
+    "value": undefined,
+  },
+]
+`;
+
+exports[`renders as expected 1`] = `
+<FilterOverlayTrigger
+  buttonClass="btn-margin-left"
+  hints={null}
+  id="reviewed-filter"
+  onSubmit={[MockFunction]}
+  popoverContent={
+    <React.Fragment>
+      <div>
+        <Label>
+          Is marked 'reviewed'
+        </Label>
+      </div>
+      <ButtonGroup>
+        <Button
+          active={true}
+          id="yes"
+          onClick={[Function]}
+          variant="secondary"
+        >
+          Yes
+        </Button>
+        <Button
+          active={false}
+          id="no"
+          onClick={[Function]}
+          variant="secondary"
+        >
+          No
+        </Button>
+        <Button
+          active={false}
+          id="either"
+          onClick={[Function]}
+          variant="secondary"
+        >
+          Either
+        </Button>
+      </ButtonGroup>
+    </React.Fragment>
+  }
+  title="Reviewed"
+/>
+`;

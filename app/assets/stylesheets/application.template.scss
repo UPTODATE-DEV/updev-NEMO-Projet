@@ -1,0 +1,36 @@
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+// This file is preprocessed to generate theme and ltr/rtl combinations.
+// This happens automatically on production.
+// On develop, if you change this file, you should run `bundle exec rake theme:preprocess`.
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// Set direction for directional variables
+// These are set super early as they may be used in later variables files.
+$dir: @@@direction@@@;
+@import 'directional';
+
+// These need to be loaded in a specific order so that earlier variables can be reused in later files.
+@import 'variables/base';
+@import 'variables/mixins';
+@import 'themes/@@@theme@@@';
+@import 'variables/bootstrap';
+
+@import 'bootstrap';
+@import 'font-awesome';
+@import 'select2';
+
+@import 'trumbowyg';
+@import 'token-input';
+@import 'jquery-ui-1.12.1-custom';
+
+@import 'jquery.fileupload';
+@import 'jquery.fileupload-ui';
+@import 'dropzone/basic';
+
+@import 'enketo/sass/plain/plain';
+@import 'enketo/sass/plain/plain-print';
+
+@import 'global/**/*';
+@import 'local/**/*';

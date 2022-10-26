@@ -1,0 +1,6 @@
+<% if read_only %>
+  <%= form.object.body %>
+<% else %>
+  <div id="char_limit"></div>
+  <%= form.text_area(:body, class: "form-control") %>
+<% end %>
